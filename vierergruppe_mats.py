@@ -22,10 +22,11 @@ from numpy import array
 
 def main():
 
-	vierergruppe = vierergruppe_sets()
-
-	for i, vsets in vierergruppe.items():
-		print(i, vsets)
+	# vierergruppe = vierergruppe_sets()
+	#
+	# for i, vsets in vierergruppe.items():
+	# 	print(i, vsets)
+	assemble_tetrads()
 
 # ********************************
 # Defining the six Vierergruppe representations
@@ -68,8 +69,8 @@ def binaries(bin_code):
 			return np.diag(tarray)
 
 # ********************************
-# Defining the binary representations for the Vierergruppe
-def vbin_groups():
+# Defining the elle binary representations for the Vierergruppe
+def vgrp_ellebin():
 
 	vgrp_elle			= {}
 	vgrp_elle['()']		= [[14,8,2,4], [2,4,14,8], [4,2,8,14],[8,14,4,2],
@@ -92,16 +93,63 @@ def vbin_groups():
 
 	return vgrp_elle
 
+# ********************************
+# Defining the tilde-elle binary representations for the Vierergruppe
+def vgrp_tildebin():
+
+	vgrp_tilde			= {}
+
+	vgrp_tilde['()']	= [[14,8,2,4], [2,4,14,8], [4,2,8,14], [8,14,4,2],
+							[6,0,10,12], [10,12,6,0], [12,10,0,6], [0,6,12,10]]
+
+	vgrp_tilde['(12)']	= [[14,4,2,8], [2,8,14,4], [4,14,8,2], [8,2,4,14],
+							[6,12,10,0], [10,0,6,12], [12,6,0,10], [0,10,12,6]]
+
+	vgrp_tilde['(13)']	= [[14,2,8,4], [2,14,4,8], [4,8,2,14], [8,4,14,2],
+							[6,10,0,12], [10,6,12,0], [12,0,10,6], [0,12,6,10]]
+
+	vgrp_tilde['(23)']	= [[2,4,8,14], [14,8,4,2], [8,14,2,4], [4,2,14,8],
+							[10,12,0,6], [6,0,12,10], [0,6,10,12], [12,10,6,0]]
+
+	vgrp_tilde['(123)']	= [[14,4,8,2], [2,8,4,14], [4,14,2,8], [8,2,14,4],
+							[6,12,0,10], [10,0,12,6], [12,6,10,0], [0,10,6,12]]
+
+	vgrp_tilde['(132)'] = [[14,2,4,8], [2,14,8,4], [4,8,14,2], [8,4,2,14],
+							[6,10,12,0], [10,6,0,12], [12,0,6,10], [0,12,10,6]]
+
+	return vgrp_tilde
+
 # Compiling the tetrads from predfined Adinkras
 def assemble_tetrads():
 
 	"""Vierergrupe dictionaries with binary quadsets for ells and tilde-ells
 	"""
 
-	vierergrupe_elle	= vbin_groups()
+	main_tetrad			= []
 
-	for vgrp, binaries in vierergrupe_elle.items():
-		vbasis	= vquads[vgrp]
+	vgruppe_sets		= vierergruppe_sets()
+	vierergruppe_elle	= vgrp_ellebin()
+
+	for vgrp, binaries_list in vierergruppe_elle.items():
+		vbasis	= vgruppe_sets[vgrp]
+		temp 	= lmat_flipping(vbasis, binaries_list)
+		print("Length lmat_flipping", len(temp), vgrp, binaries_list)
+		main_tetrad.extend(temp)
+
+	print(len(main_tetrad))
+
+# Use the binary representation info to perform flips on L mats in each tetrad
+def lmat_flipping(vbasis, binaries_list):
+
+	tetrads			= []
+
+	for xbin in binaries_list:
+		binmats = [binaries(b) for b in xbin]
+		temp	= [np.dot(vbasis[i], binmats[i]) for i in range(0, len(binmats))]
+		print(len(temp), temp)
+		tetrads.append(temp)
+
+	return tetrads
 
 # ********************************
 # Main() function.
