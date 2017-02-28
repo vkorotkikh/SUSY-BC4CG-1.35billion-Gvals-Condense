@@ -20,6 +20,8 @@ import numpy.matlib
 import itertools
 from numpy import array
 
+
+# ********************************
 def main():
 
 	# vierergruppe = vierergruppe_sets()
@@ -27,6 +29,7 @@ def main():
 	# for i, vsets in vierergruppe.items():
 	# 	print(i, vsets)
 	assemble_tetrads()
+
 
 # ********************************
 # Defining the six Vierergruppe representations
@@ -68,6 +71,7 @@ def binaries(bin_code):
 			tarray = np.array(btuple[1])
 			return np.diag(tarray)
 
+
 # ********************************
 # Defining the elle binary representations for the Vierergruppe
 def vgrp_ellebin():
@@ -92,6 +96,7 @@ def vgrp_ellebin():
 							[6,10,12,0], [10,6,0,12], [12,0,6,10], [0,12,10,6]]
 
 	return vgrp_elle
+
 
 # ********************************
 # Defining the tilde-elle binary representations for the Vierergruppe
@@ -119,6 +124,8 @@ def vgrp_tildebin():
 
 	return vgrp_tilde
 
+
+# ********************************
 # Compiling the tetrads from predfined Adinkras
 def assemble_tetrads():
 
@@ -129,27 +136,41 @@ def assemble_tetrads():
 
 	vgruppe_sets		= vierergruppe_sets()
 	vierergruppe_elle	= vgrp_ellebin()
+	vierergruppe_tilde	= vgrp_tildebin()
 
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
 		temp 	= lmat_flipping(vbasis, binaries_list)
+		print(len(temp))
+		for i, tet in enumerate(temp):
+		main_tetrad.extend(temp)
+
+	for vgrp, binaries_list in vierergruppe_tilde.items():
+		vbasis	= vgruppe_sets[vgrp]
+		temp 	= lmat_flipping(vbasis, binaries_list)
+		print(len(temp))
+		for i, tet in enumerate(temp):
+			print("Length of tet:", len(tet), "Type", type(tet))
 		print("Length lmat_flipping", len(temp), vgrp, binaries_list)
 		main_tetrad.extend(temp)
 
-	print(len(main_tetrad))
+	# print(main_tetrad)
+	for i, tetrad in enumerate(main_tetrad):
+		print("Tetrad #", i, "type:", type(tetrad), "Ls", tetrad)
 
+
+# ********************************
 # Use the binary representation info to perform flips on L mats in each tetrad
 def lmat_flipping(vbasis, binaries_list):
 
-	tetrads			= []
+	lmat_list		= []
 
 	for xbin in binaries_list:
 		binmats = [binaries(b) for b in xbin]
 		temp	= [np.dot(vbasis[i], binmats[i]) for i in range(0, len(binmats))]
-		print(len(temp), temp)
-		tetrads.append(temp)
+		lmat_list.append(temp)
 
-	return tetrads
+	return lmat_list
 
 # ********************************
 # Main() function.
