@@ -1,20 +1,18 @@
 # ******************************************************************************
-#
-# Name:    Outer Product calculation
+# Name:  Generate the Vierergruppe
 # Author:  Vadim Korotkikh
-# Email:   Vadim.Korotkikh
-# Date:    November 2016
-# Version: 1.3
+# Email:   va.korotki@gmail.com
+# Date:    February 2017
+# Version:
 #
 # Description:
 #
 # ******************************************************************************
-
-
-# ******************************************************************************
 # Begin Imports
+
 import math
 import sys
+import time
 import numpy as np
 import numpy.matlib
 import itertools
@@ -24,12 +22,7 @@ from numpy import array
 # ********************************
 def main():
 
-	# vierergruppe = vierergruppe_sets()
-	#
-	# for i, vsets in vierergruppe.items():
-	# 	print(i, vsets)
 	assemble_tetrads()
-
 
 # ********************************
 # Defining the six Vierergruppe representations
@@ -141,17 +134,14 @@ def assemble_tetrads():
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
 		temp 	= lmat_flipping(vbasis, binaries_list)
-		print(len(temp))
-		for i, tet in enumerate(temp):
 		main_tetrad.extend(temp)
 
 	for vgrp, binaries_list in vierergruppe_tilde.items():
 		vbasis	= vgruppe_sets[vgrp]
 		temp 	= lmat_flipping(vbasis, binaries_list)
-		print(len(temp))
-		for i, tet in enumerate(temp):
-			print("Length of tet:", len(tet), "Type", type(tet))
-		print("Length lmat_flipping", len(temp), vgrp, binaries_list)
+		# for i, tet in enumerate(temp):
+		# 	print("Length of tet:", len(tet), "Type", type(tet))
+		# print("Length lmat_flipping", len(temp), vgrp, binaries_list)
 		main_tetrad.extend(temp)
 
 	# print(main_tetrad)
@@ -173,7 +163,7 @@ def lmat_flipping(vbasis, binaries_list):
 	return lmat_list
 
 # ********************************
-# Main() function.
+# Alpha and Beta matrices hardcoded
 def pauli_byproducts():
 
 	""" These are the alpha and beta matrices multiplied by 2i
@@ -192,4 +182,10 @@ def pauli_byproducts():
 	beta3i = np.matrix([[0, 2, 0, 0], [-2, 0, 0, 0], [0, 0, 0, -2], [0, 0, 2, 0]])
 
 
+# ********************************
+# Run main()
+start_time = time.time()
+
 main()
+print("-- Execution time --")
+print("---- %s seconds ----" % (time.time() - start_time))
