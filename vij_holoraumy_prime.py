@@ -63,12 +63,16 @@ def calculate_vij_matrices(main_tetrad_list):
 			print("# ********************************")
 			print("								     ")
 			print("Tetrad i: ", ti)
-			# print(teti[0][1][0,:], teti[1][1][0,:], teti[2][1][0,:], teti[3][1][0,:])
-			# print(teti[0][1][1,:], teti[1][1][1,:], teti[2][1][1,:], teti[3][1][1,:])
-			# print(teti[0][1][2,:], teti[1][1][2,:], teti[2][1][2,:], teti[3][1][2,:])
-			# print(teti[0][1][3,:], teti[1][1][3,:], teti[2][1][3,:], teti[3][1][3,:])
-			print("								     ")
 
+		for ijtup in ij_indices:
+			limat 		= ijtup[0]
+			ljmat 		= ijtup[1]
+			ij_temp		= ijtup
+
+			tr_limat	= np.transpose(limat)
+			tr_ljmat	= np.transpose(ljmat)
+
+			temp_mat	= np.dot(tr_limat, ljmat) - np.dot(tr_ljmat, limat)
 		temp_combos = []
 		alpha_temp	= []
 		beta_temp   = []
@@ -82,6 +86,7 @@ def calculate_vij_matrices(main_tetrad_list):
 		So for each matrix in the tetrad its checked against all the possible others,
 	 	bypassing the duplicate calculations
 		"""
+
 		for i, li in enumerate(teti):
 			# print(li[1])
 			bigli = li[1]
