@@ -18,6 +18,7 @@ import numpy.matlib
 import itertools
 from numpy import array
 
+import vij_holoraumy_prime
 
 # ********************************
 def main():
@@ -34,6 +35,8 @@ def vierergruppe_sets():
 	vp4 	= np.matrix([[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]])
 	vprime 	= [vp1, vp2, vp3, vp4]
 
+	print(vprime)
+
 	"""Elements for flopping bosonic fields"""
 	b12 	= np.matrix([[0,1,0,0], [1,0,0,0], [0,0,1,0], [0,0,0,1]])
 	b13 	= np.matrix([[0,0,1,0], [0,1,0,0], [1,0,0,0], [0,0,0,1]])
@@ -44,9 +47,9 @@ def vierergruppe_sets():
 	vgruppe	= 	{'()': vprime,
 				'(12)': [np.dot(b12, i) for i in vprime],
 				'(13)': [np.dot(b13, i) for i in vprime],
-				'(23)': [np.dot(b23, i) for i in vprime],
+				'(23)': [np.dot(i, b23) for i in vprime],
 				'(123)':[np.dot(b123, i) for i in vprime],
-				'(132)':[np.dot(b132, i) for i in vprime]
+				'(132)':[np.dot(i, b132) for i in vprime]
 				}
 
 	return vgruppe
@@ -134,19 +137,24 @@ def assemble_tetrads():
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
 		temp 	= lmat_flipping(vbasis, binaries_list)
+		print("	")
+		print("",vgrp, "flips", binaries_list)
+		vij_holoraumy_prime.calculate_vij_matrices(temp)
 		main_tetrad.extend(temp)
 
-	for vgrp, binaries_list in vierergruppe_tilde.items():
-		vbasis	= vgruppe_sets[vgrp]
-		temp 	= lmat_flipping(vbasis, binaries_list)
-		# for i, tet in enumerate(temp):
-		# 	print("Length of tet:", len(tet), "Type", type(tet))
-		# print("Length lmat_flipping", len(temp), vgrp, binaries_list)
-		main_tetrad.extend(temp)
+	# for vgrp, binaries_list in vierergruppe_tilde.items():
+	# 	vbasis	= vgruppe_sets[vgrp]
+	# 	temp 	= lmat_flipping(vbasis, binaries_list)
+	# 	# for i, tet in enumerate(temp):
+	# 	# 	print("Length of tet:", len(tet), "Type", type(tet))
+	# 	# print("Length lmat_flipping", len(temp), vgrp, binaries_list)
+	# 	main_tetrad.extend(temp)
 
 	# print(main_tetrad)
-	for i, tetrad in enumerate(main_tetrad):
-		print("Tetrad #", i, "type:", type(tetrad), "Ls", tetrad)
+	# for i, tetrad in enumerate(main_tetrad):
+		# print("Tetrad #", i, "type:", type(tetrad), "Ls", tetrad)
+
+	# vij_holoraumy_prime.calculate_vij_matrices(main_tetrad)
 
 
 # ********************************
@@ -164,11 +172,11 @@ def lmat_flipping(vbasis, binaries_list):
 
 # ********************************
 # Alpha and Beta matrices hardcoded
-def pauli_byproducts():
+def alphas_betas():
 
 	""" These are the alpha and beta matrices multiplied by 2i
-		alpha and beta are results of outerproducts inbetween
-		Pauli matrices and Identity matrix They are defined in equtions (4.5)
+		alpha and beta are tensor products of Pauli spin matrices
+ 		Identity matrix They are defined in equtions (4.5)
 		in Isaac Chappell II, S. James Gates, Jr - 2012
 	"""
 
@@ -181,6 +189,7 @@ def pauli_byproducts():
 	beta2i = np.matrix([[0, 0, 2, 0], [0, 0, 0, 2], [-2, 0, 0, 0], [0, -2, 0, 0]])
 	beta3i = np.matrix([[0, 2, 0, 0], [-2, 0, 0, 0], [0, 0, 0, -2], [0, 0, 2, 0]])
 
+	return [alpha1i, alpha2i, alpha3i, beta1i, beta2i, beta3i]
 
 # ********************************
 # Run main()
