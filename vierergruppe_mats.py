@@ -45,10 +45,11 @@ def vierergruppe_sets():
 	b132	= np.matrix([[0,1,0,0], [0,0,1,0], [1,0,0,0], [0,0,0,1]])
 
 	vgruppe	= 	{'()': vprime,
-				'(12)': [np.dot(b12, i) for i in vprime],
-				'(13)': [np.dot(b13, i) for i in vprime],
+				'(12)': [np.dot(i, b12) for i in vprime],
+				'(13)': [np.dot(i, b13) for i in vprime],
 				'(23)': [np.dot(i, b23) for i in vprime],
 				'(123)':[np.dot(b123, i) for i in vprime],
+				# '(123)':[np.dot(i, b123) for i in vprime],
 				'(132)':[np.dot(i, b132) for i in vprime]
 				}
 
@@ -137,9 +138,17 @@ def assemble_tetrads():
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
 		temp 	= lmat_flipping(vbasis, binaries_list)
-		print("	")
-		print("",vgrp, "flips", binaries_list)
+		print("")
+		print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
+		print("Calculating Vij coefficients")
+		print("							")
+		print("Vierergruppe flop: ",vgrp)
+		print("Flip sets:", binaries_list)
 		vij_holoraumy_prime.calculate_vij_matrices(temp)
+		# print("Result above for",vgrp, "Vierergrupe")
+		# print("Flips", binaries_list)
+		# print("")
+		print("<<<>>>")
 		main_tetrad.extend(temp)
 
 	# for vgrp, binaries_list in vierergruppe_tilde.items():
