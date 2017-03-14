@@ -34,12 +34,9 @@ def gen_permutations(n):
 
 # Generate all sign permutations of an nxn Identity Matrix
 def gen_signm(n):
+	
 	n 		= int(n)
 	items	= [1] * n
-	# itemsl = np.ones(n)
-	# items = itemsl.tolist()
-    # n   = int(n)
-    # items = [1] * n
 	sign_mat = []
 	for signs in itertools.product([-1,1], repeat=len(items)):
 		temp = np.array([a*sign for a,sign in zip(items,signs)],dtype=int)
@@ -65,7 +62,6 @@ def gen_product_matrices(n):
 def pairing(matli, matlj):
 	ri = np.transpose(matli)
 	rj = np.transpose(matlj)
-	# sig_lj =  np.multiply(matlj, -1)
 	# tmat = np.dot(matli,rj) + np.dot(matlj,ri)
 	rtmat = np.dot(ri,matlj) + np.dot(rj,matli)
 
