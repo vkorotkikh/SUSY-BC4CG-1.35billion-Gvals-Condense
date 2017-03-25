@@ -58,6 +58,8 @@ def calculate_vijmatset(one_adinkra):
 
 	vij_possibilities 	= alphas_betas()
 
+	debug			= 0
+
 	alpha_temp	= []
 	beta_temp   = []
 	vij_tempset = []
@@ -66,8 +68,8 @@ def calculate_vijmatset(one_adinkra):
 	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
 
 	for ijtup in ij_indices:
-		limat 		= teti[ijtup[0]]
-		ljmat 		= teti[ijtup[1]]
+		limat 		= one_adinkra[ijtup[0]]
+		ljmat 		= one_adinkra[ijtup[1]]
 		ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
 		""" Enhance appearance of ijstr - V_{ ij } """
 		ijstr		= "V_{" + ij_temp + "}"
@@ -89,14 +91,13 @@ def calculate_vijmatset(one_adinkra):
 					print(ijx)
 				tmint = np.int(1)
 				if xi < 3:
-					tmp_str = "alpha" + str((xi + 1))
+					tmp_str = "alpha^" + str((xi + 1))
 					# print(tmp_str)
-					vij_tempset.append([tmp_str, ijstr, tmint])
-					alpha_temp.append([tmp_str, ijstr, tmint])
+					# vij_tempset.append([tmp_str, ijstr, tmint])
+					vij_tempset.append([ijstr, tmint, tmp_str])
 				elif xi >= 3:
-					tmp_str = "beta" + str((xi - 2))
-					vij_tempset.append([tmp_str, ijstr, tmint])
-					beta_temp.append([tmp_str, ijstr, tmint])
+					tmp_str = "beta^" + str((xi - 2))
+					vij_tempset.append([ijstr, tmint, tmp_str])
 			elif np.array_equal(temp_mat, ijx_neg):
 				tf_bool = 1
 				if debug:
@@ -106,14 +107,12 @@ def calculate_vijmatset(one_adinkra):
 				# xint = (xi + 1) * ( -1)
 				tmint = np.int(-1)
 				if xi < 3:
-					tmp_str = "alpha" + str((xi + 1))
+					tmp_str = "alpha^" + str((xi + 1))
 					# print(tmp_str)
-					vij_tempset.append([tmp_str, ijstr, tmint])
-					alpha_temp.append([tmp_str, ijstr, tmint])
+					vij_tempset.append([ijstr, tmint, tmp_str])
 				elif xi >= 3:
-					tmp_str = "beta" + str((xi - 2))
-					vij_tempset.append([tmp_str, ijstr, tmint])
-					beta_temp.append([tmp_str, ijstr, tmint])
+					tmp_str = "beta^" + str((xi - 2))
+					vij_tempset.append([ijstr, tmint, tmp_str])
 			else:
 				if tf_bool == 0 and xi >= 5:
 					if not(np.array_equal(temp_mat, ijx)) or not np.array_equal(temp_mat, ijx_neg):

@@ -165,9 +165,11 @@ def calculate_vgruppe_sets(gruppe_adinkras, gruppe_binaries):
 	for i in range(0, len(gruppe_adinkras)):
 
 		print("")
-		print("Calculating Vij matrices for:", gruppe_binaries[i])
-		
+		print("Calculating Vij matrices for binary flip:", gruppe_binaries[i])
+
 		vijset = vij_holoraumy_4x4.calculate_vijmatset(gruppe_adinkras[i])
+		# print(vijset)
+		print(vijset[0], vijset[1], vijset[2], vijset[3], vijset[4], vijset[5])
 
 	# for vgrp, binaries_list in vierergruppe_tilde.items():
 	# 	vbasis	= vgruppe_sets[vgrp]
