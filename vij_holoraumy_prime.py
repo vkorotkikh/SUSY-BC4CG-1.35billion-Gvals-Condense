@@ -39,7 +39,6 @@ def calculate_vij_matrices(main_tetrad_list):
 
 
 	vij_possibilities 	= alphas_betas()
-	vij_sixset 			= []
 
 	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
 

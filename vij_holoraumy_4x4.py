@@ -39,7 +39,6 @@ def calculate_vij_matrices(main_tetrad_list):
 
 
 	vij_possibilities 	= alphas_betas()
-	vij_sixset 			= []
 
 	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
 
@@ -58,73 +57,81 @@ def calculate_vij_matrices(main_tetrad_list):
 			print("# ********************************")
 			print("								     ")
 			print("Tetrad i: ", ti)
+			calculate_vijmat(teti)
 
-		alpha_temp	= []
-		beta_temp   = []
-		vij_tempset = []
-		""" Store 6 Vij matrices in temp_vijmat"""
-		# temp_vijmat		= []
+# ******************************************************************************
+# Creating an abstract Adinkra handler
+def calculate_vijmat(one_adinkra):
 
-		for ijtup in ij_indices:
-			limat 		= teti[ijtup[0]]
-			ljmat 		= teti[ijtup[1]]
-			ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
-			ijstr		= ij_temp
-			tr_limat	= np.transpose(limat)
-			tr_ljmat	= np.transpose(ljmat)
-			""" Vij eq from 1601.00 (3.2) """
-			temp_mat	= np.dot(tr_limat, ljmat) - np.dot(tr_ljmat, limat)
-			""" Compare against the 6 possible matrix solutions """
-			tf_bool = 0
+	vij_possibilities 	= alphas_betas()
 
-			for xi, ijx in enumerate(vij_possibilities):
-				ijx_neg = np.multiply(ijx, -1)
-				# print(xi)
-				if np.array_equal(temp_mat, ijx):
-					tf_bool = 1
-					if debug:
-						print("*************$$$$$$$$$$$$$$$$$$ ")
-						print("l-solution found:")
-						print(ijx)
-					tmint = np.int(1)
-					if xi < 3:
-						tmp_str = "alpha" + str((xi + 1))
-						# print(tmp_str)
-						vij_tempset.append([tmp_str, ijstr, tmint])
-						alpha_temp.append([tmp_str, ijstr, tmint])
-					elif xi >= 3:
-						tmp_str = "beta" + str((xi - 2))
-						vij_tempset.append([tmp_str, ijstr, tmint])
-						beta_temp.append([tmp_str, ijstr, tmint])
-				elif np.array_equal(temp_mat, ijx_neg):
-					tf_bool = 1
-					if debug:
-						print("*************$$$$$$$$$$$$$$$$$$ ")
-						print("l-solution found:")
-						print(ijx_neg)
-					# xint = (xi + 1) * ( -1)
-					tmint = np.int(-1)
-					if xi < 3:
-						tmp_str = "alpha" + str((xi + 1))
-						# print(tmp_str)
-						vij_tempset.append([tmp_str, ijstr, tmint])
-						alpha_temp.append([tmp_str, ijstr, tmint])
-					elif xi >= 3:
-						tmp_str = "beta" + str((xi - 2))
-						vij_tempset.append([tmp_str, ijstr, tmint])
-						beta_temp.append([tmp_str, ijstr, tmint])
-				else:
-					if tf_bool == 0 and xi >= 5:
-						if not(np.array_equal(temp_mat, ijx)) or not np.array_equal(temp_mat, ijx_neg):
-							print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
-							print("Anomaly found:",ijstr)
-							print(temp_mat)
-							anomaly_switch = 1
-			tf_bool = 0
+	alpha_temp	= []
+	beta_temp   = []
+	vij_tempset = []
+	""" Store 6 Vij matrices in temp_vijmat"""
+	# temp_vijmat		= []
+	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
 
-		calc_check.append(vij_tempset)
+	for ijtup in ij_indices:
+		limat 		= teti[ijtup[0]]
+		ljmat 		= teti[ijtup[1]]
+		ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
+		ijstr		= ij_temp
+		tr_limat	= np.transpose(limat)
+		tr_ljmat	= np.transpose(ljmat)
+		""" Vij eq from 1601.00 (3.2) """
+		temp_mat	= np.dot(tr_limat, ljmat) - np.dot(tr_ljmat, limat)
+		""" Compare against the 6 possible matrix solutions """
+		tf_bool = 0
 
+		for xi, ijx in enumerate(vij_possibilities):
+			ijx_neg = np.multiply(ijx, -1)
+			# print(xi)
+			if np.array_equal(temp_mat, ijx):
+				tf_bool = 1
+				if debug:
+					print("*************$$$$$$$$$$$$$$$$$$ ")
+					print("l-solution found:")
+					print(ijx)
+				tmint = np.int(1)
+				if xi < 3:
+					tmp_str = "alpha" + str((xi + 1))
+					# print(tmp_str)
+					vij_tempset.append([tmp_str, ijstr, tmint])
+					alpha_temp.append([tmp_str, ijstr, tmint])
+				elif xi >= 3:
+					tmp_str = "beta" + str((xi - 2))
+					vij_tempset.append([tmp_str, ijstr, tmint])
+					beta_temp.append([tmp_str, ijstr, tmint])
+			elif np.array_equal(temp_mat, ijx_neg):
+				tf_bool = 1
+				if debug:
+					print("*************$$$$$$$$$$$$$$$$$$ ")
+					print("l-solution found:")
+					print(ijx_neg)
+				# xint = (xi + 1) * ( -1)
+				tmint = np.int(-1)
+				if xi < 3:
+					tmp_str = "alpha" + str((xi + 1))
+					# print(tmp_str)
+					vij_tempset.append([tmp_str, ijstr, tmint])
+					alpha_temp.append([tmp_str, ijstr, tmint])
+				elif xi >= 3:
+					tmp_str = "beta" + str((xi - 2))
+					vij_tempset.append([tmp_str, ijstr, tmint])
+					beta_temp.append([tmp_str, ijstr, tmint])
+			else:
+				if tf_bool == 0 and xi >= 5:
+					if not(np.array_equal(temp_mat, ijx)) or not np.array_equal(temp_mat, ijx_neg):
+						print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
+						print("Anomaly found:",ijstr)
+						print(temp_mat)
+						anomaly_switch = 1
+		tf_bool = 0
 
+	calc_check.append(vij_tempset)
+
+"""   Split this up into different func or keep later """
 		if alpha_temp:
 			vij_alphas.append(alpha_temp)
 		elif beta_temp:

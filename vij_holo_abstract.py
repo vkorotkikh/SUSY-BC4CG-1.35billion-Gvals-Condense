@@ -53,7 +53,9 @@ def calculate_vij_matrices(main_tetrad_list):
 	anomaly_switch  = 0
 	debug			= 0
 
-
+# ******************************************************************************
+# Creating an abstract Adinkra handler
+def calculate_vijmat(one_adinkra):
 	for ti, teti in enumerate(main_tetrad_list):
 		if debug:
 			print("# ********************************")
