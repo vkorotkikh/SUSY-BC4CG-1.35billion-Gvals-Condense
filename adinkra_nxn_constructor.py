@@ -34,7 +34,7 @@ def gen_permutations(n):
 
 # Generate all sign permutations of an nxn Identity Matrix
 def gen_signm(n):
-	
+
 	n 		= int(n)
 	items	= [1] * n
 	sign_mat = []
@@ -58,7 +58,7 @@ def gen_product_matrices(n):
 			legal_matrices.append(np.dot(x,y))
 	return legal_matrices
 
-# ****************
+# ********************************
 def pairing(matli, matlj):
 	ri = np.transpose(matli)
 	rj = np.transpose(matlj)
@@ -116,18 +116,18 @@ def make_adinkras(k, legal_matrices):
 		return adinkra_list
 
 
-# ****************
-def makeall_adinkras(k):
+# ********************************
+def makeall_adinkras(k,n):
 
 	# print(len(test_list))
 	# return make_matrices(n, gen_product_matrices(n))
-	main_tetrad = make_adinkras(k, gen_product_matrices(k))
+	main_tetrad = make_adinkras(k,gen_product_matrices(n))
 	print(len(main_tetrad))
 
-# ****************
+# ********************************
 # Run main()
 start_time = time.time()
 
-makeall_adinkras(4)
+makeall_adinkras(4,4)
 print("-- Execution time --")
 print("---- %s seconds ----" % (time.time() - start_time))
