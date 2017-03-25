@@ -42,13 +42,6 @@ def calculate_vij_matrices(main_tetrad_list):
 
 	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
 
-	# print("							")
-	# print("Calculating Vij matrices")
-	# print("							")
-	vij_alphas 		= []
-	vij_betas  		= []
-	calc_check		= []
-
 	anomaly_switch  = 0
 	debug			= 0
 
@@ -57,11 +50,11 @@ def calculate_vij_matrices(main_tetrad_list):
 			print("# ********************************")
 			print("								     ")
 			print("Tetrad i: ", ti)
-			calculate_vijmat(teti)
+			calculate_vijmatset(teti)
 
 # ******************************************************************************
 # Creating an abstract Adinkra handler
-def calculate_vijmat(one_adinkra):
+def calculate_vijmatset(one_adinkra):
 
 	vij_possibilities 	= alphas_betas()
 
@@ -76,7 +69,8 @@ def calculate_vijmat(one_adinkra):
 		limat 		= teti[ijtup[0]]
 		ljmat 		= teti[ijtup[1]]
 		ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
-		ijstr		= ij_temp
+		""" Enhance appearance of ijstr - V_{ ij } """
+		ijstr		= "V_{" + ij_temp + "}"
 		tr_limat	= np.transpose(limat)
 		tr_ljmat	= np.transpose(ljmat)
 		""" Vij eq from 1601.00 (3.2) """
@@ -129,28 +123,20 @@ def calculate_vijmat(one_adinkra):
 						anomaly_switch = 1
 		tf_bool = 0
 
-	calc_check.append(vij_tempset)
+	return vij_tempset
 
-"""   Split this up into different func or keep later """
-		if alpha_temp:
-			vij_alphas.append(alpha_temp)
-		elif beta_temp:
-			vij_betas.append(beta_temp)
-		beta_temp 	= []
-		alpha_temp 	= []
-
-	print("*************$$$$$$$$$$$$$$$$$$ ")
-	print("Vij Matrix Coefficients Results:")
-	print("")
-	for mvals in calc_check:
-		if any(x for x in mvals if x[0].startswith('alpha')) and any(x for x in mvals if x[0].startswith('beta')):
-			print("MIXED ALPHA_BETA ERROR")
-			print(mvals)
-		else:
-			print(mvals)
-
-	print("Length Vij alphas adinkras:", len(vij_alphas))
-	print("Length Vij beta adikras:", len(vij_betas))
+	# print("*************$$$$$$$$$$$$$$$$$$ ")
+	# print("Vij Matrix Coefficients Results:")
+	# print("")
+	# for mvals in calc_check:
+	# 	if any(x for x in mvals if x[0].startswith('alpha')) and any(x for x in mvals if x[0].startswith('beta')):
+	# 		print("MIXED ALPHA_BETA ERROR")
+	# 		print(mvals)
+	# 	else:
+	# 		print(mvals)
+	#
+	# print("Length Vij alphas adinkras:", len(vij_alphas))
+	# print("Length Vij beta adikras:", len(vij_betas))
 
 # ********************************
 # Alpha and Beta matrices hardcoded

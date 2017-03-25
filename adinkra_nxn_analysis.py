@@ -15,3 +15,17 @@ import sys
 
 def main():
 	pass
+
+
+# ********************************
+def inverse_tally(matrix_list):
+	""" Function for finding all the inverse pairs in a i sized list of
+	sign permutation matrices """
+
+	temp	= []
+
+	for i, mat in enumerate(matrix_list):
+		imat_inv	= inv(mat)
+		for j, mat in enumerate(matrix_list):
+			if np.array_equal(imat_inv, mat):
+				temp.append((i,j)

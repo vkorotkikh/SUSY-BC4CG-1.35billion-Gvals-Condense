@@ -19,6 +19,7 @@ import itertools
 from numpy import array
 
 import vij_holoraumy_prime
+import vij_holoraumy_4x4
 
 # ********************************
 def main():
@@ -143,13 +144,30 @@ def assemble_tetrads():
 		print("Calculating Vij coefficients")
 		print("							")
 		print("Vierergruppe flop: ",vgrp)
-		print("Flip sets:", binaries_list)
-		vij_holoraumy_prime.calculate_vij_matrices(temp)
-		# print("Result above for",vgrp, "Vierergrupe")
-		# print("Flips", binaries_list)
-		# print("")
+		# print("Flip sets:", binaries_list)
+		# vij_holoraumy_prime.calculate_vij_matrices(temp)
+		calculate_vgruppe_sets(temp, binaries_list)
+
 		print("<<<>>>")
 		main_tetrad.extend(temp)
+
+
+# ********************************
+# Function for calling calculate_vij_matrices
+def calculate_vgruppe_sets(gruppe_adinkras, gruppe_binaries):
+	"""
+	Function for printing out the details of each Adinkra - Vij matrix
+	sixset calculation, including the binary representation and the
+	corresponding resulting Vij matrices and their elles/tilde elles
+	Coefficients.
+	"""
+
+	for i in range(0, len(gruppe_adinkras)):
+
+		print("")
+		print("Calculating Vij matrices for:", gruppe_binaries[i])
+		
+		vijset = vij_holoraumy_4x4.calculate_vijmatset(gruppe_adinkras[i])
 
 	# for vgrp, binaries_list in vierergruppe_tilde.items():
 	# 	vbasis	= vgruppe_sets[vgrp]
