@@ -150,6 +150,20 @@ def assemble_tetrads():
 		print("<<<>>>")
 		main_tetrad.extend(temp)
 
+	for vgrp, binaries_list in vierergruppe_tilde.items():
+		vbasis	= vgruppe_sets[vgrp]
+		temp 	= lmat_flipping(vbasis, binaries_list)
+		print("")
+		print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
+		print("Calculating Vij coefficients")
+		print("							")
+		print("Vierergruppe flop: ",vgrp)
+		# print("Flip sets:", binaries_list)
+		# vij_holoraumy_prime.calculate_vij_matrices(temp)
+		calculate_vgruppe_sets(temp, binaries_list)
+
+		print("<<<>>>")
+		main_tetrad.extend(temp)
 
 # ********************************
 # Function for calling calculate_vij_matrices
