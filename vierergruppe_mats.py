@@ -36,7 +36,6 @@ def vierergruppe_sets():
 	vp4 	= np.matrix([[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]])
 	vprime 	= [vp1, vp2, vp3, vp4]
 
-	print(vprime)
 
 	"""Elements for flopping bosonic fields"""
 	b12 	= np.matrix([[0,1,0,0], [1,0,0,0], [0,0,1,0], [0,0,0,1]])
