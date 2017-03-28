@@ -42,7 +42,6 @@ def calculate_vij_matrices(main_tetrad_list):
 
 	vij_possibilities = []
 	vij_possibilities = alpha_beta_4x4.illuminator_of_elfes()
-	vij_sixset 		= []
 
 	print("							")
 	print("Calculating Vij matrices")
@@ -148,7 +147,6 @@ def calculate_vij_matrices(main_tetrad_list):
 									print("Anomaly found:",i,j)
 									print(temp_mat)
 									anomaly_switch = 1
-
 					tf_bool = 0
 
 		vij_matrices.append(temp_vijmat)
