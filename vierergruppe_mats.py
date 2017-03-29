@@ -140,7 +140,7 @@ def assemble_tetrads():
 		temp 	= lmat_flipping(vbasis, binaries_list)
 		print("")
 		print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
-		print("Calculating Vij coefficients")
+		print("Calculating Vij elle coefficients")
 		print("							")
 		print("Vierergruppe flop: ",vgrp)
 		# print("Flip sets:", binaries_list)
@@ -150,20 +150,20 @@ def assemble_tetrads():
 		print("<<<>>>")
 		main_tetrad.extend(temp)
 
-	for vgrp, binaries_list in vierergruppe_tilde.items():
-		vbasis	= vgruppe_sets[vgrp]
-		temp 	= lmat_flipping(vbasis, binaries_list)
-		print("")
-		print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
-		print("Calculating Vij coefficients")
-		print("							")
-		print("Vierergruppe flop: ",vgrp)
-		# print("Flip sets:", binaries_list)
-		# vij_holoraumy_prime.calculate_vij_matrices(temp)
-		calculate_vgruppe_sets(temp, binaries_list)
-
-		print("<<<>>>")
-		main_tetrad.extend(temp)
+	# for vgrp, binaries_list in vierergruppe_tilde.items():
+	# 	vbasis	= vgruppe_sets[vgrp]
+	# 	temp 	= lmat_flipping(vbasis, binaries_list)
+	# 	print("")
+	# 	print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
+	# 	print("Calculating Vij tilde elle coefficients")
+	# 	print("							")
+	# 	print("Vierergruppe flop: ",vgrp)
+	# 	# print("Flip sets:", binaries_list)
+	# 	# vij_holoraumy_prime.calculate_vij_matrices(temp)
+	# 	calculate_vgruppe_sets(temp, binaries_list)
+	#
+	# 	print("<<<>>>")
+	# 	main_tetrad.extend(temp)
 
 # ********************************
 # Function for calling calculate_vij_matrices
@@ -178,11 +178,11 @@ def calculate_vgruppe_sets(gruppe_adinkras, gruppe_binaries):
 	for i in range(0, len(gruppe_adinkras)):
 
 		print("")
-		print("Calculating Vij matrices for binary flip:", gruppe_binaries[i])
+		print("Calculating for binary flip:", gruppe_binaries[i])
 
 		vijset = vij_holoraumy_4x4.calculate_vijmatset(gruppe_adinkras[i])
-		# print(vijset)
-		print(vijset[0], vijset[1], vijset[2], vijset[3], vijset[4], vijset[5])
+		for i in vijset:
+			print(i)
 
 	# for vgrp, binaries_list in vierergruppe_tilde.items():
 	# 	vbasis	= vgruppe_sets[vgrp]

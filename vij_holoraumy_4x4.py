@@ -72,7 +72,7 @@ def calculate_vijmatset(one_adinkra):
 		ljmat 		= one_adinkra[ijtup[1]]
 		ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
 		""" Enhance appearance of ijstr - V_{ ij } """
-		ijstr		= "V_{" + ij_temp + "}"
+		ijstr		= "~V_{" + ij_temp + "}"
 		tr_limat	= np.transpose(limat)
 		tr_ljmat	= np.transpose(ljmat)
 		""" Vij eq from 1601.00 (3.2) """
@@ -94,10 +94,14 @@ def calculate_vijmatset(one_adinkra):
 					tmp_str = "alpha^" + str((xi + 1))
 					# print(tmp_str)
 					# vij_tempset.append([tmp_str, ijstr, tmint])
-					vij_tempset.append([ijstr, tmint, tmp_str])
+					res_str	= ijstr + " = " + "1 * " + tmp_str
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_tempset.append(res_str)
 				elif xi >= 3:
 					tmp_str = "beta^" + str((xi - 2))
-					vij_tempset.append([ijstr, tmint, tmp_str])
+					res_str	= ijstr + " = " + "1 * " + tmp_str
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_tempset.append(res_str)
 			elif np.array_equal(temp_mat, ijx_neg):
 				tf_bool = 1
 				if debug:
@@ -108,11 +112,15 @@ def calculate_vijmatset(one_adinkra):
 				tmint = np.int(-1)
 				if xi < 3:
 					tmp_str = "alpha^" + str((xi + 1))
+					res_str	= ijstr + " = " + "-1 * " + tmp_str
 					# print(tmp_str)
-					vij_tempset.append([ijstr, tmint, tmp_str])
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_tempset.append(res_str)
 				elif xi >= 3:
 					tmp_str = "beta^" + str((xi - 2))
-					vij_tempset.append([ijstr, tmint, tmp_str])
+					res_str	= ijstr + " = " + "-1 * " + tmp_str
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_tempset.append(res_str)
 			else:
 				if tf_bool == 0 and xi >= 5:
 					if not(np.array_equal(temp_mat, ijx)) or not np.array_equal(temp_mat, ijx_neg):
@@ -136,6 +144,82 @@ def calculate_vijmatset(one_adinkra):
 	#
 	# print("Length Vij alphas adinkras:", len(vij_alphas))
 	# print("Length Vij beta adikras:", len(vij_betas))
+
+# ******************************************************************************
+# Creating an abstract Adinkra handler
+def calculate_vijmatset_nicely(one_adinkra):
+
+	vij_possibilities 	= alphas_betas()
+
+	debug			= 0
+
+	alpha_temp	= []
+	beta_temp   = []
+	vij_tempset = []
+	""" Store 6 Vij matrices in temp_vijmat"""
+	# temp_vijmat		= []
+	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
+
+	for ijtup in ij_indices:
+		limat 		= one_adinkra[ijtup[0]]
+		ljmat 		= one_adinkra[ijtup[1]]
+		ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
+		""" Enhance appearance of ijstr - V_{ ij } """
+		ijstr		= "V_{" + ij_temp + "}"
+		tr_limat	= np.transpose(limat)
+		tr_ljmat	= np.transpose(ljmat)
+		""" Vij eq from 1601.00 (3.2) """
+		temp_mat	= np.dot(tr_limat, ljmat) - np.dot(tr_ljmat, limat)
+		""" Compare against the 6 possible matrix solutions """
+		tf_bool = 0
+
+		for xi, ijx in enumerate(vij_possibilities):
+			ijx_neg = np.multiply(ijx, -1)
+			# print(xi)
+			if np.array_equal(temp_mat, ijx):
+				tf_bool = 1
+				if debug:
+					print("*************$$$$$$$$$$$$$$$$$$ ")
+					print("l-solution found:")
+					print(ijx)
+				tmint = np.int(1)
+				if xi < 3:
+					tmp_str = "alpha^" + str((xi + 1))
+					int_str	= "elle = 1"
+					# print(tmp_str)
+					vij_tempset.append([ijstr, int_str, tmp_str])
+				elif xi >= 3:
+					tmp_str = "beta^" + str((xi - 2))
+					int_str = "tilde~elle = 1"
+					vij_tempset.append([ijstr, int_str, tmp_str])
+			elif np.array_equal(temp_mat, ijx_neg):
+				tf_bool = 1
+				if debug:
+					print("*************$$$$$$$$$$$$$$$$$$ ")
+					print("l-solution found:")
+					print(ijx_neg)
+				# xint = (xi + 1) * ( -1)
+				tmint = np.int(-1)
+				if xi < 3:
+					tmp_str = "alpha^" + str((xi + 1))
+					int_str	= "elle = -1"
+					# print(tmp_str)
+					vij_tempset.append([ijstr, int_str, tmp_str])
+				elif xi >= 3:
+					tmp_str = "-beta^" + str((xi - 2))
+					# int_str = "tilde~elle = -1"
+					vij_tempset.append([ijstr, int_str, tmp_str])
+			else:
+				if tf_bool == 0 and xi >= 5:
+					if not(np.array_equal(temp_mat, ijx)) or not np.array_equal(temp_mat, ijx_neg):
+						print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
+						print("Anomaly found:",ijstr)
+						print(temp_mat)
+						anomaly_switch = 1
+		tf_bool = 0
+
+	return vij_tempset
+
 
 # ********************************
 # Alpha and Beta matrices hardcoded
