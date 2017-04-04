@@ -45,12 +45,11 @@ def vierergruppe_sets():
 	b132	= np.matrix([[0,1,0,0], [0,0,1,0], [1,0,0,0], [0,0,0,1]])
 
 	vgruppe	= 	{'()': vprime,
-				'(12)': [np.dot(i, b12) for i in vprime],
-				'(13)': [np.dot(i, b13) for i in vprime],
-				'(23)': [np.dot(i, b23) for i in vprime],
+				'(12)': [np.dot(b12, i) for i in vprime],
+				'(13)': [np.dot(b13, i) for i in vprime],
+				'(23)': [np.dot(b23, i) for i in vprime],
 				'(123)':[np.dot(b123, i) for i in vprime],
-				# '(123)':[np.dot(i, b123) for i in vprime],
-				'(132)':[np.dot(i, b132) for i in vprime]
+				'(132)':[np.dot(b132, i) for i in vprime]
 				}
 
 	return vgruppe
@@ -66,7 +65,8 @@ def binaries(bin_code):
 	for btuple in binaries_lt:
 		if bin_code == btuple[0]:
 			tarray = np.array(btuple[1])
-			return np.diag(tarray)
+			temp   = np.diag(tarray)
+			return np.asmatrix(temp)
 
 
 # ********************************
@@ -137,6 +137,7 @@ def assemble_tetrads():
 
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
+		print(vbasis)
 		temp 	= lmat_flipping(vbasis, binaries_list)
 		print("")
 		print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
@@ -206,8 +207,10 @@ def lmat_flipping(vbasis, binaries_list):
 	lmat_list		= []
 
 	for xbin in binaries_list:
+		print("xbin", xbin)
 		binmats = [binaries(b) for b in xbin]
-		temp	= [np.dot(vbasis[i], binmats[i]) for i in range(0, len(binmats))]
+		# temp	= [np.dot(vbasis[i], binmats[i]) for i in range(0, len(binmats))]
+		temp	= [np.dot(binmats[i], vbasis[i]) for i in range(0, len(binmats))]
 		lmat_list.append(temp)
 
 	return lmat_list

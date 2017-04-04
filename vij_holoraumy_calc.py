@@ -13,7 +13,7 @@
 
 
 # ******************************************************************************
-# Begin Imports
+# Library Imports
 import math
 import sys
 import numpy as np
