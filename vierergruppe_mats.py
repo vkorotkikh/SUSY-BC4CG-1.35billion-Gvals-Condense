@@ -8,7 +8,7 @@
 # Description:
 #
 # ******************************************************************************
-# Begin Imports
+# Library Imports
 
 import math
 import sys
@@ -37,6 +37,7 @@ def vierergruppe_sets():
 	vprime 	= [vp1, vp2, vp3, vp4]
 
 
+
 	"""Elements for flopping bosonic fields"""
 	b12 	= np.matrix([[0,1,0,0], [1,0,0,0], [0,0,1,0], [0,0,0,1]])
 	b13 	= np.matrix([[0,0,1,0], [0,1,0,0], [1,0,0,0], [0,0,0,1]])
@@ -53,6 +54,26 @@ def vierergruppe_sets():
 				}
 
 	return vgruppe
+
+#
+def test_p1():
+
+	l1	= np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0]])
+	l2  = np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [0, 0, -1, 0], [-1, 0, 0, 0]])
+	l3	= np.matrix([[0, 0, 1, 0], [-1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, -1]])
+	l4  = np.matrix([[0, 0, 0, -1], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, -1, 0]])
+
+# ********************************
+# Defining the Pizza slices
+def pieslices():
+
+	p1	= [np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0]]),
+			np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [1, 0, 0, 0]]),
+			np.matrix([[0, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 0, 0, 1], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0]])
+			]
+
+	p2	= [np.matrix([[1, 0, 0, 0], [0, 0, 0, 1], [0, 1, 0, 0], [0, 0, 1, 0]]),
 
 # ********************************
 # Defining the binary multiplication matrices
@@ -137,13 +158,12 @@ def assemble_tetrads():
 
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
-		print(vbasis)
-		temp 	= lmat_flipping(vbasis, binaries_list)
 		print("")
 		print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
 		print("Calculating Vij elle coefficients")
 		print("							")
 		print("Vierergruppe flop: ",vgrp)
+		temp 	= lmat_flipping(vbasis, binaries_list)
 		# print("Flip sets:", binaries_list)
 		# vij_holoraumy_prime.calculate_vij_matrices(temp)
 		calculate_vgruppe_sets(temp, binaries_list)
@@ -207,9 +227,8 @@ def lmat_flipping(vbasis, binaries_list):
 	lmat_list		= []
 
 	for xbin in binaries_list:
-		print("xbin", xbin)
+		print("Flip:", xbin)
 		binmats = [binaries(b) for b in xbin]
-		# temp	= [np.dot(vbasis[i], binmats[i]) for i in range(0, len(binmats))]
 		temp	= [np.dot(binmats[i], vbasis[i]) for i in range(0, len(binmats))]
 		lmat_list.append(temp)
 
