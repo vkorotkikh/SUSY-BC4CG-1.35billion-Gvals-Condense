@@ -24,40 +24,62 @@ import vij_holoraumy_4x4
 # ********************************
 def main():
 
-	assemble_tetrads()
+	elle_class_calc()
+
 
 # ********************************
-# Defining the six Vierergruppe representations
-def vierergruppe_sets():
+# Performing the coefficient calculation
+def elle_class_calc():
 
-	vp1 	= np.matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
-	vp2 	= np.matrix([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]])
-	vp3 	= np.matrix([[0, 0, 1, 0], [0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0]])
-	vp4 	= np.matrix([[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]])
-	vprime 	= [vp1, vp2, vp3, vp4]
+	pieslices	= pieslicing()
+	vflops		= vierergruppe_flops()
+
+	elle_bin	= flip_ellebin()
+
+	# for i in vflops:
+	for vset, flop_ops in vflops.items():
+		print(vset)
+		flip_ops	= elle_bin[vset]
+		print("Bin length", len(binaries))
+		for flip in flip_ops:
+			print("Specific flip:", flip)
+			for x in range(0, len(flop_ops)):
+				for pie in pieslices:
+					temp_flop	= colorspace_flop(pie, flop_ops[x])
+					temp_flip	= colorspace_flip(temp_flop, flip)
+				# temp_adink	= colorspace_flip(colorspace_flop(flop[x], pieslices), binaries[x])
 
 
+# ********************************
+# Defining the Vierergruppe representations for flop operations
+def vierergruppe_flops():
 
-	"""Elements for flopping bosonic fields"""
-	b12 	= np.matrix([[0,1,0,0], [1,0,0,0], [0,0,1,0], [0,0,0,1]])
-	b13 	= np.matrix([[0,0,1,0], [0,1,0,0], [1,0,0,0], [0,0,0,1]])
-	b23 	= np.matrix([[1,0,0,0], [0,0,1,0], [0,1,0,0], [0,0,0,1]])
-	b123	= np.matrix([[0,0,1,0], [1,0,0,0], [0,1,0,0], [0,0,0,1]])
-	b132	= np.matrix([[0,1,0,0], [0,0,1,0], [1,0,0,0], [0,0,0,1]])
+	vprime 	= [ "()", "(12)(34)", "(13)(24)", "(14)(23)" ]
+	# vprime	= [ "1234", "2143", "3412", "4321"]
+	vprime	= [ [1,2,3,4], [2,1,4,3], [3,4,1,2], [4,3,2,1] ]
 
-	vgruppe	= 	{'()': vprime,
-				'(12)': [np.dot(b12, i) for i in vprime],
-				'(13)': [np.dot(b13, i) for i in vprime],
-				'(23)': [np.dot(b23, i) for i in vprime],
-				'(123)':[np.dot(b123, i) for i in vprime],
-				'(132)':[np.dot(b132, i) for i in vprime]
+
+	vgrpv 		= [ ("()", [1,2,3,4]), ("(12)(34)", [2,1,4,3]),
+					("13)(24)", [3,4,1,2]), ("(14)(23)", [4,3,2,1])]
+
+	vgrp12v		= [ ("(12)", [2,1,3,4]), ("(34)", [1,2,4,3]),
+					("(1324)", [3,4,2,1]), ("(1423)", [4,3,1,2]) ]
+
+	vgrp13v		= [ ("(13)", [3,2,1,4]), ("(1234)", [2,3,4,1]),
+					("(24)", [1,4,3,2]), ("(1432)", [4,1,2,3])	]
+
+	vgruppe	= 	{
+				'()': vgrpv,
+				'(12)': vgrp12v,
+				# '(13)': vgrp13v
 				}
-
+	# return [ vgrpv, vgrp12v, vgrp13v ]
 	return vgruppe
+
 
 # ********************************
 # Defining the Pizza slices
-def pieslices():
+def pieslicing():
 
 	p1	= [np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0]]),
 			np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [1, 0, 0, 0]]),
@@ -70,6 +92,39 @@ def pieslices():
 			np.matrix([[0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 1], [1, 0, 0, 0]]),
 			np.matrix([[0, 0, 0, 1], [1, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 0]])
 			]
+
+	""" Just one pie piece for now """
+	return [ p1 ]
+	# return [p1, p2]
+
+
+# ********************************
+# Perform flop operation over Adinkra color space
+def colorspace_flop(adinkra, flop_op):
+	print("Flop", flop_op, flop_op[1])
+	print("Pie Adinka")
+	print(adinkra)
+	print("")
+
+	new_adinkra	= [ adinkra[(ind - 1)] for ind in flop_op[1] ]
+
+	test_adinkra	= []
+	for ind in flop_op[1]:
+		test_adinkra.append(adinkra[(ind - 1)])
+
+	if new_adinkra == test_adinkra:
+		print("True")
+
+	return new_adinkra
+
+
+# ********************************
+# Perform flip operation over Adinkra color space
+def colorspace_flip():
+
+	pass
+
+
 
 # ********************************
 # Defining the binary multiplication matrices
@@ -88,9 +143,10 @@ def binaries(bin_code):
 
 # ********************************
 # Defining the elle binary representations for the Vierergruppe
-def vgrp_ellebin():
+def flip_ellebin():
 
 	vgrp_elle			= {}
+
 	vgrp_elle['()']		= [[14,8,2,4], [2,4,14,8], [4,2,8,14],[8,14,4,2],
 							[6,0,10,12], [10,12,6,0], [12,10,0,6], [0,6,12,10]]
 
@@ -114,7 +170,7 @@ def vgrp_ellebin():
 
 # ********************************
 # Defining the tilde-elle binary representations for the Vierergruppe
-def vgrp_tildebin():
+def flip_tildebin():
 
 	vgrp_tilde			= {}
 
@@ -149,8 +205,8 @@ def assemble_tetrads():
 	main_tetrad			= []
 
 	vgruppe_sets		= vierergruppe_sets()
-	vierergruppe_elle	= vgrp_ellebin()
-	vierergruppe_tilde	= vgrp_tildebin()
+	vierergruppe_elle	= flip_ellebin()
+	vierergruppe_tilde	= flip_tildebin()
 
 	for vgrp, binaries_list in vierergruppe_elle.items():
 		vbasis	= vgruppe_sets[vgrp]
@@ -181,6 +237,33 @@ def assemble_tetrads():
 	#
 	# 	print("<<<>>>")
 	# 	main_tetrad.extend(temp)
+
+# ********************************
+# Defining the six Vierergruppe representations
+def vierergruppe_sets():
+
+	vp1 	= np.matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
+	vp2 	= np.matrix([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]])
+	vp3 	= np.matrix([[0, 0, 1, 0], [0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0]])
+	vp4 	= np.matrix([[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]])
+	vprime 	= [vp1, vp2, vp3, vp4]
+
+	"""Elements for flopping bosonic fields"""
+	b12 	= np.matrix([[0,1,0,0], [1,0,0,0], [0,0,1,0], [0,0,0,1]])
+	b13 	= np.matrix([[0,0,1,0], [0,1,0,0], [1,0,0,0], [0,0,0,1]])
+	b23 	= np.matrix([[1,0,0,0], [0,0,1,0], [0,1,0,0], [0,0,0,1]])
+	b123	= np.matrix([[0,0,1,0], [1,0,0,0], [0,1,0,0], [0,0,0,1]])
+	b132	= np.matrix([[0,1,0,0], [0,0,1,0], [1,0,0,0], [0,0,0,1]])
+
+	vgruppe	= 	{'()': vprime,
+				'(12)': [np.dot(b12, i) for i in vprime],
+				'(13)': [np.dot(b13, i) for i in vprime],
+				'(23)': [np.dot(b23, i) for i in vprime],
+				'(123)':[np.dot(b123, i) for i in vprime],
+				'(132)':[np.dot(b132, i) for i in vprime]
+				}
+
+	return vgruppe
 
 # ********************************
 # Function for calling calculate_vij_matrices
@@ -229,6 +312,9 @@ def lmat_flipping(vbasis, binaries_list):
 		lmat_list.append(temp)
 
 	return lmat_list
+
+
+
 
 # ********************************
 # Alpha and Beta matrices hardcoded
