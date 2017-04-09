@@ -38,15 +38,18 @@ def elle_class_calc():
 
 	# for i in vflops:
 	for vset, flop_ops in vflops.items():
-		print(vset)
-		flip_ops	= elle_bin[vset]
-		print("Bin length", len(binaries))
-		for flip in flip_ops:
-			print("Specific flip:", flip)
+		print(vset,"V")
+		vset_flips	= elle_bin[vset]
+		print("Bin length", len(vset_flips))
+		print("Flips:", vset_flips)
+		print("")
+		for flip_ops in vset_flips:
 			for x in range(0, len(flop_ops)):
+				print("Flop x:", flop_ops[x], "Flip x:", flip_ops[x])
 				for pie in pieslices:
 					temp_flop	= colorspace_flop(pie, flop_ops[x])
-					temp_flip	= colorspace_flip(temp_flop, flip)
+					temp_flip	= colorspace_flip(temp_flop, binaries(flip_ops[x]))
+					vijset 		= vij_holoraumy_4x4.calculate_vijmatset(temp_flip)
 				# temp_adink	= colorspace_flip(colorspace_flop(flop[x], pieslices), binaries[x])
 
 
@@ -94,36 +97,39 @@ def pieslicing():
 			]
 
 	""" Just one pie piece for now """
-	return [ p1 ]
-	# return [p1, p2]
+	# return [ p1 ]
+	return [p1, p2]
 
 
 # ********************************
 # Perform flop operation over Adinkra color space
 def colorspace_flop(adinkra, flop_op):
-	print("Flop", flop_op, flop_op[1])
-	print("Pie Adinka")
+	print("Flop Operation", flop_op[1])
+	print("Adinkra")
 	print(adinkra)
 	print("")
 
 	new_adinkra	= [ adinkra[(ind - 1)] for ind in flop_op[1] ]
 
-	test_adinkra	= []
-	for ind in flop_op[1]:
-		test_adinkra.append(adinkra[(ind - 1)])
-
-	if new_adinkra == test_adinkra:
-		print("True")
+	# test_adinkra	= []
+	# for ind in flop_op[1]:
+	# 	test_adinkra.append(adinkra[(ind - 1)])
 
 	return new_adinkra
 
 
 # ********************************
 # Perform flip operation over Adinkra color space
-def colorspace_flip():
+def colorspace_flip(adinkra, flip_op):
 
-	pass
+	print("Flip Operation", flip_op)
+	new_adinkra	= []
+	new_adinkra	= [(adinkra[i] * flip_op[i]) for i in range(0, len(adinkra))]
 
+	print("Flipped Adinkra")
+	print(new_adinkra)
+	print("")
+	return new_adinkra
 
 
 # ********************************
@@ -136,10 +142,9 @@ def binaries(bin_code):
 
 	for btuple in binaries_lt:
 		if bin_code == btuple[0]:
-			tarray = np.array(btuple[1])
-			temp   = np.diag(tarray)
-			return np.asmatrix(temp)
-
+			# tarray = np.array(btuple[1])
+			# temp   = np.diag(tarray)
+			return btuple[1]
 
 # ********************************
 # Defining the elle binary representations for the Vierergruppe
