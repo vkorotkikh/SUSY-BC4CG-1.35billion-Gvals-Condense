@@ -50,6 +50,7 @@ def elle_class_calc():
 					temp_flop	= colorspace_flop(pie, flop_ops[x])
 					temp_flip	= colorspace_flip(temp_flop, binaries(flip_ops[x]))
 					vijset 		= vij_holoraumy_4x4.calculate_vijmatset(temp_flip)
+					print(vijset)
 				# temp_adink	= colorspace_flip(colorspace_flop(flop[x], pieslices), binaries[x])
 
 
@@ -79,10 +80,41 @@ def vierergruppe_flops():
 	# return [ vgrpv, vgrp12v, vgrp13v ]
 	return vgruppe
 
+# ********************************
+# cis seed pie slices - elle coefficients
+def cis_seed_pies():
+
+	p1plus	= 	[	[0,12,10,6], [2,14,8,4], [4,8,14,2], [6,10,12,0],
+					[8,4,2,12], [10,6,0,12], [12,0,6,10], [14,2,4,8]
+				]
+	p2plus	=	[	[0,6,12,10], [2,4,14,8], [4,2,8,14], [6,0,10,12],
+					[8,14,4,2], [10,12,6,0], [12,10,0,6], [14,8,2,4]
+				]
+	p3plus	=	[	[12,0,10,6], [14,2,8,4], [8,4,14,2], [10,6,12,0],
+					[4,8,2,14],	[6,10,0,12], [0,12,6,10], [2,14,4,8]
+				]
+	p4plus	=	[	[0,10,12,6], [2,8,14,4], [4,14,8,2], [6,12,10,0],
+					[8,2,4,14], [10,0,6,12], [12,6,0,10], [14,4,2,8]
+				]
+	p5plus	=	[	[0,6,10,12], [2,4,8,14], [4,2,14,8], [6,0,12,10],
+					[8,14,2,4], [10,12,0,6], [12,10,6,0], [14,8,4,2]
+				]
+	p6plus	=	[	[0,10,6,12], [2,8,4,14], [4,14,2,8], [6,12,0,10],
+					[8,2,14,4], [10,0,12,6], [12,6,10,0], [14,4,8,2]
+				]
+
+	cis_promotions	=	[p1plus, p2plus, p3plus, p4plus, p5plus, p6plus]
+
+	""" Import pie slice definitions before applying the binaries	"""
+	pieref	=	pieslices()
+
+	for i in range(0, len(cis_promotions)):
+		promo_pie	=	pieref[i]
+		temp
 
 # ********************************
 # Defining the Pizza slices
-def pieslicing():
+def pieslices():
 
 	p1	= [np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0]]),
 			np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [1, 0, 0, 0]]),
@@ -90,15 +122,42 @@ def pieslicing():
 			np.matrix([[0, 0, 0, 1], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0]])
 			]
 
+
+	p1neg	=	[	[0,10,6,12], [2,8,4,14], [4,14,2,8], [6,12,0,10]
+					[8,2,14,4], [10,0,12,6], [12,6,10,0], [14,4,8,2]
+				]
+
 	p2	= [np.matrix([[1, 0, 0, 0], [0, 0, 0, 1], [0, 1, 0, 0], [0, 0, 1, 0]]),
 			np.matrix([[0, 1, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1]]),
 			np.matrix([[0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 1], [1, 0, 0, 0]]),
 			np.matrix([[0, 0, 0, 1], [1, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 0]])
 			]
 
+
+	p2neg	=	[	[0,12,10,6], [2,14,8,4], [4,8,14,2], [6,10,12,0],
+					[8,4,2,14], [10,6,0,12], [12,0,6,10], [14,2,4,8]
+				]
+
+	p3plus	=	[	[12,0,10,6], [14,2,8,4], [8,4,14,2], [10,6,12,0],
+					[4,8,2,14],	[6,10,0,12], [0,12,6,10], [2,14,4,8]
+				]
+
+	p3neg	=	[	[6,0,12,10], [4,2,14,8], [2,4,8,14], [0,6,10,12],
+					[14,8,4,2], [12,10,6,0], [10,12,0,6], [8,14,2,4]
+				]
+
+	p4plus	=	[	[0,10,12,6], [2,8,14,4], [4,14,8,2], [6,12,10,0],
+					[8,2,4,14], [10,0,6,12], [12,6,0,10], [14,4,2,8]
+				]
+
+	p4neg	=	[	[0,12,6,10], [2,4,14,8], [4,8,2,14], [6,10,0,12],
+					[8,4,14,2],	[10,6,12,0], [12,0,10,6], [14,2,8,4],
+				]
+
+
 	""" Just one pie piece for now """
 	# return [ p1 ]
-	return [p1, p2]
+	return [p1 p2]
 
 
 # ********************************
@@ -124,7 +183,18 @@ def colorspace_flip(adinkra, flip_op):
 
 	print("Flip Operation", flip_op)
 	new_adinkra	= []
-	new_adinkra	= [(adinkra[i] * flip_op[i]) for i in range(0, len(adinkra))]
+
+	""" Weird bug here if you do the algorith this way """
+	# new_adinkra	= []
+
+	# for i in range(0, len(adinkra)):
+	# 	tmat 		= adinkra[i]
+	# 	tmat[1:]	= tmat[1:] * flip_op[i]
+	# 	new_adinkra.append(tmat)
+	for i in range(0, len(flip_op)):
+		# new_adinkra[i][1:]	= new_adinkra[i][1:] * flip_op[i]
+		temp_mat	= adinkra[i] * flip_op[i]
+		new_adinkra.append(temp_mat)
 
 	print("Flipped Adinkra")
 	print(new_adinkra)
@@ -317,8 +387,6 @@ def lmat_flipping(vbasis, binaries_list):
 		lmat_list.append(temp)
 
 	return lmat_list
-
-
 
 
 # ********************************
