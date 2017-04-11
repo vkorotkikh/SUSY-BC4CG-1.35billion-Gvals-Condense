@@ -32,11 +32,19 @@ def main():
 def elle_class_calc():
 
 	pieslices	= pieslicing()
-	vflops		= vierergruppe_flops()
 
+	vflops		= vierergruppe_flops()
 	elle_bin	= flip_ellebin()
 
 	# for i in vflops:
+
+	for vset in vflops:
+		print(vset[0], "V set")
+
+		temp_flips	= flip_ellebin(vset[0])
+
+
+
 	for vset, flop_ops in vflops.items():
 		print(vset,"V")
 		vset_flips	= elle_bin[vset]
@@ -72,18 +80,24 @@ def vierergruppe_flops():
 	vgrp13v		= [ ("(13)", [3,2,1,4]), ("(1234)", [2,3,4,1]),
 					("(24)", [1,4,3,2]), ("(1432)", [4,1,2,3])	]
 
-	vgruppe	= 	{
-				'()': vgrpv,
-				'(12)': vgrp12v,
-				# '(13)': vgrp13v
-				}
-	# return [ vgrpv, vgrp12v, vgrp13v ]
+	# vgruppe	= 	{
+	# 			'()': vgrpv,
+	# 			'(12)': vgrp12v,
+	# 			'(13)': vgrp13v
+	# 			}
+
+	vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v) ]
+
 	return vgruppe
 
 # ********************************
 # cis seed pie slices - elle coefficients
-def cis_seed_pies():
+def cis_seed_pies(pie_index):
 
+	""" Defining the words (aka collection of four boolean factors) that
+		when applied to corresponding Pie slices "promote" the Pie slice
+		to Adinkras
+	"""
 	p1plus	= 	[	[0,12,10,6], [2,14,8,4], [4,8,14,2], [6,10,12,0],
 					[8,4,2,12], [10,6,0,12], [12,0,6,10], [14,2,4,8]
 				]
@@ -106,58 +120,100 @@ def cis_seed_pies():
 	cis_promotions	=	[p1plus, p2plus, p3plus, p4plus, p5plus, p6plus]
 
 	""" Import pie slice definitions before applying the binaries	"""
-	pieref	=	pieslices()
+	# pie_slices	=	pieslices()
 
-	for i in range(0, len(cis_promotions)):
-		promo_pie	=	pieref[i]
-		temp
+	# for i in range(0, len(cis_promotions)):
+
+	pslice			=	pieslices(pie_index)
+	pslice_words	=	cis_promotions[pie_index]
+
+	""" List to hold all the promoted Pie slice Adinkras using corresponding
+		words """
+	 		=	[]
+	for word in pslice_words:
+		temp_adinkra	=	[]
+		bool_list		=	[]
+		for bins in word:
+			bin_list 	= binaries(bins)
+			temp		= np.array(bin_list)
+			bool_mat	= np.diag(temp)
+			bool_list.append(bool_mat)
+		temp_adinkra	= [(np.dot(bool_list[x],pslice[x])) for x in range(0,len(pslice))]
+		# pie_adinkras.append(temp_adinkra)
+		pie_adinkras.append(temp_adinkra)
+
+	return pie_adinkras
 
 # ********************************
-# Defining the Pizza slices
-def pieslices():
+# trans seed pie slices - tilde~elle coefficients
+def trans_seed_pies(pie_index):
 
-	p1	= [np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0]]),
-			np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [1, 0, 0, 0]]),
-			np.matrix([[0, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1]]),
-			np.matrix([[0, 0, 0, 1], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0]])
-			]
-
-
-	p1neg	=	[	[0,10,6,12], [2,8,4,14], [4,14,2,8], [6,12,0,10]
+	""" Defining the words (aka collection of four boolean factors) that
+		when applied to corresponding Pie slices "promote" the Pie slice
+		to Adinkras
+	"""
+	p1neg	=	[	[0,10,6,12], [2,8,4,14], [4,14,2,8], [6,12,0,10],
 					[8,2,14,4], [10,0,12,6], [12,6,10,0], [14,4,8,2]
 				]
 
-	p2	= [np.matrix([[1, 0, 0, 0], [0, 0, 0, 1], [0, 1, 0, 0], [0, 0, 1, 0]]),
-			np.matrix([[0, 1, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1]]),
-			np.matrix([[0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 1], [1, 0, 0, 0]]),
-			np.matrix([[0, 0, 0, 1], [1, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 0]])
-			]
-
-
 	p2neg	=	[	[0,12,10,6], [2,14,8,4], [4,8,14,2], [6,10,12,0],
 					[8,4,2,14], [10,6,0,12], [12,0,6,10], [14,2,4,8]
-				]
-
-	p3plus	=	[	[12,0,10,6], [14,2,8,4], [8,4,14,2], [10,6,12,0],
-					[4,8,2,14],	[6,10,0,12], [0,12,6,10], [2,14,4,8]
 				]
 
 	p3neg	=	[	[6,0,12,10], [4,2,14,8], [2,4,8,14], [0,6,10,12],
 					[14,8,4,2], [12,10,6,0], [10,12,0,6], [8,14,2,4]
 				]
 
-	p4plus	=	[	[0,10,12,6], [2,8,14,4], [4,14,8,2], [6,12,10,0],
-					[8,2,4,14], [10,0,6,12], [12,6,0,10], [14,4,2,8]
+	p4neg	=	[	[0,12,6,10], [2,4,14,8], [4,8,2,14], [6,10,0,12],
+					[8,4,14,2],	[10,6,12,0], [12,0,10,6], [14,2,8,4]
 				]
 
-	p4neg	=	[	[0,12,6,10], [2,4,14,8], [4,8,2,14], [6,10,0,12],
-					[8,4,14,2],	[10,6,12,0], [12,0,10,6], [14,2,8,4],
-				]
+# ********************************
+# Defining the Pizza slices
+def pieslices(pie_index):
+
+	p1	= 	[np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0]]),
+			np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [1, 0, 0, 0]]),
+			np.matrix([[0, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 0, 0, 1], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0]])
+			]
+
+	p2	= 	[np.matrix([[1, 0, 0, 0], [0, 0, 0, 1], [0, 1, 0, 0], [0, 0, 1, 0]]),
+			np.matrix([[0, 1, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 1], [1, 0, 0, 0]]),
+			np.matrix([[0, 0, 0, 1], [1, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 0]])
+			]
+
+	p3	=	[np.matrix([[1, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 1, 0, 0], [0, 0, 0, 1], [1, 0, 0, 0], [0, 0, 1, 0]]),
+			np.matrix([[0, 0, 1, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 1, 0, 0]]),
+			np.matrix([[0, 0, 0, 1], [0, 1, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0]])
+			]
+
+	p4	=	[np.matrix([[1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0]]),
+			np.matrix([[0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [1, 0, 0, 0]]),
+			np.matrix([[0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0]])
+			]
+
+	p5	=	[np.matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]),
+			np.matrix([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 0, 1, 0], [0, 0, 0, 1], [0, 1, 0, 0], [1, 0, 0, 0]]),
+			np.matrix([[0, 0, 0, 1], [0, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0]])
+			]
+
+	p6	=	[np.matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]),
+			np.matrix([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]),
+			np.matrix([[0, 0, 1, 0], [0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0]]),
+			np.matrix([[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]])
+			]
+
+	pie_complete = [ p1, p2, p3, p4, p5, p6 ]
 
 
 	""" Just one pie piece for now """
 	# return [ p1 ]
-	return [p1 p2]
+	return pie_complete[pie_index]
 
 
 # ********************************
@@ -203,7 +259,7 @@ def colorspace_flip(adinkra, flip_op):
 
 
 # ********************************
-# Defining the binary multiplication matrices
+# Defining the binary multiplication arrays
 def binaries(bin_code):
 
 	binaries_lt	= [(0, [1,1,1,1]), (2, [1,-1,1,1]), (4, [1,1,-1,1]),
@@ -218,7 +274,7 @@ def binaries(bin_code):
 
 # ********************************
 # Defining the elle binary representations for the Vierergruppe
-def flip_ellebin():
+def flip_ellebin(flip_set):
 
 	vgrp_elle			= {}
 
@@ -240,7 +296,7 @@ def flip_ellebin():
 	vgrp_elle['(132)']	= [[14,2,4,8], [2,14,8,4], [4,8,14,2], [8,4,2,14],
 							[6,10,12,0], [10,6,0,12], [12,0,6,10], [0,12,10,6]]
 
-	return vgrp_elle
+	return vgrp_elle[flip_set]
 
 
 # ********************************
