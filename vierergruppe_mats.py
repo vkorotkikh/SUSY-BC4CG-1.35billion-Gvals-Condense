@@ -31,35 +31,72 @@ def main():
 # Performing the coefficient calculation
 def elle_class_calc():
 
-	pieslices	= pieslicing()
 
 	vflops		= vierergruppe_flops()
-	elle_bin	= flip_ellebin()
-
+	# elle_bin	= flip_ellebin()
 	# for i in vflops:
 
 	for vset in vflops:
-		print(vset[0], "V set")
+		# print(vset[0], "V set")
 
-		temp_flips	= flip_ellebin(vset[0])
-
-
-
-	for vset, flop_ops in vflops.items():
-		print(vset,"V")
-		vset_flips	= elle_bin[vset]
-		print("Bin length", len(vset_flips))
-		print("Flips:", vset_flips)
+		# temp_flips	= flip_ellebin(vset[0])
+		print("Vierergruppe:", vset[0],"V")
+		print("Flop Ops:", vset[1])
 		print("")
-		for flip_ops in vset_flips:
-			for x in range(0, len(flop_ops)):
-				print("Flop x:", flop_ops[x], "Flip x:", flip_ops[x])
-				for pie in pieslices:
-					temp_flop	= colorspace_flop(pie, flop_ops[x])
-					temp_flip	= colorspace_flip(temp_flop, binaries(flip_ops[x]))
-					vijset 		= vij_holoraumy_4x4.calculate_vijmatset(temp_flip)
-					print(vijset)
-				# temp_adink	= colorspace_flip(colorspace_flop(flop[x], pieslices), binaries[x])
+		# print("Flips:",temp_flips)
+		# print("")
+		""" For every populated cis Pie slice - 8 Adinkras per slice"""
+		for i in range(0, 6):
+			temp_pie	= cis_seed_pies(i)
+			# print("Pie i:", i)
+			""" temp_flips contains a Group of flips associated with a Vierergruppe
+			so 8 sets of 4. """
+			temp_flips	= flip_ellebin(vset[0])
+			print("Flips:",temp_flips)
+			print("")
+			""" For i Adinkra out of selected Pie slice	"""
+			for itet, adinkra in enumerate(temp_pie):
+
+				# for x in range(0, len(vset[1])):
+				# 	flop_tup 	= vset[1][x]
+				# 	flop_op		= vset[1][x][1]
+				# 	# print("vset[1]:", flop_tup)
+				#
+				# 	for flip_ops in temp_flips:
+				# 		assoc_flip	=	flip_ops[x]
+				# 		print("")
+				# 		print("Pie i", i, "Adinkra", itet)
+				# 		print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]))
+				# 		temp_flop	=	colorspace_flop(adinkra, flop_op)
+				# 		temp_flip	=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
+				# 		vijset		=	vij_holoraumy_4x4.calculate_vijmatset(temp_flip)
+				# 		print(vijset)
+				for flip_ops in temp_flips:
+					for x in range(0, len(vset[1])):
+						flop_tup 	=	vset[1][x]
+						flop_op		=	vset[1][x][1]
+						assoc_flip	=	flip_ops[x]
+						print("")
+						print("Pie i", i, "Adinkra", itet)
+						print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]))
+						temp_flop		=	colorspace_flop(adinkra, flop_op)
+						temp_flip		=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
+						vijset, newrep	=	vij_holoraumy_4x4.calculate_vijmatset_nicely(temp_flip)
+						print(vijset)
+	# for vset, flop_ops in vflops.items():
+	# 	print(vset,"V")
+	# 	vset_flips	= elle_bin[vset]
+	# 	print("Bin length", len(vset_flips))
+	# 	print("Flips:", vset_flips)
+	# 	print("")
+	# 	for flip_ops in vset_flips:
+	# 		for x in range(0, len(flop_ops)):
+	# 			print("Flop x:", flop_ops[x], "Flip x:", flip_ops[x])
+	# 			for pie in pieslices:
+	# 				temp_flop	= colorspace_flop(pie, flop_ops[x])
+	# 				temp_flip	= colorspace_flip(temp_flop, binaries(flip_ops[x]))
+	# 				vijset 		= vij_holoraumy_4x4.calculate_vijmatset(temp_flip)
+	# 				print(vijset)
 
 
 # ********************************
@@ -86,7 +123,8 @@ def vierergruppe_flops():
 	# 			'(13)': vgrp13v
 	# 			}
 
-	vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v) ]
+	# vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v) ]
+	vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v)]
 
 	return vgruppe
 
@@ -99,7 +137,7 @@ def cis_seed_pies(pie_index):
 		to Adinkras
 	"""
 	p1plus	= 	[	[0,12,10,6], [2,14,8,4], [4,8,14,2], [6,10,12,0],
-					[8,4,2,12], [10,6,0,12], [12,0,6,10], [14,2,4,8]
+					[8,4,2,14], [10,6,0,12], [12,0,6,10], [14,2,4,8]
 				]
 	p2plus	=	[	[0,6,12,10], [2,4,14,8], [4,2,8,14], [6,0,10,12],
 					[8,14,4,2], [10,12,6,0], [12,10,0,6], [14,8,2,4]
@@ -129,7 +167,7 @@ def cis_seed_pies(pie_index):
 
 	""" List to hold all the promoted Pie slice Adinkras using corresponding
 		words """
-	 		=	[]
+	pie_adinkras	=	[]
 	for word in pslice_words:
 		temp_adinkra	=	[]
 		bool_list		=	[]
@@ -219,16 +257,11 @@ def pieslices(pie_index):
 # ********************************
 # Perform flop operation over Adinkra color space
 def colorspace_flop(adinkra, flop_op):
-	print("Flop Operation", flop_op[1])
-	print("Adinkra")
-	print(adinkra)
-	print("")
-
-	new_adinkra	= [ adinkra[(ind - 1)] for ind in flop_op[1] ]
-
-	# test_adinkra	= []
-	# for ind in flop_op[1]:
-	# 	test_adinkra.append(adinkra[(ind - 1)])
+	# print("Flop Operation", flop_op)
+	# print("Adinkra")
+	# print(adinkra)
+	# print("")
+	new_adinkra	= [ adinkra[(ind - 1)] for ind in flop_op]
 
 	return new_adinkra
 

@@ -153,9 +153,8 @@ def calculate_vijmatset_nicely(one_adinkra):
 
 	debug			= 0
 
-	alpha_temp	= []
-	beta_temp   = []
-	vij_tempset = []
+	vij_detail	=	[]
+	vij_tempset = 	[]
 	""" Store 6 Vij matrices in temp_vijmat"""
 	# temp_vijmat		= []
 	ij_indices			= list(itertools.combinations([0,1,2,3], 2))
@@ -165,7 +164,8 @@ def calculate_vijmatset_nicely(one_adinkra):
 		ljmat 		= one_adinkra[ijtup[1]]
 		ij_temp		= str(ijtup[0] + 1) + str(ijtup[1] + 1)
 		""" Enhance appearance of ijstr - V_{ ij } """
-		ijstr		= "V_{" + ij_temp + "}"
+		ijstr		= "~V_{" + ij_temp + "}"
+
 		tr_limat	= np.transpose(limat)
 		tr_ljmat	= np.transpose(ljmat)
 		""" Vij eq from 1601.00 (3.2) """
@@ -185,13 +185,18 @@ def calculate_vijmatset_nicely(one_adinkra):
 				tmint = np.int(1)
 				if xi < 3:
 					tmp_str = "alpha^" + str((xi + 1))
-					int_str	= "elle = 1"
 					# print(tmp_str)
-					vij_tempset.append([ijstr, int_str, tmp_str])
+					# vij_tempset.append([tmp_str, ijstr, tmint])
+					res_str	= ijstr + " = " + "1 * " + tmp_str
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_detail.append([ij_temp, tmint, tmp_str])
+					vij_tempset.append(res_str)
 				elif xi >= 3:
 					tmp_str = "beta^" + str((xi - 2))
-					int_str = "tilde~elle = 1"
-					vij_tempset.append([ijstr, int_str, tmp_str])
+					res_str	= ijstr + " = " + "1 * " + tmp_str
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_detail.append([ij_temp, tmint, tmp_str])
+					vij_tempset.append(res_str)
 			elif np.array_equal(temp_mat, ijx_neg):
 				tf_bool = 1
 				if debug:
@@ -202,13 +207,17 @@ def calculate_vijmatset_nicely(one_adinkra):
 				tmint = np.int(-1)
 				if xi < 3:
 					tmp_str = "alpha^" + str((xi + 1))
-					int_str	= "elle = -1"
+					res_str	= ijstr + " = " + "-1 * " + tmp_str
 					# print(tmp_str)
-					vij_tempset.append([ijstr, int_str, tmp_str])
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_detail.append([ij_temp, tmint, tmp_str])
+					vij_tempset.append(res_str)
 				elif xi >= 3:
-					tmp_str = "-beta^" + str((xi - 2))
-					# int_str = "tilde~elle = -1"
-					vij_tempset.append([ijstr, int_str, tmp_str])
+					tmp_str = "beta^" + str((xi - 2))
+					res_str	= ijstr + " = " + "-1 * " + tmp_str
+					# vij_tempset.append([tmint, ijstr, tmp_str])
+					vij_detail.append([ij_temp, tmint, tmp_str])
+					vij_tempset.append(res_str)
 			else:
 				if tf_bool == 0 and xi >= 5:
 					if not(np.array_equal(temp_mat, ijx)) or not np.array_equal(temp_mat, ijx_neg):
@@ -218,7 +227,49 @@ def calculate_vijmatset_nicely(one_adinkra):
 						anomaly_switch = 1
 		tf_bool = 0
 
-	return vij_tempset
+	repackaging	=	[(vij_detail[0], vij_detail[5]), (vij_detail[1], vij_detail[4]), (vij_detail[2], vij_detail[3])]
+	end_pack	=	[ "", "", ""]
+
+	for itup, vijtup in enumerate(repackaging):
+		p1 		= vijtup[0]
+		p2 		= vijtup[1]
+		ind_pos	= int(p1[2][-1:]) - 1
+		if itup == 0:
+			if p1[1] == p2[1]:
+				if p1[1] < 0:
+					end_pack[ind_pos] = "alpha^2"
+				elif p1[1] > 0:
+					end_pack[ind_pos] = "-alpha^2"
+			elif p1[1] != p2[1]:
+				if p1[1] > 0:
+					end_pack[ind_pos] = "-beta^3"
+				elif p1[1] < 0:
+					end_pack[ind_pos] = "beta^3"
+		if itup == 1:
+			if p1[1] != p2[1]:
+				if p1[1] < 0 and p2[1] > 0:
+					end_pack[ind_pos] = "alpha^3"
+				elif p1[1] > 0 and p2[1] < 0:
+					end_pack[ind_pos] = "-alpha^3"
+			elif p1[1] == p2[1]:
+				if p1[1] < 0 and p2[1] < 0:
+					end_pack[ind_pos] = "beta^2"
+				elif p1[1] > 0 and p2[1] > 0:
+					end_pack[ind_pos] = "-beta^2"
+		if itup == 2:
+			if p1[1] == p2[1]:
+				if p1[1] < 0 and p2[1] < 0:
+					end_pack[ind_pos] = "alpha^1"
+				elif p1[1] > 0 and p2[1] > 0:
+					end_pack[ind_pos] = "-alpha^1"
+			if p1[1] != p2[1]:
+				if p1[1] < 0 and p2[1] > 0:
+					end_pack[ind_pos] = "beta^1"
+				else:
+					end_pack[ind_pos] = "-beta^1"
+	# print(end_pack)
+
+	return vij_tempset, end_pack
 
 
 # ********************************
