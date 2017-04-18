@@ -46,6 +46,8 @@ def elle_class_calc():
 			# print("Pie i:", i)
 
 			""" For i Adinkra out of selected Pie slice	"""
+			pie_vijres	=	[]
+			pie_newrep	=	[]
 			for itet, adinkra in enumerate(temp_pie):
 				""" temp_flips contains a Group of flips associated with a Vierergruppe
 				so 8 sets of 4. """
@@ -84,6 +86,9 @@ def elle_class_calc():
 					for zz in range(0, len(newrep_temp)):
 						print(newrep_temp[zz])
 					print("		")
+					pie_vijres	=	[vij for vij in vijres_temp]
+					pie_newrep	=	[newrep for newrep in newrep_temp]
+				
 				# for x in range(0, len(vset[1])):
 				# 	flop_tup 	= vset[1][x]
 				# 	flop_op		= vset[1][x][1]
