@@ -21,12 +21,12 @@ from numpy import array
 import vij_holoraumy_prime
 import vij_holoraumy_4x4
 
-# ********************************
+##************************************
 def main():
 
 	elle_class_calc()
 
-# ********************************
+##************************************
 # Performing the coefficient calculation
 def elle_class_calc():
 
@@ -89,7 +89,7 @@ def elle_class_calc():
 					pie_newrep	=	[newrep for newrep in newrep_temp]
 
 
-# ********************************
+##************************************
 # Performing the coefficient calculation
 def elle_class_calc():
 
@@ -175,7 +175,7 @@ def elle_class_calc():
 	# 				print(vijset)
 
 
-# ********************************
+##************************************
 # Defining the Vierergruppe representations for flop operations
 def vierergruppe_flops():
 
@@ -211,7 +211,7 @@ def vierergruppe_flops():
 
 	return vgruppe
 
-# ********************************
+##************************************
 # cis seed pie slices - elle coefficients
 def cis_seed_pies(pie_index):
 
@@ -265,7 +265,7 @@ def cis_seed_pies(pie_index):
 
 	return pie_adinkras
 
-# ********************************
+##************************************
 # trans seed pie slices - tilde~elle coefficients
 def trans_seed_pies(pie_index):
 
@@ -289,7 +289,7 @@ def trans_seed_pies(pie_index):
 					[8,4,14,2],	[10,6,12,0], [12,0,10,6], [14,2,8,4]
 				]
 
-# ********************************
+##************************************
 # Defining the Pizza slices
 def pieslices(pie_index):
 
@@ -337,7 +337,7 @@ def pieslices(pie_index):
 	return pie_complete[pie_index]
 
 
-# ********************************
+##************************************
 # Perform flop operation over Adinkra color space
 def colorspace_flop(adinkra, flop_op):
 	# print("	")
@@ -350,7 +350,7 @@ def colorspace_flop(adinkra, flop_op):
 	return new_adinkra
 
 
-# ********************************
+##************************************
 # Perform flip operation over Adinkra color space
 def colorspace_flip(adinkra, flip_op):
 
@@ -373,7 +373,7 @@ def colorspace_flip(adinkra, flip_op):
 	return new_adinkra
 
 
-# ********************************
+##************************************
 # Defining the binary multiplication arrays
 def binaries(bin_code):
 
@@ -387,7 +387,7 @@ def binaries(bin_code):
 			# temp   = np.diag(tarray)
 			return btuple[1]
 
-# ********************************
+##************************************
 # Defining the elle binary representations for the Vierergruppe
 def flip_ellebin(flip_set):
 
@@ -414,7 +414,7 @@ def flip_ellebin(flip_set):
 	return vgrp_elle[flip_set]
 
 
-# ********************************
+##************************************
 # Defining the tilde-elle binary representations for the Vierergruppe
 def flip_tildebin():
 
