@@ -26,7 +26,6 @@ def main():
 
 	elle_class_calc()
 
-
 # ********************************
 # Performing the coefficient calculation
 def elle_class_calc():
@@ -88,7 +87,65 @@ def elle_class_calc():
 					print("		")
 					pie_vijres	=	[vij for vij in vijres_temp]
 					pie_newrep	=	[newrep for newrep in newrep_temp]
-				
+
+
+# ********************************
+# Performing the coefficient calculation
+def elle_class_calc():
+
+	vflops		= vierergruppe_flops()
+	# elle_bin	= flip_ellebin()
+	for vset in vflops:
+		# print(vset[0], "V set")
+		print("Vierergruppe:", vset[0],"V")
+		print("Flop Ops:", vset[1])
+		print("")
+		# print("Flips:",temp_flips)
+		# print("")
+		""" For every populated cis Pie slice - 8 Adinkras per slice"""
+		for i in range(0, 6):
+			temp_pie	= cis_seed_pies(i)
+			# print("Pie i:", i)
+
+			""" For i Adinkra out of selected Pie slice	"""
+			for itet, adinkra in enumerate(temp_pie):
+				""" temp_flips contains a Group of flips associated with a Vierergruppe
+				so 8 sets of 4. """
+				temp_flips	= flip_ellebin(vset[0])
+				print("Flips:",temp_flips)
+				print("")
+				print("Pie #", i, "Adinkra", itet)
+				for flip_ops in temp_flips:
+					print("Current Flip:", flip_ops)
+					print("")
+					vijres_temp	= []
+					newrep_temp = []
+					for x in range(0, len(vset[1])):
+						flop_tup 	=	vset[1][x]
+						flop_op		=	vset[1][x][1]
+						assoc_flip	=	flip_ops[x]
+						# print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]))
+						temp_flop		=	colorspace_flop(adinkra, flop_op)
+						temp_flip		=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
+						vijset, newrep	=	vij_holoraumy_4x4.calculate_vijmatset_nicely(temp_flip)
+						if vijset not in vijres_temp:
+							vijres_temp.append(vijset)
+							if len(vijres_temp) > 1:
+								print("Current Flop:", flop_op, "	Flip:", flip_ops[x])
+						else:
+							pass
+
+						if newrep not in newrep_temp:
+							newrep_temp.append(newrep)
+						else:
+							pass
+					print("vijres_temp")
+					for zz in range(0, len(vijres_temp)):
+						print(vijres_temp[zz])
+					print("newrep_temp")
+					for zz in range(0, len(newrep_temp)):
+						print(newrep_temp[zz])
+					print("		")
 				# for x in range(0, len(vset[1])):
 				# 	flop_tup 	= vset[1][x]
 				# 	flop_op		= vset[1][x][1]
