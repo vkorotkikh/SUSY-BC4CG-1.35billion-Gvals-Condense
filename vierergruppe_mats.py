@@ -293,6 +293,36 @@ def trans_seed_pies(pie_index):
 					[8,2,4,14], [10,0,6,12], [12,6,0,10], [14,4,2,8]
 				]
 
+	p6neg	=	[	[0,6,12,10], [2,4,14,8], [4,2,8,14], [6,0,10,12],
+					[8,14,4,2], [10,12,6,0], [12,10,0,6], [14,8,2,4]
+				]
+
+	trans_promotions	=	[p1neg, p2neg, p3neg, p4neg, p5neg, p6neg]
+
+	""" Import pie slice definitions before applying the binaries	"""
+	# pie_slices	=	pieslices()
+
+	# for i in range(0, len(cis_promotions)):
+
+	pslice			=	pieslices(pie_index)
+	pslice_words	=	trans_promotions[pie_index]
+
+	""" List to hold all the promoted Pie slice Adinkras using corresponding
+		words """
+	pie_adinkras	=	[]
+	for word in pslice_words:
+		temp_adinkra	=	[]
+		bool_list		=	[]
+		for bins in word:
+			bin_list 	= binaries(bins)
+			temp		= np.array(bin_list)
+			bool_mat	= np.diag(temp)
+			bool_list.append(bool_mat)
+		temp_adinkra	= [(np.dot(bool_list[x],pslice[x])) for x in range(0,len(pslice))]
+		# pie_adinkras.append(temp_adinkra)
+		pie_adinkras.append(temp_adinkra)
+
+	return pie_adinkras
 
 ##************************************
 # Defining the Pizza slices
