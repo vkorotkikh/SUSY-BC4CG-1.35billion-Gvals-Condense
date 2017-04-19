@@ -24,11 +24,12 @@ import vij_holoraumy_4x4
 ##************************************
 def main():
 
-	elle_class_calc()
+	# elle_class_calc()
+	cis_seed_calc()
 
 ##************************************
 # Performing the coefficient calculation
-def elle_class_calc():
+def cis_seed_calc():
 
 	vflops		= vierergruppe_flops()
 	# elle_bin	= flip_ellebin()
@@ -39,38 +40,39 @@ def elle_class_calc():
 		print("")
 		# print("Flips:",temp_flips)
 		# print("")
+		pie_vijres	=	[]
+		pie_newrep	=	[]
 		""" For every populated cis Pie slice - 8 Adinkras per slice"""
 		for i in range(0, 6):
-			temp_pie	= cis_seed_pies(i)
-			# print("Pie i:", i)
 
-			""" For i Adinkra out of selected Pie slice	"""
-			pie_vijres	=	[]
-			pie_newrep	=	[]
-			for itet, adinkra in enumerate(temp_pie):
-				""" temp_flips contains a Group of flips associated with a Vierergruppe
-				so 8 sets of 4. """
-				temp_flips	= flip_ellebin(vset[0])
-				print("Flips:",temp_flips)
+			""" temp_flips contains a Group of flips associated with a Vierergruppe
+			so 8 sets of 4. """
+			temp_flips	= flip_ellebin(vset[0])
+			print("Flips:",temp_flips)
+			print("")
+
+			for flip_ops in temp_flips:
+				print("Current Flip:", flip_ops)
 				print("")
-				print("Pie #", i, "Adinkra", itet)
-				for flip_ops in temp_flips:
-					print("Current Flip:", flip_ops)
-					print("")
-					vijres_temp	= []
-					newrep_temp = []
-					for x in range(0, len(vset[1])):
-						flop_tup 	=	vset[1][x]
-						flop_op		=	vset[1][x][1]
-						assoc_flip	=	flip_ops[x]
-						# print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]))
+				vijres_temp	= []
+				newrep_temp = []
+				for x in range(0, len(vset[1])):
+					flop_tup 	=	vset[1][x]
+					flop_op		=	vset[1][x][1]
+					assoc_flip	=	flip_ops[x]
+
+					temp_pie	= cis_seed_pies(i)
+					print("Pie i:", i)
+					""" For i Adinkra out of selected Pie slice	"""
+					for itet, adinkra in enumerate(temp_pie):
+						print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]), "Adinkra #:", itet)
 						temp_flop		=	colorspace_flop(adinkra, flop_op)
 						temp_flip		=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
 						vijset, newrep	=	vij_holoraumy_4x4.calculate_vijmatset_nicely(temp_flip)
 						if vijset not in vijres_temp:
 							vijres_temp.append(vijset)
-							if len(vijres_temp) > 1:
-								print("Current Flop:", flop_op, "	Flip:", flip_ops[x])
+							# if len(vijres_temp) > 1:
+							# 	print("Current Flop:", flop_op, "	Flip:", flip_ops[x])
 						else:
 							pass
 
@@ -78,15 +80,13 @@ def elle_class_calc():
 							newrep_temp.append(newrep)
 						else:
 							pass
-					print("vijres_temp")
-					for zz in range(0, len(vijres_temp)):
-						print(vijres_temp[zz])
-					print("newrep_temp")
-					for zz in range(0, len(newrep_temp)):
-						print(newrep_temp[zz])
-					print("		")
-					pie_vijres	=	[vij for vij in vijres_temp]
-					pie_newrep	=	[newrep for newrep in newrep_temp]
+				print("vijres_temp")
+				for zz in range(0, len(vijres_temp)):
+					print(vijres_temp[zz])
+				print("newrep_temp")
+				for zz in range(0, len(newrep_temp)):
+					print(newrep_temp[zz])
+				print("		")
 
 
 ##************************************
@@ -389,7 +389,7 @@ def colorspace_flop(adinkra, flop_op):
 # Perform flip operation over Adinkra color space
 def colorspace_flip(adinkra, flip_op):
 
-	print("Executing colorspace_flip", flip_op)
+	# print("Executing colorspace_flip", flip_op)
 	""" Weird bug here if you do the algorith this way """
 	# new_adinkra	= []
 	# for i in range(0, len(adinkra)):
