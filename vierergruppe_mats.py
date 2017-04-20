@@ -25,7 +25,8 @@ import vij_holoraumy_4x4
 def main():
 
 	# elle_class_calc()
-	cis_seed_calc()
+	# cis_seed_calc()
+	trans_seed_calc()
 
 ##************************************
 # Performing the coefficient calculation
@@ -36,8 +37,8 @@ def cis_seed_calc():
 	for vset in vflops:
 		# print(vset[0], "V set")
 		print("Vierergruppe:", vset[0],"V")
-		print("Flop Ops:", vset[1])
-		print("")
+		print("Flops:", vset[1])
+		# print("")
 		# print("Flips:",temp_flips)
 		# print("")
 		pie_vijres	=	[]
@@ -51,7 +52,6 @@ def cis_seed_calc():
 
 		for flip_ops in temp_flips:
 			print("Current Flip:", flip_ops)
-			print("")
 			vijres_temp	= []
 			newrep_temp = []
 			for x in range(0, len(vset[1])):
@@ -80,10 +80,75 @@ def cis_seed_calc():
 							newrep_temp.append(newrep)
 						else:
 							pass
-			print("~Vij results")
-			for zz in range(0, len(vijres_temp)):
-				print("%s" % vijres_temp[zz])
-			print("elle coefficients")
+			# print("~Vij results")
+			# for zz in range(0, len(vijres_temp)):
+			# 	print("%s" % vijres_temp[zz])
+			print("i*elle(IJ) ")
+			tmp_str	= " "
+			for zz in range(0, len(newrep_temp)):
+				for izz in newrep_temp[zz]:
+					tmp_str = tmp_str + str(izz) + ", "
+
+			print("%s " % tmp_str)
+			print("		")
+
+##************************************
+# Performing the coefficient calculation
+def trans_seed_calc():
+
+	vflops		= vierergruppe_flops()
+	# elle_bin	= flip_ellebin()
+	for vset in vflops:
+		# print(vset[0], "V set")
+		print("Vierergruppe:", vset[0],"V")
+		print("Flops:", vset[1])
+		# print("")
+		# print("Flips:",temp_flips)
+		# print("")
+		pie_vijres	=	[]
+		pie_newrep	=	[]
+
+		""" temp_flips contains a Group of flips associated with a Vierergruppe
+		so 8 sets of 4. """
+		temp_flips	= flip_tildebin(vset[0])
+		print("Flips:",temp_flips)
+		print("")
+
+		for flip_ops in temp_flips:
+			print("Current Flip:", flip_ops)
+			vijres_temp	= []
+			newrep_temp = []
+			for x in range(0, len(vset[1])):
+				flop_tup 	=	vset[1][x]
+				flop_op		=	vset[1][x][1]
+				assoc_flip	=	flip_ops[x]
+
+				""" For every populated cis Pie slice - 8 Adinkras per slice"""
+				for i in range(0, 6):
+					temp_pie	= trans_seed_pies(i)
+					print("Pie i:", i)
+					""" For i Adinkra out of selected Pie slice	"""
+					for itet, adinkra in enumerate(temp_pie):
+						print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]), "Adinkra #:", itet)
+						temp_flop		=	colorspace_flop(adinkra, flop_op)
+						temp_flip		=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
+						vijset, newrep	=	vij_holoraumy_4x4.calculate_vijmatset_nicely(temp_flip)
+						if vijset not in vijres_temp:
+							vijres_temp.append(vijset)
+							print(vijres_temp)
+							if len(vijres_temp) > 1:
+								print("Current Flop:", flop_op, "	Flip:", flip_ops[x])
+						else:
+							pass
+
+						if newrep not in newrep_temp:
+							newrep_temp.append(newrep)
+						else:
+							pass
+			# print("~Vij results")
+			# for zz in range(0, len(vijres_temp)):
+			# 	print("%s" % vijres_temp[zz])
+			print("i*elle(IJ) ")
 			tmp_str	= " "
 			for zz in range(0, len(newrep_temp)):
 				for izz in newrep_temp[zz]:
@@ -290,7 +355,7 @@ def trans_seed_pies(pie_index):
 					[14,8,4,2], [12,10,6,0], [10,12,0,6], [8,14,2,4]
 				]
 
-	p4neg	=	[	[0,12,6,10], [2,4,14,8], [4,8,2,14], [6,10,0,12],
+	p4neg	=	[	[0,12,6,10], [2,14,4,8], [4,8,2,14], [6,10,0,12],
 					[8,4,14,2],	[10,6,12,0], [12,0,10,6], [14,2,8,4]
 				]
 
@@ -456,7 +521,7 @@ def flip_ellebin(flip_set):
 
 ##************************************
 # Defining the tilde-elle binary representations for the Vierergruppe
-def flip_tildebin():
+def flip_tildebin(flip_set):
 
 	vgrp_tilde			= {}
 
@@ -478,7 +543,7 @@ def flip_tildebin():
 	vgrp_tilde['(132)'] = [[14,2,4,8], [2,14,8,4], [4,8,14,2], [8,4,2,14],
 							[6,10,12,0], [10,6,0,12], [12,0,6,10], [0,12,10,6]]
 
-	return vgrp_tilde
+	return vgrp_tilde[flip_set]
 
 
 # ********************************
