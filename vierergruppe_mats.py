@@ -370,10 +370,6 @@ def trans_seed_pies(pie_index):
 	trans_promotions	=	[p1neg, p2neg, p3neg, p4neg, p5neg, p6neg]
 
 	""" Import pie slice definitions before applying the binaries	"""
-	# pie_slices	=	pieslices()
-
-	# for i in range(0, len(cis_promotions)):
-
 	pslice			=	pieslices(pie_index)
 	pslice_words	=	trans_promotions[pie_index]
 
@@ -389,7 +385,6 @@ def trans_seed_pies(pie_index):
 			bool_mat	= np.diag(temp)
 			bool_list.append(bool_mat)
 		temp_adinkra	= [(np.dot(bool_list[x],pslice[x])) for x in range(0,len(pslice))]
-		# pie_adinkras.append(temp_adinkra)
 		pie_adinkras.append(temp_adinkra)
 
 	return pie_adinkras
@@ -546,7 +541,7 @@ def flip_tildebin(flip_set):
 	return vgrp_tilde[flip_set]
 
 
-# ********************************
+##************************************
 # Compiling the tetrads from predfined Adinkras
 def assemble_tetrads():
 
@@ -589,7 +584,7 @@ def assemble_tetrads():
 	# 	print("<<<>>>")
 	# 	main_tetrad.extend(temp)
 
-# ********************************
+##************************************
 # Defining the six Vierergruppe representations
 def vierergruppe_sets():
 
@@ -616,7 +611,7 @@ def vierergruppe_sets():
 
 	return vgruppe
 
-# ********************************
+##************************************
 # Function for calling calculate_vij_matrices
 def calculate_vgruppe_sets(gruppe_adinkras, gruppe_binaries):
 	"""
@@ -634,7 +629,6 @@ def calculate_vgruppe_sets(gruppe_adinkras, gruppe_binaries):
 		vijset = vij_holoraumy_4x4.calculate_vijmatset(gruppe_adinkras[i])
 		for i in vijset:
 			print(i)
-
 	# for vgrp, binaries_list in vierergruppe_tilde.items():
 	# 	vbasis	= vgruppe_sets[vgrp]
 	# 	temp 	= lmat_flipping(vbasis, binaries_list)
@@ -643,14 +637,8 @@ def calculate_vgruppe_sets(gruppe_adinkras, gruppe_binaries):
 	# 	# print("Length lmat_flipping", len(temp), vgrp, binaries_list)
 	# 	main_tetrad.extend(temp)
 
-	# print(main_tetrad)
-	# for i, tetrad in enumerate(main_tetrad):
-		# print("Tetrad #", i, "type:", type(tetrad), "Ls", tetrad)
 
-	# vij_holoraumy_prime.calculate_vij_matrices(main_tetrad)
-
-
-# ********************************
+##************************************
 # Use the binary representation info to perform flips on L mats in each tetrad
 def lmat_flipping(vbasis, binaries_list):
 
@@ -686,7 +674,7 @@ def alphas_betas():
 
 	return [alpha1i, alpha2i, alpha3i, beta1i, beta2i, beta3i]
 
-# ********************************
+##************************************
 # Run main()
 start_time = time.time()
 
