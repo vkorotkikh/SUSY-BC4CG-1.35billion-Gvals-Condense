@@ -124,8 +124,8 @@ def trans_seed_calc():
 				assoc_flip	=	flip_ops[x]
 
 				""" For every populated cis Pie slice - 8 Adinkras per slice"""
-				for i in range(0, 6):
-					temp_pie	= trans_seed_pies(i)
+				for i in range(0,1):
+					temp_pie	= cis_seed_pies(i)
 					print("Pie i:", i)
 					""" For i Adinkra out of selected Pie slice	"""
 					for itet, adinkra in enumerate(temp_pie):
@@ -134,15 +134,19 @@ def trans_seed_calc():
 						temp_flip		=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
 						vijset, newrep	=	vij_holoraumy_4x4.calculate_vijmatset_nicely(temp_flip)
 						if vijset not in vijres_temp:
+							print(vijset)
 							vijres_temp.append(vijset)
-							print(vijres_temp)
 							if len(vijres_temp) > 1:
 								print("Current Flop:", flop_op, "	Flip:", flip_ops[x])
 						else:
 							pass
 
 						if newrep not in newrep_temp:
-							newrep_temp.append(newrep)
+							# newrep_temp.append(newrep)
+							if len(newrep_temp) == 0:
+								newrep_temp.append(newrep)
+							elif len(newrep_temp) > 1:
+								pass
 						else:
 							pass
 			# print("~Vij results")
@@ -272,12 +276,12 @@ def vierergruppe_flops():
 	vgrp132v	= [ ("(132)", [2,3,1,4]), ("(234)", [1,4,2,3]),
 					("(124)", [4,1,3,2]), ("(143)", [3,2,4,1])	]
 
-	# vgrp13v		= [ ("(13)", [3,2,1,4]), ("(1234)", [2,3,4,1]),
-	# 				("(24)", [1,4,3,2]), ("(1432)", [4,1,2,3])	]
-	# vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v) ]
 
-	vgruppe	   = [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v),
-				('(23)', vgrp23v), ('(123)', vgrp123v), ('(132)', vgrp132v) ]
+	# vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v) ]
+	vgruppe	   = [ ('()', vgrpv) ]
+
+	# vgruppe	   = [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v),
+	# 			('(23)', vgrp23v), ('(123)', vgrp123v), ('(132)', vgrp132v) ]
 
 	return vgruppe
 
