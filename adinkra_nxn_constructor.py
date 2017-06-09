@@ -122,12 +122,11 @@ def makeall_adinkras(k,n):
 	# print(len(test_list))
 	# return make_matrices(n, gen_product_matrices(n))
 	main_tetrad = make_adinkras(k,gen_product_matrices(n))
-	print(len(main_tetrad))
 
 # ********************************
 # Run main()
-start_time = time.time()
-
-makeall_adinkras(4,4)
-print("-- Execution time --")
-print("---- %s seconds ----" % (time.time() - start_time))
+# start_time = time.time()
+#
+# makeall_adinkras(4,4)
+# print("-- Execution time --")
+# print("---- %s seconds ----" % (time.time() - start_time))

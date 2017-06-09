@@ -46,6 +46,11 @@ def main():
 	calculate_wisdom(4)
 	# calc_all_adinkras(4)
 
+def missing_elements(L):
+    # start, end = L[0], L[-1]
+	start, end = 0, 383
+	return sorted(set(range(start, end + 1)).difference(L))
+
 # ******************************************************************************
 # Calculate all possible Adinkra (L matrix tetrads) in BC4 space
 def calculate_wisdom(n):
@@ -60,6 +65,9 @@ def calculate_wisdom(n):
 
 	invs_check = []
 	trnp_check = []
+	skew_check = []
+
+	nonskew_list	= []
 
 	sign_pmat = gen_signm(n)
 	uperm_mat = gen_dpermut_mat()
@@ -93,6 +101,7 @@ def calculate_wisdom(n):
 					calc_check.append(dprod)
 
 	self_inverse	= []
+	nonskewlist		= []
 
 	for i, im in enumerate(res):
 		invsmat = inv(im)
@@ -117,6 +126,19 @@ def calculate_wisdom(n):
 						trnp_check.append(temp)
 					else:
 						pass
+				if np.array_equal(trnpmat, np.multiply(jm, -1)):
+					temp.sort()
+					if temp not in skew_check:
+						skew_check.append(temp)
+						if i not in nonskewlist:
+							nonskewlist.append(i)
+						if j not in nonskewlist:
+							nonskewlist.append(j)
+					else:
+						pass
+					# elif j >= 382:
+					# 	nonskew_list.append(i)
+
 
 	print("Finishing building 384 matrices")
 	# print("Checking for duplicates in 384")
@@ -130,6 +152,10 @@ def calculate_wisdom(n):
 
 	print("Transpose check")
 	print("Number of Transpose duplicate matrices:", len(trnp_check))
+	print("Skew check")
+	print("Number of Skew-symmetric duplicate matrices:", len(skew_check))
+	print("nonskewlist:", len(nonskewlist))
+	print(missing_elements(nonskewlist))
 	test_list = []
 	for xmat in invs_check:
 		if [mat for mat in trnp_check if np.array_equal(mat, xmat)]:
@@ -137,6 +163,7 @@ def calculate_wisdom(n):
 	print("Checking if Inverse and Transpose sets are the same")
 	print("Number of Inverse - Transpose matches:", len(test_list))
 
+	sys.exit()
 	""" Creating the 2 * I, 4x4 identity matrix """
 	idt_mat = 2 * np.matlib.identity(n, dtype=int)
 
@@ -383,6 +410,7 @@ def pie_slicing(big_list_oftetrads):
 	print("Length of Kein Flip list:", len(kein_flip))
 	print("")
 	print("Length of Self Kein Flip:", len(self_kein))
+
 
 
 # ******************************************************************************
