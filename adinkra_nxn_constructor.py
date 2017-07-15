@@ -123,6 +123,8 @@ def makeall_adinkras(k,n):
 	# return make_matrices(n, gen_product_matrices(n))
 	main_tetrad = make_adinkras(k,gen_product_matrices(n))
 
+	return main_tetrad
+
 # ********************************
 # Run main()
 # start_time = time.time()

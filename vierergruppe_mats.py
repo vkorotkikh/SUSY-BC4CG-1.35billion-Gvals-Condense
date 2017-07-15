@@ -124,41 +124,46 @@ def trans_seed_calc():
 				assoc_flip	=	flip_ops[x]
 
 				""" For every populated cis Pie slice - 8 Adinkras per slice"""
-				for i in range(0,1):
-					temp_pie	= cis_seed_pies(i)
-					print("Pie i:", i)
+				for i in range(0,6):
+					temp_pie	= trans_seed_pies(i)
+					# print("Pie i:", i)
 					""" For i Adinkra out of selected Pie slice	"""
 					for itet, adinkra in enumerate(temp_pie):
-						print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]), "Adinkra #:", itet)
+						# print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]), "Adinkra #:", itet)
 						temp_flop		=	colorspace_flop(adinkra, flop_op)
 						temp_flip		=	colorspace_flip(temp_flop, binaries(flip_ops[x]))
 						vijset, newrep	=	vij_holoraumy_4x4.calculate_vijmatset_nicely(temp_flip)
 						if vijset not in vijres_temp:
-							print(vijset)
 							vijres_temp.append(vijset)
 							if len(vijres_temp) > 1:
-								print("Current Flop:", flop_op, "	Flip:", flip_ops[x])
+								print("***ERROR - EXTRA ~Vij result found ***")
+								print("Current Flop:", flop_op, "	Flip:", flip_ops[x], binaries(flip_ops[x]), "Adinkra #:", itet)
+								print(vijset)
 						else:
 							pass
-
 						if newrep not in newrep_temp:
-							# newrep_temp.append(newrep)
-							if len(newrep_temp) == 0:
-								newrep_temp.append(newrep)
-							elif len(newrep_temp) > 1:
-								pass
+							newrep_temp.append(newrep)
 						else:
 							pass
-			# print("~Vij results")
-			# for zz in range(0, len(vijres_temp)):
-			# 	print("%s" % vijres_temp[zz])
+						# if newrep not in newrep_temp:
+						# 	# newrep_temp.append(newrep)
+						# 	if len(newrep_temp) == 0:
+						# 		newrep_temp.append(newrep)
+						# 	elif len(newrep_temp) > 1:
+						# 		pass
+						# else:
+						# 	pass
+			# print("	")
+			print("~Vij ~elle coefficient results")
+			for zz in range(0, len(vijres_temp)):
+				print("%s" % vijres_temp[zz])
 			print("i*elle(IJ) ")
-			tmp_str	= " "
+			# tmp_str	= " "
 			for zz in range(0, len(newrep_temp)):
+				tmp_str		= " "
 				for izz in newrep_temp[zz]:
 					tmp_str = tmp_str + str(izz) + ", "
-
-			print("%s " % tmp_str)
+				print("%s " % tmp_str)
 			print("		")
 
 
@@ -278,10 +283,10 @@ def vierergruppe_flops():
 
 
 	# vgruppe 	= [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v) ]
-	vgruppe	   = [ ('()', vgrpv) ]
+	# vgruppe	   = [ ('()', vgrpv) ]
 
-	# vgruppe	   = [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v),
-	# 			('(23)', vgrp23v), ('(123)', vgrp123v), ('(132)', vgrp132v) ]
+	vgruppe	   = [ ('()', vgrpv), ('(12)',vgrp12v), ('(13)', vgrp13v),
+				('(23)', vgrp23v), ('(123)', vgrp123v), ('(132)', vgrp132v) ]
 
 	return vgruppe
 
@@ -435,16 +440,12 @@ def pieslices(pie_index):
 
 	pie_complete = [ p1, p2, p3, p4, p5, p6 ]
 
-
-	""" Just one pie piece for now """
-	# return [ p1 ]
 	return pie_complete[pie_index]
 
 
 ##************************************
 # Perform flop operation over Adinkra color space
 def colorspace_flop(adinkra, flop_op):
-	# print("	")
 	# print("Executing colorspace_flip", flop_op)
 	# print("Adinkra")
 	# print(adinkra)
@@ -524,23 +525,34 @@ def flip_tildebin(flip_set):
 
 	vgrp_tilde			= {}
 
-	vgrp_tilde['()']	= [[14,8,2,4], [2,4,14,8], [4,2,8,14], [8,14,4,2],
-							[6,0,10,12], [10,12,6,0], [12,10,0,6], [0,6,12,10]]
+	vgrp_tilde['()']	= [[14,4,8,2], [2,8,4,14], [4,14,2,8], [8,2,14,4],
+							[6,12,0,10], [10,0,12,6], [12,6,10,0], [0,10,6,12]]
+							# [[14,8,2,4], [2,4,14,8], [4,2,8,14], [8,14,4,2],
+							# [6,0,10,12], [10,12,6,0], [12,10,0,6], [0,6,12,10]]
 
-	vgrp_tilde['(12)']	= [[14,4,2,8], [2,8,14,4], [4,14,8,2], [8,2,4,14],
+	vgrp_tilde['(12)']	= [[14,8,4,2], [2,4,8,14], [4,2,14,8], [8,14,2,4],
+							[6,0,12,10], [10,12,0,6], [12,10,6,0], [0,6,10,12]]
+							# [[14,4,2,8], [2,8,14,4], [4,14,8,2], [8,2,4,14],
+							# [6,12,10,0], [10,0,6,12], [12,6,0,10], [0,10,12,6]]
+
+	vgrp_tilde['(13)']	= [[14,4,2,8], [2,8,14,4], [4,14,8,2], [8,2,4,14],
 							[6,12,10,0], [10,0,6,12], [12,6,0,10], [0,10,12,6]]
 
-	vgrp_tilde['(13)']	= [[14,2,8,4], [2,14,4,8], [4,8,2,14], [8,4,14,2],
-							[6,10,0,12], [10,6,12,0], [12,0,10,6], [0,12,6,10]]
+	vgrp_tilde['(23)']	= [[4,8,2,14], [8,4,14,2], [14,2,8,4], [2,14,4,8],
+							[12,0,10,6], [0,12,6,10], [6,10,0,12], [10,6,12,0]]
+							# [[2,4,8,14], [14,8,4,2], [8,14,2,4], [4,2,14,8],
+							# [10,12,0,6], [6,0,12,10], [0,6,10,12], [12,10,6,0]]
 
-	vgrp_tilde['(23)']	= [[2,4,8,14], [14,8,4,2], [8,14,2,4], [4,2,14,8],
-							[10,12,0,6], [6,0,12,10], [0,6,10,12], [12,10,6,0]]
-
-	vgrp_tilde['(123)']	= [[14,4,8,2], [2,8,4,14], [4,14,2,8], [8,2,14,4],
-							[6,12,0,10], [10,0,12,6], [12,6,10,0], [0,10,6,12]]
-
-	vgrp_tilde['(132)'] = [[14,2,4,8], [2,14,8,4], [4,8,14,2], [8,4,2,14],
+	vgrp_tilde['(123)']	= [[14,2,4,8], [2,14,8,4], [4,8,14,2], [8,4,2,14],
 							[6,10,12,0], [10,6,0,12], [12,0,6,10], [0,12,10,6]]
+							# [[14,4,8,2], [2,8,4,14], [4,14,2,8], [8,2,14,4],
+							# [6,12,0,10], [10,0,12,6], [12,6,10,0], [0,10,6,12]]
+
+	vgrp_tilde['(132)'] = [[14,8,2,4], [2,4,14,8], [4,2,8,14], [8,14,4,2],
+							[6,0,10,12], [10,12,6,0], [12,10,0,6], [0,6,12,10]]
+
+							# [[14,2,4,8], [2,14,8,4], [4,8,14,2], [8,4,2,14],
+							# [6,10,12,0], [10,6,0,12], [12,0,6,10], [0,12,10,6]]
 
 	return vgrp_tilde[flip_set]
 
@@ -572,21 +584,6 @@ def assemble_tetrads():
 
 		print("<<<>>>")
 		main_tetrad.extend(temp)
-
-	# for vgrp, binaries_list in vierergruppe_tilde.items():
-	# 	vbasis	= vgruppe_sets[vgrp]
-	# 	temp 	= lmat_flipping(vbasis, binaries_list)
-	# 	print("")
-	# 	print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ")
-	# 	print("Calculating Vij tilde elle coefficients")
-	# 	print("							")
-	# 	print("Vierergruppe flop: ",vgrp)
-	# 	# print("Flip sets:", binaries_list)
-	# 	# vij_holoraumy_prime.calculate_vij_matrices(temp)
-	# 	calculate_vgruppe_sets(temp, binaries_list)
-	#
-	# 	print("<<<>>>")
-	# 	main_tetrad.extend(temp)
 
 ##************************************
 # Defining the six Vierergruppe representations

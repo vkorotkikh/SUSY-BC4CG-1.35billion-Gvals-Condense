@@ -100,7 +100,6 @@ def calculate_wisdom(n):
 				else:
 					calc_check.append(dprod)
 
-	self_inverse	= []
 	nonskewlist		= []
 
 	for i, im in enumerate(res):
@@ -163,7 +162,6 @@ def calculate_wisdom(n):
 	print("Checking if Inverse and Transpose sets are the same")
 	print("Number of Inverse - Transpose matches:", len(test_list))
 
-	sys.exit()
 	""" Creating the 2 * I, 4x4 identity matrix """
 	idt_mat = 2 * np.matlib.identity(n, dtype=int)
 
@@ -522,7 +520,7 @@ def calculate_posvij_matrices(main_tetrad_ark):
 	print(len(vij_matrices))
 	pass
 
-# **************************************************************************
+# ******************************************************************************
 # Run main()
 if __name__ == "__main__":
 	start_time = time.time()
