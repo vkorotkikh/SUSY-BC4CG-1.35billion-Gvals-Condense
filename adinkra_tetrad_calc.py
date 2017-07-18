@@ -315,9 +315,6 @@ def build_four_pillars(zeropt_mat, doz_mats):
 	for key, four_pairs in ark_12of4_pairs.items():
 		""" Hold 3 matrix numbers """
 		temp_tri = []
-		# print("Building tetrad combinations")
-		# print(pt0_mnum, key, four_pairs)
-		# Temp list for storing local tetrads for each of ix pairs.
 		local_tetrad = []
 		for oneof4 in four_pairs:
 			temp_tri.append((pt0_mnum))
@@ -327,7 +324,6 @@ def build_four_pillars(zeropt_mat, doz_mats):
 			# print("Matching pairs for i:", oneof4, i_4temp)
 			s = set(four_pairs)
 			temp_tri.append(oneof4)
-
 			# Ixpairs is a list of matrices from the 12 matrices
 			# that pair with each other and with any 1 of the 12
 			# This is necessary to construct a tetrad, the 1st member
@@ -335,9 +331,6 @@ def build_four_pillars(zeropt_mat, doz_mats):
 			# the other 3 matrices come from the list of 12, provided that
 			# all 3 pair with each other as well.
 			ixpairs = [m for m in i_4temp if m in s]
-			# print("Pair matches for", key, "and ", oneof4, ixpairs)
-			# print("Matches for:",oneof4,"of the 4")
-			# print(key, oneof4, ixpairs)
 			lt = []
 			for m in ixpairs:
 				lt.extend(temp_tri)
@@ -359,8 +352,6 @@ def build_four_pillars(zeropt_mat, doz_mats):
 				lt = []
 			""" Wipe the temp_tri for next matrices in the four_pairs """
 			temp_tri = []
-			# print("Number of unique tetrads:", len(tetnum_list))
-	# print(len(tetnum_list))
 	return tetnum_list
 
 # ******************************************************************************
@@ -423,6 +414,7 @@ def gen_signm(n):
 		sign_mat.append(np.diag(temp))
 	return sign_mat
 
+
 # ******************************************************************************
 # Function for nxn matrices, P(l) - matrix rep. of permutation matrices
 def gen_dpermut_mat():
@@ -440,85 +432,9 @@ def gen_dpermut_mat():
 		matint = temp_mat.astype(int)
 		temp.append(matint)
 
-	newlist = []
-	for i in temp:
-		if not any(np.array_equal(i, xmat) for xmat in newlist):
-			newlist.append(i)
 
-	with open('dxd_permutation_matrices.txt', 'w') as outfile:
-		for pmat in temp:
-			# outfile.write(smat.astype(str))
-			outfile.write(np.array_str(pmat))
-			outfile.write("\n")
-			outfile.write("\n")
-	# for i, x in enumerate(newlist):
-	# 	print(i, x, "\n")
-	# print(len(newlist))
 	return(temp)
 
-# ******************************************************************************
-# Do the final Vij calculation
-def calculate_posvij_matrices(main_tetrad_ark):
-
-	""" Remember that the main_tetrad_ark is a list of lists,
-		with each list containing four tuples, with tuples being
-		matrix number and the matrices itself. """
-
-	# Import all the possible solutions to the Vij matrices
-	vij_possibilities = matrix_outerprod_calc.illuminator_of_elfes()
-	vij_matrices = []
-
-	print("							")
-	print("	Calculating Vij matrices")
-	print("							")
-	# for i in range(0, len(main_tetrad_ark)):
-	for i in range(0, len(vij_possibilities)):
-		tet_i = [x[1] for x in main_tetrad_ark[i]]
-		tri_tet = [np.transpose(i) for i in tet_i]
-		print("# ********************************")
-		# print("								     ")
-		print("MATRIX i: ", i)
-		print("								     ")
-		for j in range(0, len(main_tetrad_ark)):
-			tet_j = [x[1] for x in main_tetrad_ark[j]]
-			trj_tet = [np.transpose(j) for j in tet_j]
-			vij_temp = []
-			# print("# ********************************")
-			print("		")
-			print("MATRIX j: ", j)
-			temp_zero = np.zeros((4,4), dtype=int)
-			for x in range(0,len(tet_i)):
-				test_1half = np.dot(tri_tet[x],tet_j[x])
-				test_2half = np.dot(trj_tet[x],tet_i[x])
-				test_difs = np.subtract(test_1half, test_2half)
-				# print(" ")
-				# print(test_difs)
-				temp_mat = np.dot(tri_tet[x],tet_j[x]) - np.dot(trj_tet[x],tet_i[x])
-				vij_temp.append(temp_mat)
-				# print("")
-			temp_add1 = np.add(vij_temp[0], vij_temp[1])
-			temp_add2 = np.add(temp_add1, vij_temp[2])
-			tempf = np.add(temp_add2, vij_temp[3])
-			# tempf = np.divide(temp_add3, 2)
-			for ijx in vij_possibilities:
-				if np.array_equal(temp_addf, ijx[0]):
-					print("*************$$$$$$$$$$$$$$$$$$***************** ")
-					print("l-solution found:", ijx[1])
-					print(temp_addf)
-					print("")
-					print(ijx[0])
-			if  np.array_equal(temp_addf, temp_zero):
-				pass
-			else:
-				vij_matrices.append(temp_addf)
-			# print("")
-			print(temp_addf)
-			# vij_matrices.append(temp_addf)
-		vijmats_size = sys.getsizeof(vij_matrices)
-		print("Size of Vij Matrices list: bytes / kilobytes:", vijmats_size, vijmats_size/1024)
-	print("Length of Vij Matrices")
-	print(len(vij_matrices))
-	pass
 
 # ******************************************************************************
 # Run main()
