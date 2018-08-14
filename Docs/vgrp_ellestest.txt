@@ -1,0 +1,470 @@
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij elle coefficients
+							
+Vierergruppe flop:  (13)
+Flip: [14, 2, 8, 4]
+Flip: [2, 14, 4, 8]
+Flip: [4, 8, 2, 14]
+Flip: [8, 4, 14, 2]
+Flip: [6, 10, 0, 12]
+Flip: [10, 6, 12, 0]
+Flip: [12, 0, 10, 6]
+Flip: [0, 12, 6, 10]
+
+Calculating for binary flip: [14, 2, 8, 4]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [2, 14, 4, 8]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [4, 8, 2, 14]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [8, 4, 14, 2]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [6, 10, 0, 12]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [10, 6, 12, 0]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [12, 0, 10, 6]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [0, 12, 6, 10]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij elle coefficients
+							
+Vierergruppe flop:  ()
+Flip: [14, 8, 2, 4]
+Flip: [2, 4, 14, 8]
+Flip: [4, 2, 8, 14]
+Flip: [8, 14, 4, 2]
+Flip: [6, 0, 10, 12]
+Flip: [10, 12, 6, 0]
+Flip: [12, 10, 0, 6]
+Flip: [0, 6, 12, 10]
+
+Calculating for binary flip: [14, 8, 2, 4]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [2, 4, 14, 8]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [4, 2, 8, 14]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [8, 14, 4, 2]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [6, 0, 10, 12]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [10, 12, 6, 0]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [12, 10, 0, 6]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [0, 6, 12, 10]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij elle coefficients
+							
+Vierergruppe flop:  (23)
+Flip: [2, 4, 8, 14]
+Flip: [14, 8, 4, 2]
+Flip: [8, 14, 2, 4]
+Flip: [4, 2, 14, 8]
+Flip: [10, 12, 0, 6]
+Flip: [6, 0, 12, 10]
+Flip: [0, 6, 10, 12]
+Flip: [12, 10, 6, 0]
+
+Calculating for binary flip: [2, 4, 8, 14]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [14, 8, 4, 2]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [8, 14, 2, 4]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [4, 2, 14, 8]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [10, 12, 0, 6]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [6, 0, 12, 10]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [0, 6, 10, 12]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+
+Calculating for binary flip: [12, 10, 6, 0]
+~V_{12} = 1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = -1 * beta^3
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij elle coefficients
+							
+Vierergruppe flop:  (132)
+Flip: [14, 2, 4, 8]
+Flip: [2, 14, 8, 4]
+Flip: [4, 8, 14, 2]
+Flip: [8, 4, 2, 14]
+Flip: [6, 10, 12, 0]
+Flip: [10, 6, 0, 12]
+Flip: [12, 0, 6, 10]
+Flip: [0, 12, 10, 6]
+
+Calculating for binary flip: [14, 2, 4, 8]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [2, 14, 8, 4]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [4, 8, 14, 2]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [8, 4, 2, 14]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [6, 10, 12, 0]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [10, 6, 0, 12]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [12, 0, 6, 10]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [0, 12, 10, 6]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij elle coefficients
+							
+Vierergruppe flop:  (12)
+Flip: [14, 4, 2, 8]
+Flip: [2, 8, 14, 4]
+Flip: [4, 14, 8, 2]
+Flip: [8, 2, 4, 14]
+Flip: [6, 12, 10, 0]
+Flip: [10, 0, 6, 12]
+Flip: [12, 6, 0, 10]
+Flip: [0, 10, 12, 6]
+
+Calculating for binary flip: [14, 4, 2, 8]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [2, 8, 14, 4]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [4, 14, 8, 2]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [8, 2, 4, 14]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [6, 12, 10, 0]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [10, 0, 6, 12]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [12, 6, 0, 10]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [0, 10, 12, 6]
+~V_{12} = -1 * beta^3
+~V_{13} = 1 * beta^2
+~V_{14} = -1 * beta^1
+~V_{23} = 1 * beta^1
+~V_{24} = 1 * beta^2
+~V_{34} = 1 * beta^3
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij elle coefficients
+							
+Vierergruppe flop:  (123)
+Flip: [14, 4, 8, 2]
+Flip: [2, 8, 4, 14]
+Flip: [4, 14, 2, 8]
+Flip: [8, 2, 14, 4]
+Flip: [6, 12, 0, 10]
+Flip: [10, 0, 12, 6]
+Flip: [12, 6, 10, 0]
+Flip: [0, 10, 6, 12]
+
+Calculating for binary flip: [14, 4, 8, 2]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [2, 8, 4, 14]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [4, 14, 2, 8]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [8, 2, 14, 4]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [6, 12, 0, 10]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [10, 0, 12, 6]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [12, 6, 10, 0]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+
+Calculating for binary flip: [0, 10, 6, 12]
+~V_{12} = -1 * beta^3
+~V_{13} = -1 * beta^2
+~V_{14} = 1 * beta^1
+~V_{23} = -1 * beta^1
+~V_{24} = -1 * beta^2
+~V_{34} = 1 * beta^3
+<<<>>>
+-- Execution time --
+---- 0.03458881378173828 seconds ----

@@ -1,0 +1,277 @@
+\subsection{All Adinkras in terms of $\ell$- and $\tilde{\ell}$-equivalence Classes}
+By direct calculation, we find that their are 48 $\ell$-equivalence classes and 48 $\tilde{\ell}$-equivalence classes.
+The $\ell$ ($\tilde{\ell}$) coefficients for the 48 $\ell$-equivalence classes ($\tilde{\ell}$-equivalence classes) of adinkras with the same $\ell$  ($\tilde{\ell}$)  coefficients are shown in Table~\ref{t:ell} (Table~\ref{t:elltilde}). Here we comment on some general results displayed in these tables. First, all cis- representations ($\chi_0 = +1$) have $\ell$ or $\tilde{\ell}$ coefficients which belong to the $\alpha$ $su(2)$ representation and all trans-representations belong to the $\beta$ $su(2)$ representation. Owing to the trace orthogonality relationship, Eq.~(\ref{e:abtraces}), the gadget value between all cis- and trans- representations is zero. This is confirmed by direct gadget calculation in section~\ref{s:gadgets}.
+%group numbers are 1-48 as in the code, here they are listed 1-48 top to bottom, left to right
+\begin{table}[!h]
+	\label{t:ell}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+		%%%%%%%%%%%%%%A set: Groups 1-8
+			flop & flip & $i\ell_{IJ}^1, i\ell_{IJ}^2, i\ell_{IJ}^3 $ & $\chi_0$\\
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\chi_0 = -1
+			\multirow{8}{*}{$\mathcal{V}$} 
+			& $14,8,2,4$ & $ \beta ^1,\beta ^3,\beta ^2 $ & \multirow{4}{*}{$-1$}\\
+			\cline{2-3}
+			& 2, 4, 14, 8 & $ -\beta ^1,\beta ^3,-\beta ^2$ & \\
+			\cline{2-3} 
+			&4, 2, 8, 14& $ -\beta ^1,-\beta ^3,\beta ^2 $& \\
+			\cline{2-3} 
+			&8, 14, 4, 2& $ \beta ^1,-\beta ^3,-\beta ^2$ & \\
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%chi_0 = +1
+			\cline{2-4} 
+			&6, 0, 10, 12&  $-\alpha ^1,\alpha ^2,\alpha ^3  $  & \multirow{4}{*}{$+1$} \\
+			\cline{2-3} 
+			&10, 12, 6, 0& $\alpha ^1,\alpha ^2,-\alpha ^3 $   & \\
+			\cline{2-3} 
+			&12, 10, 0, 6& $\alpha ^1,-\alpha ^2,\alpha ^3$    & \\
+			\cline{2-3} 
+			&0, 6, 12, 10& $-\alpha ^1,-\alpha ^2,-\alpha ^3$& \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%%B set: Groups 9-16
+			%%%%%%%%%%%%%%%%%%%\chi_0=+1
+			\multirow{8}{*}{$(12)\mathcal{V}$} & 14, 4, 2, 8 & $\alpha ^3,-\alpha ^2,-\alpha ^1$ & \multirow{4}{*}{$+1$}\\
+			\cline{2-3}
+			&2, 8, 14, 4& $-\alpha ^3,-\alpha ^2,\alpha ^1$& \\
+			\cline{2-3} 
+			&4, 14, 8, 2& $\alpha ^3,\alpha ^2,\alpha ^1$& \\
+			\cline{2-3} 
+			&8, 2, 4, 14&  $-\alpha ^3,\alpha ^2,-\alpha ^1$  & \\
+			%%%%%%%%%%%%%%%%%%%\chi_0=-1
+			\cline{2-4} 
+			&6, 12, 10, 0& $\beta ^2,-\beta ^3,\beta ^1$   & \multirow{4}{*}{$-1$}\\
+			\cline{2-3} 
+			&10, 0, 6, 12& $-\beta ^2,-\beta ^3,-\beta ^1$   & \\
+			\cline{2-3} 
+			&12, 6, 0, 10& $\beta ^2,\beta ^3,-\beta ^1$   & \\
+			\cline{2-3} 
+			&0, 10, 12, 6& $-\beta ^2,\beta ^3,\beta ^1$& \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%C set: Groups 17-24
+			%%%%%%%%%%%%%%\chi_0=+1
+			\multirow{8}{*}{$(13)\mathcal{V}$} & 14, 2, 8, 4 & $-\alpha ^2,\alpha ^1,-\alpha ^3$& \multirow{4}{*}{$+1$}\\
+			\cline{2-3}
+			&2, 14, 4, 8& $-\alpha ^2,-\alpha ^1,\alpha ^3$& \\
+			\cline{2-3} 
+			&4, 8, 2, 14& $\alpha ^2,-\alpha ^1,-\alpha ^3$& \\
+			\cline{2-3} 
+			&8, 4, 14, 2& $\alpha ^2,\alpha ^1,\alpha ^3$   & \\
+			%%%%%%%%%%%%%%\chi_0=-1
+			\cline{2-4} 
+			&6, 10, 0, 12& $-\beta ^3,-\beta ^1,-\beta ^2$   & \multirow{4}{*}{$-1$} \\
+			\cline{2-3} 
+			&10, 6, 12, 0& $-\beta ^3,\beta ^1,\beta ^2$   & \\
+			\cline{2-3} 
+			&12, 0, 10, 6& $\beta ^3,\beta ^1,-\beta ^2$   & \\
+			\cline{2-3} 
+			&0, 12, 6, 10& $\beta ^3,-\beta ^1,\beta ^2$& \\
+			\hline
+			\hline
+	\end{tabular}
+	\quad
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		%%%%%%%%%%%%%D set: Groups 25-32
+		flop & flip & $i\ell_{IJ}^1, i\ell_{IJ}^2, i\ell_{IJ}^3 $ & $\chi_0$ \\
+			%%%%%%%%%%%%%%%%%%\chi_0=+1
+			\hline
+			\multirow{8}{*}{$(23)\mathcal{V}$} & 2, 4, 8, 14 & $-\alpha ^1,-\alpha ^3,\alpha ^2$& \multirow{4}{*}{+1}\\
+			\cline{2-3}
+			&14, 8, 4, 2& $\alpha ^1,\alpha ^3,\alpha ^2$& \\
+			\cline{2-3} 
+			&8, 14, 2, 4& $\alpha ^1,-\alpha^3,-\alpha ^2$ & \\
+			\cline{2-3} 
+			&4, 2, 14, 8& $-\alpha ^1,\alpha ^3,-\alpha ^2$  & \\
+			%%%%%%%%%%%%%%%%%%\chi_0=-1
+			\cline{2-4} 
+			&10, 12, 0, 6& $\beta ^1,-\beta ^2,\beta ^3$   & \multirow{4}{*}{$-1$} \\
+			\cline{2-3} 
+			&6, 0, 12, 10&  $-\beta ^1,\beta ^2,\beta ^3$  & \\
+			\cline{2-3} 
+			&0, 6, 10, 12&  $-\beta ^1,-\beta ^2,-\beta ^3$  & \\
+			\cline{2-3} 
+			&12, 10, 6, 0& $\beta ^1,\beta ^2,-\beta ^3$& \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%%E set: Groups 33-40
+			%%%%%%%%%%%%%%%%%%\chi_0 = -1
+			\multirow{8}{*}{$(123)\mathcal{V}$} & 14, 4, 8, 2 & $-\beta ^2,\beta ^1,-\beta ^3$ & \multirow{4}{*}{$-1$}\\
+			\cline{2-3}
+			&2, 8, 4, 14& $\beta ^2,-\beta ^1,-\beta ^3$& \\
+			\cline{2-3} 
+			&4, 14, 2, 8& $-\beta ^2,-\beta ^1,\beta ^3$ & \\
+			\cline{2-3} 
+			&8, 2, 14, 4&  $\beta ^2,\beta ^1,\beta ^3$  & \\
+			%%%%%%%%%%%%%%%%%%\chi_0 = +1
+			\cline{2-4} 
+			&6, 12, 0, 10& $-\alpha ^3,-\alpha ^1,-\alpha ^2$   & \multirow{4}{*}{$+1$} \\
+			\cline{2-3} 
+			&10, 0, 12, 6& $\alpha ^3,\alpha ^1,-\alpha ^2$   & \\
+			\cline{2-3} 
+			&12, 6, 10, 0& $-\alpha ^3,\alpha ^1,\alpha ^2$   & \\
+			\cline{2-3} 
+			&0, 10, 6, 12& $\alpha ^3,-\alpha ^1,\alpha ^2$ & \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%F set: Groups 41-48
+			%%%%%%%%%%%%%%%%%%\chi_0 = -1
+			\multirow{8}{*}{$(132)\mathcal{V}$} & 14, 2, 4, 8 & $\beta ^3,-\beta ^2,-\beta ^1$ & \multirow{4}{*}{$-1$}\\
+			\cline{2-3}
+			&2, 14, 8, 4& $\beta ^3,\beta ^2,\beta ^1$ & \\
+			\cline{2-3} 
+			&4, 8, 14, 2& $\beta ^3,\beta ^2,\beta ^1$ & \\
+			\cline{2-3} 
+			&8, 4, 2, 14&  $-\beta ^3,\beta ^2,-\beta ^1$   & \\
+			%%%%%%%%%%%%%%%%%%\chi_0 = +1
+			\cline{2-4} 
+			&6, 10, 12, 0&  $\alpha ^2,-\alpha ^3,\alpha ^1$  & \multirow{4}{*}{$+1$}\\
+			\cline{2-3} 
+			&10, 6, 0, 12&  $\alpha ^2,\alpha ^3,-\alpha ^1$  & \\
+			\cline{2-3} 
+			&12, 0, 6, 10&  $-\alpha ^2,-\alpha ^3,-\alpha ^1$  & \\
+			\cline{2-3} 
+			&0, 12, 10, 6& $-\alpha ^2,\alpha ^3,\alpha ^1$ & \\
+			\hline
+			\hline
+	\end{tabular}
+	\caption{$\ell$ coefficients for all 4 color, 4 node adinkras generated from an even worded cis-seed representation of each slice of the pizza. Subscripts indicating which space the elements act over have been suppressed for space purposes. The flops and flips are over the color space, with the color flop being performed before the color flip as in the example above. The numbers encoding the color flip refer to the boolean notation as in appendix~\ref{a:pop} but operating on the colors of the adinkras. For instance, the first row on the left of color flop $\mathcal{V}$ and flip $14, 8, 2, 4$ refers to the equivalence class in Eq.~(\ref{e:FirstEquivClass}) with $\ell^{\hat{a}}_{IJ}$ values as in Eq.~(\ref{e:FirstElls}).}
+\end{table}
+
+%group numbers are 1-48 as in the code, here they are listed 1-48 top to bottom, left to right
+\begin{table}[!htbp]
+	\label{t:elltilde}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+		%%%%%%%%%%%%%%A set: Groups 1-8
+			flop & flip & $i\tilde{\ell}_{IJ}^1, i\tilde{\ell}_{IJ}^2, i\tilde{\ell}_{IJ}^3 $ & $\chi_0$\\
+			\hline
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\chi_0 = +1
+			\multirow{8}{*}{$\mathcal{V}$} & $14,8,2,4$ & $ \alpha ^1,\alpha ^3,\alpha ^2 $ & \multirow{4}{*}{$+1$}\\
+			\cline{2-3}
+			& 2, 4, 14, 8 & $-\alpha ^1,-\alpha ^3,\alpha ^2$ & \\
+			\cline{2-3} 
+			&4, 2, 8, 14& $-\alpha ^1,\alpha ^3,-\alpha ^2$& \\
+			\cline{2-3} 
+			&8, 14, 4, 2& $ \alpha ^1,-\alpha ^3,-\alpha ^2$ & \\
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%chi_0 = -1
+			\cline{2-4} 
+			&6, 0, 10, 12&  $-\beta ^1,\beta ^2,\beta ^3$  & \multirow{4}{*}{$-1$} \\
+			\cline{2-3} 
+			&10, 12, 6, 0& $\beta ^1,-\beta ^2,\beta ^3$   & \\
+			\cline{2-3} 
+			&12, 10, 0, 6& $\beta ^1,\beta ^2,-\beta ^3$    & \\
+			\cline{2-3} 
+			&0, 6, 12, 10& $-\beta ^1,-\beta ^2,-\beta ^3$& \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%%B set: Groups 9-16
+			%%%%%%%%%%%%%%%%%%%\chi_0=-1
+			\multirow{8}{*}{$(12)\mathcal{V}$} & 14, 4, 2, 8 & $-\beta ^2,\beta ^1,-\beta ^3$ & \multirow{4}{*}{$-1$}\\
+			\cline{2-3}
+			&2, 8, 14, 4& $\beta ^2,-\beta ^1,-\beta ^3$& \\
+			\cline{2-3} 
+			&4, 14, 8, 2& $-\beta ^2,-\beta ^1,\beta ^3$& \\
+			\cline{2-3} 
+			&8, 2, 4, 14&  $\beta ^2,\beta ^1,\beta ^3$  & \\
+			%%%%%%%%%%%%%%%%%%%\chi_0=+1
+			\cline{2-4} 
+			&6, 12, 10, 0& $-\alpha ^3,-\alpha ^1,-\alpha ^2$   & \multirow{4}{*}{$+1$}\\
+			\cline{2-3} 
+			&10, 0, 6, 12& $\alpha ^3,\alpha ^1,-\alpha ^2$   & \\
+			\cline{2-3} 
+			&12, 6, 0, 10& $-\alpha ^3,\alpha ^1,\alpha ^2$   & \\
+			\cline{2-3} 
+			&0, 10, 12, 6& $\alpha ^3,-\alpha ^1,\alpha ^2$& \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%C set: Groups 17-24
+			%%%%%%%%%%%%%%\chi_0=-1
+			\multirow{8}{*}{$(13)\mathcal{V}$} & 14, 2, 8, 4 & $\beta ^3,-\beta ^2,-\beta ^1$& \multirow{4}{*}{$-1$}\\
+			\cline{2-3}
+			&2, 14, 4, 8& $\beta ^3,\beta ^2,\beta ^1$& \\
+			\cline{2-3} 
+			&4, 8, 2, 14& $-\beta ^3,-\beta ^2,\beta ^1$& \\
+			\cline{2-3} 
+			&8, 4, 14, 2& $-\beta ^3,\beta ^2,-\beta ^1$   & \\
+			%%%%%%%%%%%%%%\chi_0=+1
+			\cline{2-4} 
+			&6, 10, 0, 12& $\alpha ^2,-\alpha ^3,\alpha ^1$   & \multirow{4}{*}{$+1$} \\
+			\cline{2-3} 
+			&10, 6, 12, 0& $\alpha ^2,\alpha ^3,-\alpha ^1$   & \\
+			\cline{2-3} 
+			&12, 0, 10, 6& $-\alpha ^2,-\alpha ^3,-\alpha ^1$   & \\
+			\cline{2-3} 
+			&0, 12, 6, 10& $-\alpha ^2,\alpha ^3,\alpha ^1$& \\
+			\hline
+			\hline
+	\end{tabular}
+	\quad
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		%%%%%%%%%%%%%D set: Groups 25-32
+		flop & flip & $i\tilde{\ell}_{IJ}^1, i\tilde{\ell}_{IJ}^2, i\tilde{\ell}_{IJ}^3 $ & $\chi_0$ \\
+			%%%%%%%%%%%%%%%%%%\chi_0=-1
+			\hline
+			\multirow{8}{*}{$(23)\mathcal{V}$} & 2, 4, 8, 14 & $-\beta ^1,-\beta ^3,\beta ^2$& \multirow{4}{*}{-1}\\
+			\cline{2-3}
+			&14, 8, 4, 2& $\beta ^1,-\beta ^3,-\beta ^2$& \\
+			\cline{2-3} 
+			&8, 14, 2, 4& $\beta ^1,\beta ^3,\beta ^2$ & \\
+			\cline{2-3} 
+			&4, 2, 14, 8& $-\beta ^1,\beta ^3,-\beta ^2$  & \\
+			%%%%%%%%%%%%%%%%%%\chi_0=+1
+			\cline{2-4} 
+			&10, 12, 0, 6& $\alpha ^1,-\alpha ^2,\alpha ^3$   & \multirow{4}{*}{$+1$} \\
+			\cline{2-3} 
+			&6, 0, 12, 10&  $-\alpha ^1,-\alpha ^2,-\alpha ^3$  & \\
+			\cline{2-3} 
+			&0, 6, 10, 12&  $-\alpha ^1,\alpha ^2,\alpha ^3$  & \\
+			\cline{2-3} 
+			&12, 10, 6, 0& $\alpha ^1,\alpha ^2,-\alpha ^3$& \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%%E set: Groups 33-40
+			%%%%%%%%%%%%%%%%%%\chi_0 = +1
+			\multirow{8}{*}{$(123)\mathcal{V}$} & 14, 4, 8, 2 & $\alpha ^3,-\alpha ^2,-\alpha ^1$ & \multirow{4}{*}{$+1$}\\
+			\cline{2-3}
+			&2, 8, 4, 14& $-\alpha ^3,-\alpha ^2,\alpha ^1$& \\
+			\cline{2-3} 
+			&4, 14, 2, 8& $\alpha ^3,\alpha ^2,\alpha ^1$ & \\
+			\cline{2-3} 
+			&8, 2, 14, 4&  $-\alpha ^3,\alpha ^2,-\alpha ^1$  & \\
+			%%%%%%%%%%%%%%%%%%\chi_0 = -1
+			\cline{2-4} 
+			&6, 12, 0, 10& $\beta ^2,-\beta ^3,\beta ^1$   & \multirow{4}{*}{$-1$} \\
+			\cline{2-3} 
+			&10, 0, 12, 6& $-\beta ^2,-\beta ^3,-\beta ^1$   & \\
+			\cline{2-3} 
+			&12, 6, 10, 0& $\beta ^2,\beta ^3,-\beta ^1$   & \\
+			\cline{2-3} 
+			&0, 10, 6, 12& $-\beta ^2,\beta ^3,\beta ^1$ & \\
+			\hline
+			\hline
+			%%%%%%%%%%%%%F set: Groups 41-48
+			%%%%%%%%%%%%%%%%%%\chi_0 = +1
+			\multirow{8}{*}{$(132)\mathcal{V}$} & 14, 2, 4, 8 & $-\alpha ^2,\alpha ^1,-\alpha ^3$ & \multirow{4}{*}{$+1$}\\
+			\cline{2-3}
+			&2, 14, 8, 4& $-\alpha ^2,-\alpha ^1,\alpha ^3$ & \\
+			\cline{2-3} 
+			&4, 8, 14, 2& $\alpha ^2,-\alpha ^1,-\alpha ^3$ & \\
+			\cline{2-3} 
+			&8, 4, 2, 14&  $\alpha ^2,\alpha ^1,\alpha ^3$   & \\
+			%%%%%%%%%%%%%%%%%%\chi_0 = -1
+			\cline{2-4} 
+			&6, 10, 12, 0&  $-\beta ^3,-\beta ^1,-\beta ^2$  & \multirow{4}{*}{$-1$}\\
+			\cline{2-3} 
+			&10, 6, 0, 12&  $-\beta ^3,\beta ^1,\beta ^2$  & \\
+			\cline{2-3} 
+			&12, 0, 6, 10&  $\beta ^3,\beta ^1,-\beta ^2$  & \\
+			\cline{2-3} 
+			&0, 12, 10, 6& $\beta ^3,-\beta ^1,\beta ^2$ & \\
+			\hline
+			\hline
+	\end{tabular}
+	\caption{$\tilde{\ell}$ coefficients for all 4 color, 4 node adinkras generated from an even worded trans-seed representation of each slice of the pizza. }
+\end{table}

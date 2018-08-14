@@ -1,0 +1,182 @@
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij tilde elle coefficients
+							
+Vierergruppe flop:  ()
+
+Calculating Vij matrices for binary flip: [14, 8, 2, 4]
+[1, '~V_{12}', 'alpha^2'] [1, '~V_{13}', 'alpha^3'] [1, '~V_{14}', 'alpha^1'] [1, '~V_{23}', 'alpha^1'] [-1, '~V_{24}', 'alpha^3'] [1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [2, 4, 14, 8]
+[1, '~V_{12}', 'alpha^2'] [-1, '~V_{13}', 'alpha^3'] [-1, '~V_{14}', 'alpha^1'] [-1, '~V_{23}', 'alpha^1'] [1, '~V_{24}', 'alpha^3'] [1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [4, 2, 8, 14]
+[-1, '~V_{12}', 'alpha^2'] [1, '~V_{13}', 'alpha^3'] [-1, '~V_{14}', 'alpha^1'] [-1, '~V_{23}', 'alpha^1'] [-1, '~V_{24}', 'alpha^3'] [-1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [8, 14, 4, 2]
+[-1, '~V_{12}', 'alpha^2'] [-1, '~V_{13}', 'alpha^3'] [1, '~V_{14}', 'alpha^1'] [1, '~V_{23}', 'alpha^1'] [1, '~V_{24}', 'alpha^3'] [-1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [6, 0, 10, 12]
+[1, '~V_{12}', 'beta^3'] [1, '~V_{13}', 'beta^2'] [-1, '~V_{14}', 'beta^1'] [-1, '~V_{23}', 'beta^1'] [-1, '~V_{24}', 'beta^2'] [1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [10, 12, 6, 0]
+[1, '~V_{12}', 'beta^3'] [-1, '~V_{13}', 'beta^2'] [1, '~V_{14}', 'beta^1'] [1, '~V_{23}', 'beta^1'] [1, '~V_{24}', 'beta^2'] [1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [12, 10, 0, 6]
+[-1, '~V_{12}', 'beta^3'] [1, '~V_{13}', 'beta^2'] [1, '~V_{14}', 'beta^1'] [1, '~V_{23}', 'beta^1'] [-1, '~V_{24}', 'beta^2'] [-1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [0, 6, 12, 10]
+[-1, '~V_{12}', 'beta^3'] [-1, '~V_{13}', 'beta^2'] [-1, '~V_{14}', 'beta^1'] [-1, '~V_{23}', 'beta^1'] [1, '~V_{24}', 'beta^2'] [-1, '~V_{34}', 'beta^3']
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij tilde elle coefficients
+							
+Vierergruppe flop:  (132)
+
+Calculating Vij matrices for binary flip: [14, 2, 4, 8]
+[1, '~V_{12}', 'beta^1'] [1, '~V_{13}', 'beta^3'] [1, '~V_{14}', 'beta^2'] [-1, '~V_{23}', 'beta^2'] [1, '~V_{24}', 'beta^3'] [-1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [2, 14, 8, 4]
+[-1, '~V_{12}', 'beta^1'] [1, '~V_{13}', 'beta^3'] [-1, '~V_{14}', 'beta^2'] [1, '~V_{23}', 'beta^2'] [1, '~V_{24}', 'beta^3'] [1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [4, 8, 14, 2]
+[-1, '~V_{12}', 'beta^1'] [-1, '~V_{13}', 'beta^3'] [1, '~V_{14}', 'beta^2'] [-1, '~V_{23}', 'beta^2'] [-1, '~V_{24}', 'beta^3'] [1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [8, 4, 2, 14]
+[1, '~V_{12}', 'beta^1'] [-1, '~V_{13}', 'beta^3'] [-1, '~V_{14}', 'beta^2'] [1, '~V_{23}', 'beta^2'] [-1, '~V_{24}', 'beta^3'] [-1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [6, 10, 12, 0]
+[-1, '~V_{12}', 'alpha^1'] [1, '~V_{13}', 'alpha^2'] [1, '~V_{14}', 'alpha^3'] [-1, '~V_{23}', 'alpha^3'] [1, '~V_{24}', 'alpha^2'] [1, '~V_{34}', 'alpha^1']
+
+Calculating Vij matrices for binary flip: [10, 6, 0, 12]
+[1, '~V_{12}', 'alpha^1'] [1, '~V_{13}', 'alpha^2'] [-1, '~V_{14}', 'alpha^3'] [1, '~V_{23}', 'alpha^3'] [1, '~V_{24}', 'alpha^2'] [-1, '~V_{34}', 'alpha^1']
+
+Calculating Vij matrices for binary flip: [12, 0, 6, 10]
+[1, '~V_{12}', 'alpha^1'] [-1, '~V_{13}', 'alpha^2'] [1, '~V_{14}', 'alpha^3'] [-1, '~V_{23}', 'alpha^3'] [-1, '~V_{24}', 'alpha^2'] [-1, '~V_{34}', 'alpha^1']
+
+Calculating Vij matrices for binary flip: [0, 12, 10, 6]
+[-1, '~V_{12}', 'alpha^1'] [-1, '~V_{13}', 'alpha^2'] [-1, '~V_{14}', 'alpha^3'] [1, '~V_{23}', 'alpha^3'] [-1, '~V_{24}', 'alpha^2'] [1, '~V_{34}', 'alpha^1']
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij tilde elle coefficients
+							
+Vierergruppe flop:  (13)
+
+Calculating Vij matrices for binary flip: [14, 2, 8, 4]
+[1, '~V_{12}', 'beta^1'] [1, '~V_{13}', 'beta^2'] [1, '~V_{14}', 'beta^3'] [1, '~V_{23}', 'beta^3'] [-1, '~V_{24}', 'beta^2'] [1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [2, 14, 4, 8]
+[-1, '~V_{12}', 'beta^1'] [-1, '~V_{13}', 'beta^2'] [1, '~V_{14}', 'beta^3'] [1, '~V_{23}', 'beta^3'] [1, '~V_{24}', 'beta^2'] [-1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [4, 8, 2, 14]
+[-1, '~V_{12}', 'beta^1'] [1, '~V_{13}', 'beta^2'] [-1, '~V_{14}', 'beta^3'] [-1, '~V_{23}', 'beta^3'] [-1, '~V_{24}', 'beta^2'] [-1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [8, 4, 14, 2]
+[1, '~V_{12}', 'beta^1'] [-1, '~V_{13}', 'beta^2'] [-1, '~V_{14}', 'beta^3'] [-1, '~V_{23}', 'beta^3'] [1, '~V_{24}', 'beta^2'] [1, '~V_{34}', 'beta^1']
+
+Calculating Vij matrices for binary flip: [6, 10, 0, 12]
+[-1, '~V_{12}', 'alpha^1'] [1, '~V_{13}', 'alpha^3'] [1, '~V_{14}', 'alpha^2'] [1, '~V_{23}', 'alpha^2'] [-1, '~V_{24}', 'alpha^3'] [-1, '~V_{34}', 'alpha^1']
+
+Calculating Vij matrices for binary flip: [10, 6, 12, 0]
+[1, '~V_{12}', 'alpha^1'] [-1, '~V_{13}', 'alpha^3'] [1, '~V_{14}', 'alpha^2'] [1, '~V_{23}', 'alpha^2'] [1, '~V_{24}', 'alpha^3'] [1, '~V_{34}', 'alpha^1']
+
+Calculating Vij matrices for binary flip: [12, 0, 10, 6]
+[1, '~V_{12}', 'alpha^1'] [1, '~V_{13}', 'alpha^3'] [-1, '~V_{14}', 'alpha^2'] [-1, '~V_{23}', 'alpha^2'] [-1, '~V_{24}', 'alpha^3'] [1, '~V_{34}', 'alpha^1']
+
+Calculating Vij matrices for binary flip: [0, 12, 6, 10]
+[-1, '~V_{12}', 'alpha^1'] [-1, '~V_{13}', 'alpha^3'] [-1, '~V_{14}', 'alpha^2'] [-1, '~V_{23}', 'alpha^2'] [1, '~V_{24}', 'alpha^3'] [-1, '~V_{34}', 'alpha^1']
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij tilde elle coefficients
+							
+Vierergruppe flop:  (23)
+
+Calculating Vij matrices for binary flip: [2, 4, 8, 14]
+[-1, '~V_{12}', 'beta^2'] [1, '~V_{13}', 'beta^3'] [-1, '~V_{14}', 'beta^1'] [-1, '~V_{23}', 'beta^1'] [-1, '~V_{24}', 'beta^3'] [-1, '~V_{34}', 'beta^2']
+
+Calculating Vij matrices for binary flip: [14, 8, 4, 2]
+[1, '~V_{12}', 'beta^2'] [1, '~V_{13}', 'beta^3'] [1, '~V_{14}', 'beta^1'] [1, '~V_{23}', 'beta^1'] [-1, '~V_{24}', 'beta^3'] [1, '~V_{34}', 'beta^2']
+
+Calculating Vij matrices for binary flip: [8, 14, 2, 4]
+[-1, '~V_{12}', 'beta^2'] [-1, '~V_{13}', 'beta^3'] [1, '~V_{14}', 'beta^1'] [1, '~V_{23}', 'beta^1'] [1, '~V_{24}', 'beta^3'] [-1, '~V_{34}', 'beta^2']
+
+Calculating Vij matrices for binary flip: [4, 2, 14, 8]
+[1, '~V_{12}', 'beta^2'] [-1, '~V_{13}', 'beta^3'] [-1, '~V_{14}', 'beta^1'] [-1, '~V_{23}', 'beta^1'] [1, '~V_{24}', 'beta^3'] [1, '~V_{34}', 'beta^2']
+
+Calculating Vij matrices for binary flip: [10, 12, 0, 6]
+[-1, '~V_{12}', 'alpha^3'] [1, '~V_{13}', 'alpha^2'] [1, '~V_{14}', 'alpha^1'] [1, '~V_{23}', 'alpha^1'] [-1, '~V_{24}', 'alpha^2'] [-1, '~V_{34}', 'alpha^3']
+
+Calculating Vij matrices for binary flip: [6, 0, 12, 10]
+[1, '~V_{12}', 'alpha^3'] [1, '~V_{13}', 'alpha^2'] [-1, '~V_{14}', 'alpha^1'] [-1, '~V_{23}', 'alpha^1'] [-1, '~V_{24}', 'alpha^2'] [1, '~V_{34}', 'alpha^3']
+
+Calculating Vij matrices for binary flip: [0, 6, 10, 12]
+[-1, '~V_{12}', 'alpha^3'] [-1, '~V_{13}', 'alpha^2'] [-1, '~V_{14}', 'alpha^1'] [-1, '~V_{23}', 'alpha^1'] [1, '~V_{24}', 'alpha^2'] [-1, '~V_{34}', 'alpha^3']
+
+Calculating Vij matrices for binary flip: [12, 10, 6, 0]
+[1, '~V_{12}', 'alpha^3'] [-1, '~V_{13}', 'alpha^2'] [1, '~V_{14}', 'alpha^1'] [1, '~V_{23}', 'alpha^1'] [1, '~V_{24}', 'alpha^2'] [1, '~V_{34}', 'alpha^3']
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij tilde elle coefficients
+							
+Vierergruppe flop:  (12)
+
+Calculating Vij matrices for binary flip: [14, 4, 2, 8]
+[1, '~V_{12}', 'beta^3'] [1, '~V_{13}', 'beta^1'] [1, '~V_{14}', 'beta^2'] [1, '~V_{23}', 'beta^2'] [-1, '~V_{24}', 'beta^1'] [1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [2, 8, 14, 4]
+[1, '~V_{12}', 'beta^3'] [-1, '~V_{13}', 'beta^1'] [-1, '~V_{14}', 'beta^2'] [-1, '~V_{23}', 'beta^2'] [1, '~V_{24}', 'beta^1'] [1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [4, 14, 8, 2]
+[-1, '~V_{12}', 'beta^3'] [-1, '~V_{13}', 'beta^1'] [1, '~V_{14}', 'beta^2'] [1, '~V_{23}', 'beta^2'] [1, '~V_{24}', 'beta^1'] [-1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [8, 2, 4, 14]
+[-1, '~V_{12}', 'beta^3'] [1, '~V_{13}', 'beta^1'] [-1, '~V_{14}', 'beta^2'] [-1, '~V_{23}', 'beta^2'] [-1, '~V_{24}', 'beta^1'] [-1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [6, 12, 10, 0]
+[1, '~V_{12}', 'alpha^2'] [-1, '~V_{13}', 'alpha^1'] [1, '~V_{14}', 'alpha^3'] [1, '~V_{23}', 'alpha^3'] [1, '~V_{24}', 'alpha^1'] [1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [10, 0, 6, 12]
+[1, '~V_{12}', 'alpha^2'] [1, '~V_{13}', 'alpha^1'] [-1, '~V_{14}', 'alpha^3'] [-1, '~V_{23}', 'alpha^3'] [-1, '~V_{24}', 'alpha^1'] [1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [12, 6, 0, 10]
+[-1, '~V_{12}', 'alpha^2'] [1, '~V_{13}', 'alpha^1'] [1, '~V_{14}', 'alpha^3'] [1, '~V_{23}', 'alpha^3'] [-1, '~V_{24}', 'alpha^1'] [-1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [0, 10, 12, 6]
+[-1, '~V_{12}', 'alpha^2'] [-1, '~V_{13}', 'alpha^1'] [-1, '~V_{14}', 'alpha^3'] [-1, '~V_{23}', 'alpha^3'] [1, '~V_{24}', 'alpha^1'] [-1, '~V_{34}', 'alpha^2']
+<<<>>>
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Calculating Vij tilde elle coefficients
+							
+Vierergruppe flop:  (123)
+
+Calculating Vij matrices for binary flip: [14, 4, 8, 2]
+[1, '~V_{12}', 'beta^3'] [1, '~V_{13}', 'beta^2'] [1, '~V_{14}', 'beta^1'] [-1, '~V_{23}', 'beta^1'] [1, '~V_{24}', 'beta^2'] [-1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [2, 8, 4, 14]
+[1, '~V_{12}', 'beta^3'] [-1, '~V_{13}', 'beta^2'] [-1, '~V_{14}', 'beta^1'] [1, '~V_{23}', 'beta^1'] [-1, '~V_{24}', 'beta^2'] [-1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [4, 14, 2, 8]
+[-1, '~V_{12}', 'beta^3'] [1, '~V_{13}', 'beta^2'] [-1, '~V_{14}', 'beta^1'] [1, '~V_{23}', 'beta^1'] [1, '~V_{24}', 'beta^2'] [1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [8, 2, 14, 4]
+[-1, '~V_{12}', 'beta^3'] [-1, '~V_{13}', 'beta^2'] [1, '~V_{14}', 'beta^1'] [-1, '~V_{23}', 'beta^1'] [-1, '~V_{24}', 'beta^2'] [1, '~V_{34}', 'beta^3']
+
+Calculating Vij matrices for binary flip: [6, 12, 0, 10]
+[1, '~V_{12}', 'alpha^2'] [1, '~V_{13}', 'alpha^3'] [-1, '~V_{14}', 'alpha^1'] [1, '~V_{23}', 'alpha^1'] [1, '~V_{24}', 'alpha^3'] [-1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [10, 0, 12, 6]
+[1, '~V_{12}', 'alpha^2'] [-1, '~V_{13}', 'alpha^3'] [1, '~V_{14}', 'alpha^1'] [-1, '~V_{23}', 'alpha^1'] [-1, '~V_{24}', 'alpha^3'] [-1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [12, 6, 10, 0]
+[-1, '~V_{12}', 'alpha^2'] [1, '~V_{13}', 'alpha^3'] [1, '~V_{14}', 'alpha^1'] [-1, '~V_{23}', 'alpha^1'] [1, '~V_{24}', 'alpha^3'] [1, '~V_{34}', 'alpha^2']
+
+Calculating Vij matrices for binary flip: [0, 10, 6, 12]
+[-1, '~V_{12}', 'alpha^2'] [-1, '~V_{13}', 'alpha^3'] [-1, '~V_{14}', 'alpha^1'] [1, '~V_{23}', 'alpha^1'] [-1, '~V_{24}', 'alpha^3'] [1, '~V_{34}', 'alpha^2']
+<<<>>>
+-- Execution time --
+---- 0.03931093215942383 seconds ----
