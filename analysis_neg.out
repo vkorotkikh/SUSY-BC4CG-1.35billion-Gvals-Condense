@@ -1,0 +1,681 @@
+Length lmats 384
+384
+Inverse - Skew Symmetric overlap check
+[]
+Transpose - Skew Symmetric overlap check
+[]
+Negative check
+Number of Negative matrices: 0
+Transpose check
+Number of Transpose  matrices: 76
+Inverse check
+Number of Inverse  matrices: 76
+Skew check
+Number of Skew-symmetric matrices: 12
+Real Orthogonal Matrix check
+Number of R. Orthogonal Matrices: 384
+Number of Non-Orth Matrices: 0
+Individual Matrix check finished
+
+Inverse check
+Number of inverse duplicate matrices: 154
+Transpose check
+Number of Transpose duplicate matrices: 154
+Skew check
+Number of Skew-symmetric duplicate matrices: 186
+nonskewlist: 372
+[88, 95, 127, 143, 151, 160, 223, 232, 247, 263, 304, 311]
+
+Num of self Skew-symmetric matrices: 12
+[88, 95, 127, 143, 151, 160, 223, 232, 247, 263, 304, 311]
+Number of Real Orthogonal Matrices: 384
+[[3, 4], [8, 12], [9, 18], [10, 13], [11, 19], [15, 20], [17, 22], [25, 49], [27, 52], [28, 99], [29, 101], [31, 55], [32, 36], [33, 66], [34, 109], [35, 115], [37, 58], [39, 68], [40, 112], [41, 118], [42, 201], [43, 203], [44, 207], [45, 213], [46, 209], [47, 215], [50, 98], [51, 100], [56, 108], [57, 114], [59, 67], [60, 200], [61, 202], [62, 206], [63, 212], [64, 208], [65, 214], [70, 113], [71, 119], [74, 122], [75, 148], [76, 123], [77, 149], [80, 132], [81, 162], [82, 133], [83, 163], [84, 224], [85, 250], [86, 230], [87, 260], [88, 304], [89, 310], [90, 225], [91, 251], [92, 231], [93, 261], [94, 305], [95, 311], [102, 198], [103, 199], [104, 204], [105, 210], [106, 205], [107, 211], [111, 116], [121, 145], [124, 147], [126, 222], [127, 247], [128, 228], [129, 258], [130, 301], [131, 307], [135, 164], [137, 166], [138, 249], [139, 227], [140, 303], [141, 309], [142, 233], [143, 263], [150, 246], [151, 223], [152, 300], [153, 306], [154, 229], [155, 259], [156, 248], [157, 226], [158, 302], [159, 308], [160, 232], [161, 262], [171, 172], [174, 270], [175, 271], [176, 324], [177, 354], [178, 325], [179, 355], [180, 272], [181, 274], [182, 326], [183, 356], [184, 328], [185, 358], [186, 273], [187, 275], [188, 327], [189, 357], [190, 329], [191, 359], [195, 196], [217, 241], [219, 244], [220, 291], [221, 293], [234, 297], [235, 299], [236, 255], [238, 257], [242, 290], [243, 292], [252, 296], [253, 298], [266, 314], [267, 340], [268, 315], [269, 341], [276, 320], [277, 346], [279, 284], [280, 352], [281, 334], [282, 321], [283, 347], [286, 353], [287, 335], [313, 337], [316, 339], [319, 343], [322, 349], [323, 331], [330, 345], [332, 351], [344, 348], [363, 364], [368, 372], [369, 378], [370, 373], [371, 379], [375, 380], [377, 382]]
+
+[[3, 4], [8, 12], [9, 18], [10, 13], [11, 19], [15, 20], [17, 22], [25, 49], [27, 52], [28, 99], [29, 101], [31, 55], [32, 36], [33, 66], [34, 109], [35, 115], [37, 58], [39, 68], [40, 112], [41, 118], [42, 201], [43, 203], [44, 207], [45, 213], [46, 209], [47, 215], [50, 98], [51, 100], [56, 108], [57, 114], [59, 67], [60, 200], [61, 202], [62, 206], [63, 212], [64, 208], [65, 214], [70, 113], [71, 119], [74, 122], [75, 148], [76, 123], [77, 149], [80, 132], [81, 162], [82, 133], [83, 163], [84, 224], [85, 250], [86, 230], [87, 260], [88, 304], [89, 310], [90, 225], [91, 251], [92, 231], [93, 261], [94, 305], [95, 311], [102, 198], [103, 199], [104, 204], [105, 210], [106, 205], [107, 211], [111, 116], [121, 145], [124, 147], [126, 222], [127, 247], [128, 228], [129, 258], [130, 301], [131, 307], [135, 164], [137, 166], [138, 249], [139, 227], [140, 303], [141, 309], [142, 233], [143, 263], [150, 246], [151, 223], [152, 300], [153, 306], [154, 229], [155, 259], [156, 248], [157, 226], [158, 302], [159, 308], [160, 232], [161, 262], [171, 172], [174, 270], [175, 271], [176, 324], [177, 354], [178, 325], [179, 355], [180, 272], [181, 274], [182, 326], [183, 356], [184, 328], [185, 358], [186, 273], [187, 275], [188, 327], [189, 357], [190, 329], [191, 359], [195, 196], [217, 241], [219, 244], [220, 291], [221, 293], [234, 297], [235, 299], [236, 255], [238, 257], [242, 290], [243, 292], [252, 296], [253, 298], [266, 314], [267, 340], [268, 315], [269, 341], [276, 320], [277, 346], [279, 284], [280, 352], [281, 334], [282, 321], [283, 347], [286, 353], [287, 335], [313, 337], [316, 339], [319, 343], [322, 349], [323, 331], [330, 345], [332, 351], [344, 348], [363, 364], [368, 372], [369, 378], [370, 373], [371, 379], [375, 380], [377, 382]]
+Checking if Inverse and Transpose sets are the same
+Number of Inverse - Transpose matches: 154
+
+Adinkra Composition Testing
+Length Adinkra list: 36864
+Adinkras without ABCD prop: 16896
+Adinkra num_check: 19968
+123=4 : 4224
+Overlap 123=4 & 124=3 Length 0
+Overlap 123=4 & 132=4 Length 768
+Overlap 123=4 & 134=2 Length 832
+Overlap 123=4 & 142=3 Length 832
+Overlap 123=4 & 143=2 Length 768
+Overlap 123=4 & 213=4 Length 192
+Overlap 123=4 & 214=3 Length 192
+Overlap 123=4 & 231=4 Length 832
+Overlap 123=4 & 234=1 Length 768
+Overlap 123=4 & 241=3 Length 768
+Overlap 123=4 & 243=1 Length 832
+Overlap 123=4 & 312=4 Length 192
+Overlap 123=4 & 314=2 Length 192
+Overlap 123=4 & 321=4 Length 0
+Overlap 123=4 & 324=1 Length 4224
+Overlap 123=4 & 341=2 Length 832
+Overlap 123=4 & 342=1 Length 768
+Overlap 123=4 & 412=3 Length 192
+Overlap 123=4 & 413=2 Length 192
+Overlap 123=4 & 421=3 Length 4224
+Overlap 123=4 & 423=1 Length 0
+Overlap 123=4 & 431=2 Length 768
+Overlap 123=4 & 432=1 Length 832
+124=3 : 4224
+Overlap 124=3 & 123=4 Length 0
+Overlap 124=3 & 132=4 Length 832
+Overlap 124=3 & 134=2 Length 768
+Overlap 124=3 & 142=3 Length 768
+Overlap 124=3 & 143=2 Length 832
+Overlap 124=3 & 213=4 Length 192
+Overlap 124=3 & 214=3 Length 192
+Overlap 124=3 & 231=4 Length 768
+Overlap 124=3 & 234=1 Length 832
+Overlap 124=3 & 241=3 Length 832
+Overlap 124=3 & 243=1 Length 768
+Overlap 124=3 & 312=4 Length 192
+Overlap 124=3 & 314=2 Length 192
+Overlap 124=3 & 321=4 Length 4224
+Overlap 124=3 & 324=1 Length 0
+Overlap 124=3 & 341=2 Length 768
+Overlap 124=3 & 342=1 Length 832
+Overlap 124=3 & 412=3 Length 192
+Overlap 124=3 & 413=2 Length 192
+Overlap 124=3 & 421=3 Length 0
+Overlap 124=3 & 423=1 Length 4224
+Overlap 124=3 & 431=2 Length 832
+Overlap 124=3 & 432=1 Length 768
+132=4 : 4224
+Overlap 132=4 & 123=4 Length 768
+Overlap 132=4 & 124=3 Length 832
+Overlap 132=4 & 134=2 Length 0
+Overlap 132=4 & 142=3 Length 768
+Overlap 132=4 & 143=2 Length 1152
+Overlap 132=4 & 213=4 Length 192
+Overlap 132=4 & 214=3 Length 192
+Overlap 132=4 & 231=4 Length 0
+Overlap 132=4 & 234=1 Length 4224
+Overlap 132=4 & 241=3 Length 1152
+Overlap 132=4 & 243=1 Length 768
+Overlap 132=4 & 312=4 Length 192
+Overlap 132=4 & 314=2 Length 192
+Overlap 132=4 & 321=4 Length 832
+Overlap 132=4 & 324=1 Length 768
+Overlap 132=4 & 341=2 Length 768
+Overlap 132=4 & 342=1 Length 1152
+Overlap 132=4 & 412=3 Length 192
+Overlap 132=4 & 413=2 Length 192
+Overlap 132=4 & 421=3 Length 768
+Overlap 132=4 & 423=1 Length 832
+Overlap 132=4 & 431=2 Length 4224
+Overlap 132=4 & 432=1 Length 0
+134=2 : 4224
+Overlap 134=2 & 123=4 Length 832
+Overlap 134=2 & 124=3 Length 768
+Overlap 134=2 & 132=4 Length 0
+Overlap 134=2 & 142=3 Length 1152
+Overlap 134=2 & 143=2 Length 768
+Overlap 134=2 & 213=4 Length 192
+Overlap 134=2 & 214=3 Length 192
+Overlap 134=2 & 231=4 Length 4224
+Overlap 134=2 & 234=1 Length 0
+Overlap 134=2 & 241=3 Length 768
+Overlap 134=2 & 243=1 Length 1152
+Overlap 134=2 & 312=4 Length 192
+Overlap 134=2 & 314=2 Length 192
+Overlap 134=2 & 321=4 Length 768
+Overlap 134=2 & 324=1 Length 832
+Overlap 134=2 & 341=2 Length 1152
+Overlap 134=2 & 342=1 Length 768
+Overlap 134=2 & 412=3 Length 192
+Overlap 134=2 & 413=2 Length 192
+Overlap 134=2 & 421=3 Length 832
+Overlap 134=2 & 423=1 Length 768
+Overlap 134=2 & 431=2 Length 0
+Overlap 134=2 & 432=1 Length 4224
+142=3 : 4224
+Overlap 142=3 & 123=4 Length 832
+Overlap 142=3 & 124=3 Length 768
+Overlap 142=3 & 132=4 Length 768
+Overlap 142=3 & 134=2 Length 1152
+Overlap 142=3 & 143=2 Length 0
+Overlap 142=3 & 213=4 Length 192
+Overlap 142=3 & 214=3 Length 192
+Overlap 142=3 & 231=4 Length 1152
+Overlap 142=3 & 234=1 Length 768
+Overlap 142=3 & 241=3 Length 0
+Overlap 142=3 & 243=1 Length 4224
+Overlap 142=3 & 312=4 Length 192
+Overlap 142=3 & 314=2 Length 192
+Overlap 142=3 & 321=4 Length 768
+Overlap 142=3 & 324=1 Length 832
+Overlap 142=3 & 341=2 Length 4224
+Overlap 142=3 & 342=1 Length 0
+Overlap 142=3 & 412=3 Length 192
+Overlap 142=3 & 413=2 Length 192
+Overlap 142=3 & 421=3 Length 832
+Overlap 142=3 & 423=1 Length 768
+Overlap 142=3 & 431=2 Length 768
+Overlap 142=3 & 432=1 Length 1152
+143=2 : 4224
+Overlap 143=2 & 123=4 Length 768
+Overlap 143=2 & 124=3 Length 832
+Overlap 143=2 & 132=4 Length 1152
+Overlap 143=2 & 134=2 Length 768
+Overlap 143=2 & 142=3 Length 0
+Overlap 143=2 & 213=4 Length 192
+Overlap 143=2 & 214=3 Length 192
+Overlap 143=2 & 231=4 Length 768
+Overlap 143=2 & 234=1 Length 1152
+Overlap 143=2 & 241=3 Length 4224
+Overlap 143=2 & 243=1 Length 0
+Overlap 143=2 & 312=4 Length 192
+Overlap 143=2 & 314=2 Length 192
+Overlap 143=2 & 321=4 Length 832
+Overlap 143=2 & 324=1 Length 768
+Overlap 143=2 & 341=2 Length 0
+Overlap 143=2 & 342=1 Length 4224
+Overlap 143=2 & 412=3 Length 192
+Overlap 143=2 & 413=2 Length 192
+Overlap 143=2 & 421=3 Length 768
+Overlap 143=2 & 423=1 Length 832
+Overlap 143=2 & 431=2 Length 1152
+Overlap 143=2 & 432=1 Length 768
+213=4 : 4224
+Overlap 213=4 & 123=4 Length 192
+Overlap 213=4 & 124=3 Length 192
+Overlap 213=4 & 132=4 Length 192
+Overlap 213=4 & 134=2 Length 192
+Overlap 213=4 & 142=3 Length 192
+Overlap 213=4 & 143=2 Length 192
+Overlap 213=4 & 214=3 Length 0
+Overlap 213=4 & 231=4 Length 192
+Overlap 213=4 & 234=1 Length 192
+Overlap 213=4 & 241=3 Length 192
+Overlap 213=4 & 243=1 Length 192
+Overlap 213=4 & 312=4 Length 0
+Overlap 213=4 & 314=2 Length 4224
+Overlap 213=4 & 321=4 Length 192
+Overlap 213=4 & 324=1 Length 192
+Overlap 213=4 & 341=2 Length 192
+Overlap 213=4 & 342=1 Length 192
+Overlap 213=4 & 412=3 Length 4224
+Overlap 213=4 & 413=2 Length 0
+Overlap 213=4 & 421=3 Length 192
+Overlap 213=4 & 423=1 Length 192
+Overlap 213=4 & 431=2 Length 192
+Overlap 213=4 & 432=1 Length 192
+214=3 : 4224
+Overlap 214=3 & 123=4 Length 192
+Overlap 214=3 & 124=3 Length 192
+Overlap 214=3 & 132=4 Length 192
+Overlap 214=3 & 134=2 Length 192
+Overlap 214=3 & 142=3 Length 192
+Overlap 214=3 & 143=2 Length 192
+Overlap 214=3 & 213=4 Length 0
+Overlap 214=3 & 231=4 Length 192
+Overlap 214=3 & 234=1 Length 192
+Overlap 214=3 & 241=3 Length 192
+Overlap 214=3 & 243=1 Length 192
+Overlap 214=3 & 312=4 Length 4224
+Overlap 214=3 & 314=2 Length 0
+Overlap 214=3 & 321=4 Length 192
+Overlap 214=3 & 324=1 Length 192
+Overlap 214=3 & 341=2 Length 192
+Overlap 214=3 & 342=1 Length 192
+Overlap 214=3 & 412=3 Length 0
+Overlap 214=3 & 413=2 Length 4224
+Overlap 214=3 & 421=3 Length 192
+Overlap 214=3 & 423=1 Length 192
+Overlap 214=3 & 431=2 Length 192
+Overlap 214=3 & 432=1 Length 192
+231=4 : 4224
+Overlap 231=4 & 123=4 Length 832
+Overlap 231=4 & 124=3 Length 768
+Overlap 231=4 & 132=4 Length 0
+Overlap 231=4 & 134=2 Length 4224
+Overlap 231=4 & 142=3 Length 1152
+Overlap 231=4 & 143=2 Length 768
+Overlap 231=4 & 213=4 Length 192
+Overlap 231=4 & 214=3 Length 192
+Overlap 231=4 & 234=1 Length 0
+Overlap 231=4 & 241=3 Length 768
+Overlap 231=4 & 243=1 Length 1152
+Overlap 231=4 & 312=4 Length 192
+Overlap 231=4 & 314=2 Length 192
+Overlap 231=4 & 321=4 Length 768
+Overlap 231=4 & 324=1 Length 832
+Overlap 231=4 & 341=2 Length 1152
+Overlap 231=4 & 342=1 Length 768
+Overlap 231=4 & 412=3 Length 192
+Overlap 231=4 & 413=2 Length 192
+Overlap 231=4 & 421=3 Length 832
+Overlap 231=4 & 423=1 Length 768
+Overlap 231=4 & 431=2 Length 0
+Overlap 231=4 & 432=1 Length 4224
+234=1 : 4224
+Overlap 234=1 & 123=4 Length 768
+Overlap 234=1 & 124=3 Length 832
+Overlap 234=1 & 132=4 Length 4224
+Overlap 234=1 & 134=2 Length 0
+Overlap 234=1 & 142=3 Length 768
+Overlap 234=1 & 143=2 Length 1152
+Overlap 234=1 & 213=4 Length 192
+Overlap 234=1 & 214=3 Length 192
+Overlap 234=1 & 231=4 Length 0
+Overlap 234=1 & 241=3 Length 1152
+Overlap 234=1 & 243=1 Length 768
+Overlap 234=1 & 312=4 Length 192
+Overlap 234=1 & 314=2 Length 192
+Overlap 234=1 & 321=4 Length 832
+Overlap 234=1 & 324=1 Length 768
+Overlap 234=1 & 341=2 Length 768
+Overlap 234=1 & 342=1 Length 1152
+Overlap 234=1 & 412=3 Length 192
+Overlap 234=1 & 413=2 Length 192
+Overlap 234=1 & 421=3 Length 768
+Overlap 234=1 & 423=1 Length 832
+Overlap 234=1 & 431=2 Length 4224
+Overlap 234=1 & 432=1 Length 0
+241=3 : 4224
+Overlap 241=3 & 123=4 Length 768
+Overlap 241=3 & 124=3 Length 832
+Overlap 241=3 & 132=4 Length 1152
+Overlap 241=3 & 134=2 Length 768
+Overlap 241=3 & 142=3 Length 0
+Overlap 241=3 & 143=2 Length 4224
+Overlap 241=3 & 213=4 Length 192
+Overlap 241=3 & 214=3 Length 192
+Overlap 241=3 & 231=4 Length 768
+Overlap 241=3 & 234=1 Length 1152
+Overlap 241=3 & 243=1 Length 0
+Overlap 241=3 & 312=4 Length 192
+Overlap 241=3 & 314=2 Length 192
+Overlap 241=3 & 321=4 Length 832
+Overlap 241=3 & 324=1 Length 768
+Overlap 241=3 & 341=2 Length 0
+Overlap 241=3 & 342=1 Length 4224
+Overlap 241=3 & 412=3 Length 192
+Overlap 241=3 & 413=2 Length 192
+Overlap 241=3 & 421=3 Length 768
+Overlap 241=3 & 423=1 Length 832
+Overlap 241=3 & 431=2 Length 1152
+Overlap 241=3 & 432=1 Length 768
+243=1 : 4224
+Overlap 243=1 & 123=4 Length 832
+Overlap 243=1 & 124=3 Length 768
+Overlap 243=1 & 132=4 Length 768
+Overlap 243=1 & 134=2 Length 1152
+Overlap 243=1 & 142=3 Length 4224
+Overlap 243=1 & 143=2 Length 0
+Overlap 243=1 & 213=4 Length 192
+Overlap 243=1 & 214=3 Length 192
+Overlap 243=1 & 231=4 Length 1152
+Overlap 243=1 & 234=1 Length 768
+Overlap 243=1 & 241=3 Length 0
+Overlap 243=1 & 312=4 Length 192
+Overlap 243=1 & 314=2 Length 192
+Overlap 243=1 & 321=4 Length 768
+Overlap 243=1 & 324=1 Length 832
+Overlap 243=1 & 341=2 Length 4224
+Overlap 243=1 & 342=1 Length 0
+Overlap 243=1 & 412=3 Length 192
+Overlap 243=1 & 413=2 Length 192
+Overlap 243=1 & 421=3 Length 832
+Overlap 243=1 & 423=1 Length 768
+Overlap 243=1 & 431=2 Length 768
+Overlap 243=1 & 432=1 Length 1152
+312=4 : 4224
+Overlap 312=4 & 123=4 Length 192
+Overlap 312=4 & 124=3 Length 192
+Overlap 312=4 & 132=4 Length 192
+Overlap 312=4 & 134=2 Length 192
+Overlap 312=4 & 142=3 Length 192
+Overlap 312=4 & 143=2 Length 192
+Overlap 312=4 & 213=4 Length 0
+Overlap 312=4 & 214=3 Length 4224
+Overlap 312=4 & 231=4 Length 192
+Overlap 312=4 & 234=1 Length 192
+Overlap 312=4 & 241=3 Length 192
+Overlap 312=4 & 243=1 Length 192
+Overlap 312=4 & 314=2 Length 0
+Overlap 312=4 & 321=4 Length 192
+Overlap 312=4 & 324=1 Length 192
+Overlap 312=4 & 341=2 Length 192
+Overlap 312=4 & 342=1 Length 192
+Overlap 312=4 & 412=3 Length 0
+Overlap 312=4 & 413=2 Length 4224
+Overlap 312=4 & 421=3 Length 192
+Overlap 312=4 & 423=1 Length 192
+Overlap 312=4 & 431=2 Length 192
+Overlap 312=4 & 432=1 Length 192
+314=2 : 4224
+Overlap 314=2 & 123=4 Length 192
+Overlap 314=2 & 124=3 Length 192
+Overlap 314=2 & 132=4 Length 192
+Overlap 314=2 & 134=2 Length 192
+Overlap 314=2 & 142=3 Length 192
+Overlap 314=2 & 143=2 Length 192
+Overlap 314=2 & 213=4 Length 4224
+Overlap 314=2 & 214=3 Length 0
+Overlap 314=2 & 231=4 Length 192
+Overlap 314=2 & 234=1 Length 192
+Overlap 314=2 & 241=3 Length 192
+Overlap 314=2 & 243=1 Length 192
+Overlap 314=2 & 312=4 Length 0
+Overlap 314=2 & 321=4 Length 192
+Overlap 314=2 & 324=1 Length 192
+Overlap 314=2 & 341=2 Length 192
+Overlap 314=2 & 342=1 Length 192
+Overlap 314=2 & 412=3 Length 4224
+Overlap 314=2 & 413=2 Length 0
+Overlap 314=2 & 421=3 Length 192
+Overlap 314=2 & 423=1 Length 192
+Overlap 314=2 & 431=2 Length 192
+Overlap 314=2 & 432=1 Length 192
+321=4 : 4224
+Overlap 321=4 & 123=4 Length 0
+Overlap 321=4 & 124=3 Length 4224
+Overlap 321=4 & 132=4 Length 832
+Overlap 321=4 & 134=2 Length 768
+Overlap 321=4 & 142=3 Length 768
+Overlap 321=4 & 143=2 Length 832
+Overlap 321=4 & 213=4 Length 192
+Overlap 321=4 & 214=3 Length 192
+Overlap 321=4 & 231=4 Length 768
+Overlap 321=4 & 234=1 Length 832
+Overlap 321=4 & 241=3 Length 832
+Overlap 321=4 & 243=1 Length 768
+Overlap 321=4 & 312=4 Length 192
+Overlap 321=4 & 314=2 Length 192
+Overlap 321=4 & 324=1 Length 0
+Overlap 321=4 & 341=2 Length 768
+Overlap 321=4 & 342=1 Length 832
+Overlap 321=4 & 412=3 Length 192
+Overlap 321=4 & 413=2 Length 192
+Overlap 321=4 & 421=3 Length 0
+Overlap 321=4 & 423=1 Length 4224
+Overlap 321=4 & 431=2 Length 832
+Overlap 321=4 & 432=1 Length 768
+324=1 : 4224
+Overlap 324=1 & 123=4 Length 4224
+Overlap 324=1 & 124=3 Length 0
+Overlap 324=1 & 132=4 Length 768
+Overlap 324=1 & 134=2 Length 832
+Overlap 324=1 & 142=3 Length 832
+Overlap 324=1 & 143=2 Length 768
+Overlap 324=1 & 213=4 Length 192
+Overlap 324=1 & 214=3 Length 192
+Overlap 324=1 & 231=4 Length 832
+Overlap 324=1 & 234=1 Length 768
+Overlap 324=1 & 241=3 Length 768
+Overlap 324=1 & 243=1 Length 832
+Overlap 324=1 & 312=4 Length 192
+Overlap 324=1 & 314=2 Length 192
+Overlap 324=1 & 321=4 Length 0
+Overlap 324=1 & 341=2 Length 832
+Overlap 324=1 & 342=1 Length 768
+Overlap 324=1 & 412=3 Length 192
+Overlap 324=1 & 413=2 Length 192
+Overlap 324=1 & 421=3 Length 4224
+Overlap 324=1 & 423=1 Length 0
+Overlap 324=1 & 431=2 Length 768
+Overlap 324=1 & 432=1 Length 832
+341=2 : 4224
+Overlap 341=2 & 123=4 Length 832
+Overlap 341=2 & 124=3 Length 768
+Overlap 341=2 & 132=4 Length 768
+Overlap 341=2 & 134=2 Length 1152
+Overlap 341=2 & 142=3 Length 4224
+Overlap 341=2 & 143=2 Length 0
+Overlap 341=2 & 213=4 Length 192
+Overlap 341=2 & 214=3 Length 192
+Overlap 341=2 & 231=4 Length 1152
+Overlap 341=2 & 234=1 Length 768
+Overlap 341=2 & 241=3 Length 0
+Overlap 341=2 & 243=1 Length 4224
+Overlap 341=2 & 312=4 Length 192
+Overlap 341=2 & 314=2 Length 192
+Overlap 341=2 & 321=4 Length 768
+Overlap 341=2 & 324=1 Length 832
+Overlap 341=2 & 342=1 Length 0
+Overlap 341=2 & 412=3 Length 192
+Overlap 341=2 & 413=2 Length 192
+Overlap 341=2 & 421=3 Length 832
+Overlap 341=2 & 423=1 Length 768
+Overlap 341=2 & 431=2 Length 768
+Overlap 341=2 & 432=1 Length 1152
+342=1 : 4224
+Overlap 342=1 & 123=4 Length 768
+Overlap 342=1 & 124=3 Length 832
+Overlap 342=1 & 132=4 Length 1152
+Overlap 342=1 & 134=2 Length 768
+Overlap 342=1 & 142=3 Length 0
+Overlap 342=1 & 143=2 Length 4224
+Overlap 342=1 & 213=4 Length 192
+Overlap 342=1 & 214=3 Length 192
+Overlap 342=1 & 231=4 Length 768
+Overlap 342=1 & 234=1 Length 1152
+Overlap 342=1 & 241=3 Length 4224
+Overlap 342=1 & 243=1 Length 0
+Overlap 342=1 & 312=4 Length 192
+Overlap 342=1 & 314=2 Length 192
+Overlap 342=1 & 321=4 Length 832
+Overlap 342=1 & 324=1 Length 768
+Overlap 342=1 & 341=2 Length 0
+Overlap 342=1 & 412=3 Length 192
+Overlap 342=1 & 413=2 Length 192
+Overlap 342=1 & 421=3 Length 768
+Overlap 342=1 & 423=1 Length 832
+Overlap 342=1 & 431=2 Length 1152
+Overlap 342=1 & 432=1 Length 768
+412=3 : 4224
+Overlap 412=3 & 123=4 Length 192
+Overlap 412=3 & 124=3 Length 192
+Overlap 412=3 & 132=4 Length 192
+Overlap 412=3 & 134=2 Length 192
+Overlap 412=3 & 142=3 Length 192
+Overlap 412=3 & 143=2 Length 192
+Overlap 412=3 & 213=4 Length 4224
+Overlap 412=3 & 214=3 Length 0
+Overlap 412=3 & 231=4 Length 192
+Overlap 412=3 & 234=1 Length 192
+Overlap 412=3 & 241=3 Length 192
+Overlap 412=3 & 243=1 Length 192
+Overlap 412=3 & 312=4 Length 0
+Overlap 412=3 & 314=2 Length 4224
+Overlap 412=3 & 321=4 Length 192
+Overlap 412=3 & 324=1 Length 192
+Overlap 412=3 & 341=2 Length 192
+Overlap 412=3 & 342=1 Length 192
+Overlap 412=3 & 413=2 Length 0
+Overlap 412=3 & 421=3 Length 192
+Overlap 412=3 & 423=1 Length 192
+Overlap 412=3 & 431=2 Length 192
+Overlap 412=3 & 432=1 Length 192
+413=2 : 4224
+Overlap 413=2 & 123=4 Length 192
+Overlap 413=2 & 124=3 Length 192
+Overlap 413=2 & 132=4 Length 192
+Overlap 413=2 & 134=2 Length 192
+Overlap 413=2 & 142=3 Length 192
+Overlap 413=2 & 143=2 Length 192
+Overlap 413=2 & 213=4 Length 0
+Overlap 413=2 & 214=3 Length 4224
+Overlap 413=2 & 231=4 Length 192
+Overlap 413=2 & 234=1 Length 192
+Overlap 413=2 & 241=3 Length 192
+Overlap 413=2 & 243=1 Length 192
+Overlap 413=2 & 312=4 Length 4224
+Overlap 413=2 & 314=2 Length 0
+Overlap 413=2 & 321=4 Length 192
+Overlap 413=2 & 324=1 Length 192
+Overlap 413=2 & 341=2 Length 192
+Overlap 413=2 & 342=1 Length 192
+Overlap 413=2 & 412=3 Length 0
+Overlap 413=2 & 421=3 Length 192
+Overlap 413=2 & 423=1 Length 192
+Overlap 413=2 & 431=2 Length 192
+Overlap 413=2 & 432=1 Length 192
+421=3 : 4224
+Overlap 421=3 & 123=4 Length 4224
+Overlap 421=3 & 124=3 Length 0
+Overlap 421=3 & 132=4 Length 768
+Overlap 421=3 & 134=2 Length 832
+Overlap 421=3 & 142=3 Length 832
+Overlap 421=3 & 143=2 Length 768
+Overlap 421=3 & 213=4 Length 192
+Overlap 421=3 & 214=3 Length 192
+Overlap 421=3 & 231=4 Length 832
+Overlap 421=3 & 234=1 Length 768
+Overlap 421=3 & 241=3 Length 768
+Overlap 421=3 & 243=1 Length 832
+Overlap 421=3 & 312=4 Length 192
+Overlap 421=3 & 314=2 Length 192
+Overlap 421=3 & 321=4 Length 0
+Overlap 421=3 & 324=1 Length 4224
+Overlap 421=3 & 341=2 Length 832
+Overlap 421=3 & 342=1 Length 768
+Overlap 421=3 & 412=3 Length 192
+Overlap 421=3 & 413=2 Length 192
+Overlap 421=3 & 423=1 Length 0
+Overlap 421=3 & 431=2 Length 768
+Overlap 421=3 & 432=1 Length 832
+423=1 : 4224
+Overlap 423=1 & 123=4 Length 0
+Overlap 423=1 & 124=3 Length 4224
+Overlap 423=1 & 132=4 Length 832
+Overlap 423=1 & 134=2 Length 768
+Overlap 423=1 & 142=3 Length 768
+Overlap 423=1 & 143=2 Length 832
+Overlap 423=1 & 213=4 Length 192
+Overlap 423=1 & 214=3 Length 192
+Overlap 423=1 & 231=4 Length 768
+Overlap 423=1 & 234=1 Length 832
+Overlap 423=1 & 241=3 Length 832
+Overlap 423=1 & 243=1 Length 768
+Overlap 423=1 & 312=4 Length 192
+Overlap 423=1 & 314=2 Length 192
+Overlap 423=1 & 321=4 Length 4224
+Overlap 423=1 & 324=1 Length 0
+Overlap 423=1 & 341=2 Length 768
+Overlap 423=1 & 342=1 Length 832
+Overlap 423=1 & 412=3 Length 192
+Overlap 423=1 & 413=2 Length 192
+Overlap 423=1 & 421=3 Length 0
+Overlap 423=1 & 431=2 Length 832
+Overlap 423=1 & 432=1 Length 768
+431=2 : 4224
+Overlap 431=2 & 123=4 Length 768
+Overlap 431=2 & 124=3 Length 832
+Overlap 431=2 & 132=4 Length 4224
+Overlap 431=2 & 134=2 Length 0
+Overlap 431=2 & 142=3 Length 768
+Overlap 431=2 & 143=2 Length 1152
+Overlap 431=2 & 213=4 Length 192
+Overlap 431=2 & 214=3 Length 192
+Overlap 431=2 & 231=4 Length 0
+Overlap 431=2 & 234=1 Length 4224
+Overlap 431=2 & 241=3 Length 1152
+Overlap 431=2 & 243=1 Length 768
+Overlap 431=2 & 312=4 Length 192
+Overlap 431=2 & 314=2 Length 192
+Overlap 431=2 & 321=4 Length 832
+Overlap 431=2 & 324=1 Length 768
+Overlap 431=2 & 341=2 Length 768
+Overlap 431=2 & 342=1 Length 1152
+Overlap 431=2 & 412=3 Length 192
+Overlap 431=2 & 413=2 Length 192
+Overlap 431=2 & 421=3 Length 768
+Overlap 431=2 & 423=1 Length 832
+Overlap 431=2 & 432=1 Length 0
+432=1 : 4224
+Overlap 432=1 & 123=4 Length 832
+Overlap 432=1 & 124=3 Length 768
+Overlap 432=1 & 132=4 Length 0
+Overlap 432=1 & 134=2 Length 4224
+Overlap 432=1 & 142=3 Length 1152
+Overlap 432=1 & 143=2 Length 768
+Overlap 432=1 & 213=4 Length 192
+Overlap 432=1 & 214=3 Length 192
+Overlap 432=1 & 231=4 Length 4224
+Overlap 432=1 & 234=1 Length 0
+Overlap 432=1 & 241=3 Length 768
+Overlap 432=1 & 243=1 Length 1152
+Overlap 432=1 & 312=4 Length 192
+Overlap 432=1 & 314=2 Length 192
+Overlap 432=1 & 321=4 Length 768
+Overlap 432=1 & 324=1 Length 832
+Overlap 432=1 & 341=2 Length 1152
+Overlap 432=1 & 342=1 Length 768
+Overlap 432=1 & 412=3 Length 192
+Overlap 432=1 & 413=2 Length 192
+Overlap 432=1 & 421=3 Length 832
+Overlap 432=1 & 423=1 Length 768
+Overlap 432=1 & 431=2 Length 0
+Number of '100%' overlap groups: 24
+123=4 & 324=1
+123=4 & 421=3
+124=3 & 321=4
+124=3 & 423=1
+132=4 & 234=1
+132=4 & 431=2
+134=2 & 231=4
+134=2 & 432=1
+142=3 & 243=1
+142=3 & 341=2
+143=2 & 241=3
+143=2 & 342=1
+213=4 & 314=2
+213=4 & 412=3
+214=3 & 312=4
+214=3 & 413=2
+231=4 & 432=1
+234=1 & 431=2
+241=3 & 342=1
+243=1 & 341=2
+312=4 & 413=2
+314=2 & 412=3
+321=4 & 423=1
+324=1 & 421=3
+Number of '0%' overlap groups: 36
+123=4 & 124=3
+123=4 & 321=4
+123=4 & 423=1
+124=3 & 324=1
+124=3 & 421=3
+132=4 & 134=2
+132=4 & 231=4
+132=4 & 432=1
+134=2 & 234=1
+134=2 & 431=2
+142=3 & 143=2
+142=3 & 241=3
+142=3 & 342=1
+143=2 & 243=1
+143=2 & 341=2
+213=4 & 214=3
+213=4 & 312=4
+213=4 & 413=2
+214=3 & 314=2
+214=3 & 412=3
+231=4 & 234=1
+231=4 & 431=2
+234=1 & 432=1
+241=3 & 243=1
+241=3 & 341=2
+243=1 & 342=1
+312=4 & 314=2
+312=4 & 412=3
+314=2 & 413=2
+321=4 & 324=1
+321=4 & 421=3
+324=1 & 423=1
+341=2 & 342=1
+412=3 & 413=2
+421=3 & 423=1
+431=2 & 432=1
+-- Execution time --
+---- 22.610249996185303 seconds ----

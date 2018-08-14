@@ -1,0 +1,687 @@
+Length lmats 384
+384
+Inverse - Skew Symmetric overlap check
+[]
+Transpose - Skew Symmetric overlap check
+[]
+Negative check
+Number of Negative matrices: 0
+Transpose check
+Number of Transpose  matrices: 76
+Inverse check
+Number of Inverse  matrices: 76
+Skew check
+Number of Skew-symmetric matrices: 12
+Real Orthogonal Matrix check
+Number of R. Orthogonal Matrices: 384
+Number of Non-Orth Matrices: 0
+Individual Matrix check finished
+
+Inverse check
+Number of inverse duplicate matrices: 154
+Transpose check
+Number of Transpose duplicate matrices: 154
+Skew check
+Number of Skew-symmetric duplicate matrices: 186
+nonskewlist: 372
+[88, 95, 127, 143, 151, 160, 223, 232, 247, 263, 304, 311]
+
+Num of self Skew-symmetric matrices: 12
+[88, 95, 127, 143, 151, 160, 223, 232, 247, 263, 304, 311]
+Number of Real Orthogonal Matrices: 384
+[[3, 4], [8, 12], [9, 18], [10, 13], [11, 19], [15, 20], [17, 22], [25, 49], [27, 52], [28, 99], [29, 101], [31, 55], [32, 36], [33, 66], [34, 109], [35, 115], [37, 58], [39, 68], [40, 112], [41, 118], [42, 201], [43, 203], [44, 207], [45, 213], [46, 209], [47, 215], [50, 98], [51, 100], [56, 108], [57, 114], [59, 67], [60, 200], [61, 202], [62, 206], [63, 212], [64, 208], [65, 214], [70, 113], [71, 119], [74, 122], [75, 148], [76, 123], [77, 149], [80, 132], [81, 162], [82, 133], [83, 163], [84, 224], [85, 250], [86, 230], [87, 260], [88, 304], [89, 310], [90, 225], [91, 251], [92, 231], [93, 261], [94, 305], [95, 311], [102, 198], [103, 199], [104, 204], [105, 210], [106, 205], [107, 211], [111, 116], [121, 145], [124, 147], [126, 222], [127, 247], [128, 228], [129, 258], [130, 301], [131, 307], [135, 164], [137, 166], [138, 249], [139, 227], [140, 303], [141, 309], [142, 233], [143, 263], [150, 246], [151, 223], [152, 300], [153, 306], [154, 229], [155, 259], [156, 248], [157, 226], [158, 302], [159, 308], [160, 232], [161, 262], [171, 172], [174, 270], [175, 271], [176, 324], [177, 354], [178, 325], [179, 355], [180, 272], [181, 274], [182, 326], [183, 356], [184, 328], [185, 358], [186, 273], [187, 275], [188, 327], [189, 357], [190, 329], [191, 359], [195, 196], [217, 241], [219, 244], [220, 291], [221, 293], [234, 297], [235, 299], [236, 255], [238, 257], [242, 290], [243, 292], [252, 296], [253, 298], [266, 314], [267, 340], [268, 315], [269, 341], [276, 320], [277, 346], [279, 284], [280, 352], [281, 334], [282, 321], [283, 347], [286, 353], [287, 335], [313, 337], [316, 339], [319, 343], [322, 349], [323, 331], [330, 345], [332, 351], [344, 348], [363, 364], [368, 372], [369, 378], [370, 373], [371, 379], [375, 380], [377, 382]]
+
+[[3, 4], [8, 12], [9, 18], [10, 13], [11, 19], [15, 20], [17, 22], [25, 49], [27, 52], [28, 99], [29, 101], [31, 55], [32, 36], [33, 66], [34, 109], [35, 115], [37, 58], [39, 68], [40, 112], [41, 118], [42, 201], [43, 203], [44, 207], [45, 213], [46, 209], [47, 215], [50, 98], [51, 100], [56, 108], [57, 114], [59, 67], [60, 200], [61, 202], [62, 206], [63, 212], [64, 208], [65, 214], [70, 113], [71, 119], [74, 122], [75, 148], [76, 123], [77, 149], [80, 132], [81, 162], [82, 133], [83, 163], [84, 224], [85, 250], [86, 230], [87, 260], [88, 304], [89, 310], [90, 225], [91, 251], [92, 231], [93, 261], [94, 305], [95, 311], [102, 198], [103, 199], [104, 204], [105, 210], [106, 205], [107, 211], [111, 116], [121, 145], [124, 147], [126, 222], [127, 247], [128, 228], [129, 258], [130, 301], [131, 307], [135, 164], [137, 166], [138, 249], [139, 227], [140, 303], [141, 309], [142, 233], [143, 263], [150, 246], [151, 223], [152, 300], [153, 306], [154, 229], [155, 259], [156, 248], [157, 226], [158, 302], [159, 308], [160, 232], [161, 262], [171, 172], [174, 270], [175, 271], [176, 324], [177, 354], [178, 325], [179, 355], [180, 272], [181, 274], [182, 326], [183, 356], [184, 328], [185, 358], [186, 273], [187, 275], [188, 327], [189, 357], [190, 329], [191, 359], [195, 196], [217, 241], [219, 244], [220, 291], [221, 293], [234, 297], [235, 299], [236, 255], [238, 257], [242, 290], [243, 292], [252, 296], [253, 298], [266, 314], [267, 340], [268, 315], [269, 341], [276, 320], [277, 346], [279, 284], [280, 352], [281, 334], [282, 321], [283, 347], [286, 353], [287, 335], [313, 337], [316, 339], [319, 343], [322, 349], [323, 331], [330, 345], [332, 351], [344, 348], [363, 364], [368, 372], [369, 378], [370, 373], [371, 379], [375, 380], [377, 382]]
+Checking if Inverse and Transpose sets are the same
+Number of Inverse - Transpose matches: 154
+
+Adinkra Composition Testing
+ABC=D : 4224
+Overlap ABC=D & ABD=C Length 0
+Overlap ABC=D & ACB=D Length 768
+Overlap ABC=D & ACD=B Length 832
+Overlap ABC=D & ADB=C Length 832
+Overlap ABC=D & ADC=B Length 768
+Overlap ABC=D & BAC=D Length 192
+Overlap ABC=D & BAD=C Length 192
+Overlap ABC=D & BCA=D Length 832
+Overlap ABC=D & BCD=A Length 768
+Overlap ABC=D & BDA=C Length 768
+Overlap ABC=D & BDC=A Length 832
+Overlap ABC=D & CAB=D Length 192
+Overlap ABC=D & CAD=B Length 192
+Overlap ABC=D & CBA=D Length 0
+Overlap ABC=D & CBD=A Length 4224
+Overlap ABC=D & CDA=B Length 832
+Overlap ABC=D & CDB=A Length 768
+Overlap ABC=D & DAB=C Length 192
+Overlap ABC=D & DAC=B Length 192
+Overlap ABC=D & DBA=C Length 4224
+Overlap ABC=D & DBC=A Length 0
+Overlap ABC=D & DCA=B Length 768
+Overlap ABC=D & DCB=A Length 832
+ABD=C : 4224
+Overlap ABD=C & ABC=D Length 0
+Overlap ABD=C & ACB=D Length 832
+Overlap ABD=C & ACD=B Length 768
+Overlap ABD=C & ADB=C Length 768
+Overlap ABD=C & ADC=B Length 832
+Overlap ABD=C & BAC=D Length 192
+Overlap ABD=C & BAD=C Length 192
+Overlap ABD=C & BCA=D Length 768
+Overlap ABD=C & BCD=A Length 832
+Overlap ABD=C & BDA=C Length 832
+Overlap ABD=C & BDC=A Length 768
+Overlap ABD=C & CAB=D Length 192
+Overlap ABD=C & CAD=B Length 192
+Overlap ABD=C & CBA=D Length 4224
+Overlap ABD=C & CBD=A Length 0
+Overlap ABD=C & CDA=B Length 768
+Overlap ABD=C & CDB=A Length 832
+Overlap ABD=C & DAB=C Length 192
+Overlap ABD=C & DAC=B Length 192
+Overlap ABD=C & DBA=C Length 0
+Overlap ABD=C & DBC=A Length 4224
+Overlap ABD=C & DCA=B Length 832
+Overlap ABD=C & DCB=A Length 768
+ACB=D : 4224
+Overlap ACB=D & ABC=D Length 768
+Overlap ACB=D & ABD=C Length 832
+Overlap ACB=D & ACD=B Length 0
+Overlap ACB=D & ADB=C Length 768
+Overlap ACB=D & ADC=B Length 1152
+Overlap ACB=D & BAC=D Length 192
+Overlap ACB=D & BAD=C Length 192
+Overlap ACB=D & BCA=D Length 0
+Overlap ACB=D & BCD=A Length 4224
+Overlap ACB=D & BDA=C Length 1152
+Overlap ACB=D & BDC=A Length 768
+Overlap ACB=D & CAB=D Length 192
+Overlap ACB=D & CAD=B Length 192
+Overlap ACB=D & CBA=D Length 832
+Overlap ACB=D & CBD=A Length 768
+Overlap ACB=D & CDA=B Length 768
+Overlap ACB=D & CDB=A Length 1152
+Overlap ACB=D & DAB=C Length 192
+Overlap ACB=D & DAC=B Length 192
+Overlap ACB=D & DBA=C Length 768
+Overlap ACB=D & DBC=A Length 832
+Overlap ACB=D & DCA=B Length 4224
+Overlap ACB=D & DCB=A Length 0
+ACD=B : 4224
+Overlap ACD=B & ABC=D Length 832
+Overlap ACD=B & ABD=C Length 768
+Overlap ACD=B & ACB=D Length 0
+Overlap ACD=B & ADB=C Length 1152
+Overlap ACD=B & ADC=B Length 768
+Overlap ACD=B & BAC=D Length 192
+Overlap ACD=B & BAD=C Length 192
+Overlap ACD=B & BCA=D Length 4224
+Overlap ACD=B & BCD=A Length 0
+Overlap ACD=B & BDA=C Length 768
+Overlap ACD=B & BDC=A Length 1152
+Overlap ACD=B & CAB=D Length 192
+Overlap ACD=B & CAD=B Length 192
+Overlap ACD=B & CBA=D Length 768
+Overlap ACD=B & CBD=A Length 832
+Overlap ACD=B & CDA=B Length 1152
+Overlap ACD=B & CDB=A Length 768
+Overlap ACD=B & DAB=C Length 192
+Overlap ACD=B & DAC=B Length 192
+Overlap ACD=B & DBA=C Length 832
+Overlap ACD=B & DBC=A Length 768
+Overlap ACD=B & DCA=B Length 0
+Overlap ACD=B & DCB=A Length 4224
+ADB=C : 4224
+Overlap ADB=C & ABC=D Length 832
+Overlap ADB=C & ABD=C Length 768
+Overlap ADB=C & ACB=D Length 768
+Overlap ADB=C & ACD=B Length 1152
+Overlap ADB=C & ADC=B Length 0
+Overlap ADB=C & BAC=D Length 192
+Overlap ADB=C & BAD=C Length 192
+Overlap ADB=C & BCA=D Length 1152
+Overlap ADB=C & BCD=A Length 768
+Overlap ADB=C & BDA=C Length 0
+Overlap ADB=C & BDC=A Length 4224
+Overlap ADB=C & CAB=D Length 192
+Overlap ADB=C & CAD=B Length 192
+Overlap ADB=C & CBA=D Length 768
+Overlap ADB=C & CBD=A Length 832
+Overlap ADB=C & CDA=B Length 4224
+Overlap ADB=C & CDB=A Length 0
+Overlap ADB=C & DAB=C Length 192
+Overlap ADB=C & DAC=B Length 192
+Overlap ADB=C & DBA=C Length 832
+Overlap ADB=C & DBC=A Length 768
+Overlap ADB=C & DCA=B Length 768
+Overlap ADB=C & DCB=A Length 1152
+ADC=B : 4224
+Overlap ADC=B & ABC=D Length 768
+Overlap ADC=B & ABD=C Length 832
+Overlap ADC=B & ACB=D Length 1152
+Overlap ADC=B & ACD=B Length 768
+Overlap ADC=B & ADB=C Length 0
+Overlap ADC=B & BAC=D Length 192
+Overlap ADC=B & BAD=C Length 192
+Overlap ADC=B & BCA=D Length 768
+Overlap ADC=B & BCD=A Length 1152
+Overlap ADC=B & BDA=C Length 4224
+Overlap ADC=B & BDC=A Length 0
+Overlap ADC=B & CAB=D Length 192
+Overlap ADC=B & CAD=B Length 192
+Overlap ADC=B & CBA=D Length 832
+Overlap ADC=B & CBD=A Length 768
+Overlap ADC=B & CDA=B Length 0
+Overlap ADC=B & CDB=A Length 4224
+Overlap ADC=B & DAB=C Length 192
+Overlap ADC=B & DAC=B Length 192
+Overlap ADC=B & DBA=C Length 768
+Overlap ADC=B & DBC=A Length 832
+Overlap ADC=B & DCA=B Length 1152
+Overlap ADC=B & DCB=A Length 768
+BAC=D : 4224
+Overlap BAC=D & ABC=D Length 192
+Overlap BAC=D & ABD=C Length 192
+Overlap BAC=D & ACB=D Length 192
+Overlap BAC=D & ACD=B Length 192
+Overlap BAC=D & ADB=C Length 192
+Overlap BAC=D & ADC=B Length 192
+Overlap BAC=D & BAD=C Length 0
+Overlap BAC=D & BCA=D Length 192
+Overlap BAC=D & BCD=A Length 192
+Overlap BAC=D & BDA=C Length 192
+Overlap BAC=D & BDC=A Length 192
+Overlap BAC=D & CAB=D Length 0
+Overlap BAC=D & CAD=B Length 4224
+Overlap BAC=D & CBA=D Length 192
+Overlap BAC=D & CBD=A Length 192
+Overlap BAC=D & CDA=B Length 192
+Overlap BAC=D & CDB=A Length 192
+Overlap BAC=D & DAB=C Length 4224
+Overlap BAC=D & DAC=B Length 0
+Overlap BAC=D & DBA=C Length 192
+Overlap BAC=D & DBC=A Length 192
+Overlap BAC=D & DCA=B Length 192
+Overlap BAC=D & DCB=A Length 192
+BAD=C : 4224
+Overlap BAD=C & ABC=D Length 192
+Overlap BAD=C & ABD=C Length 192
+Overlap BAD=C & ACB=D Length 192
+Overlap BAD=C & ACD=B Length 192
+Overlap BAD=C & ADB=C Length 192
+Overlap BAD=C & ADC=B Length 192
+Overlap BAD=C & BAC=D Length 0
+Overlap BAD=C & BCA=D Length 192
+Overlap BAD=C & BCD=A Length 192
+Overlap BAD=C & BDA=C Length 192
+Overlap BAD=C & BDC=A Length 192
+Overlap BAD=C & CAB=D Length 4224
+Overlap BAD=C & CAD=B Length 0
+Overlap BAD=C & CBA=D Length 192
+Overlap BAD=C & CBD=A Length 192
+Overlap BAD=C & CDA=B Length 192
+Overlap BAD=C & CDB=A Length 192
+Overlap BAD=C & DAB=C Length 0
+Overlap BAD=C & DAC=B Length 4224
+Overlap BAD=C & DBA=C Length 192
+Overlap BAD=C & DBC=A Length 192
+Overlap BAD=C & DCA=B Length 192
+Overlap BAD=C & DCB=A Length 192
+BCA=D : 4224
+Overlap BCA=D & ABC=D Length 832
+Overlap BCA=D & ABD=C Length 768
+Overlap BCA=D & ACB=D Length 0
+Overlap BCA=D & ACD=B Length 4224
+Overlap BCA=D & ADB=C Length 1152
+Overlap BCA=D & ADC=B Length 768
+Overlap BCA=D & BAC=D Length 192
+Overlap BCA=D & BAD=C Length 192
+Overlap BCA=D & BCD=A Length 0
+Overlap BCA=D & BDA=C Length 768
+Overlap BCA=D & BDC=A Length 1152
+Overlap BCA=D & CAB=D Length 192
+Overlap BCA=D & CAD=B Length 192
+Overlap BCA=D & CBA=D Length 768
+Overlap BCA=D & CBD=A Length 832
+Overlap BCA=D & CDA=B Length 1152
+Overlap BCA=D & CDB=A Length 768
+Overlap BCA=D & DAB=C Length 192
+Overlap BCA=D & DAC=B Length 192
+Overlap BCA=D & DBA=C Length 832
+Overlap BCA=D & DBC=A Length 768
+Overlap BCA=D & DCA=B Length 0
+Overlap BCA=D & DCB=A Length 4224
+BCD=A : 4224
+Overlap BCD=A & ABC=D Length 768
+Overlap BCD=A & ABD=C Length 832
+Overlap BCD=A & ACB=D Length 4224
+Overlap BCD=A & ACD=B Length 0
+Overlap BCD=A & ADB=C Length 768
+Overlap BCD=A & ADC=B Length 1152
+Overlap BCD=A & BAC=D Length 192
+Overlap BCD=A & BAD=C Length 192
+Overlap BCD=A & BCA=D Length 0
+Overlap BCD=A & BDA=C Length 1152
+Overlap BCD=A & BDC=A Length 768
+Overlap BCD=A & CAB=D Length 192
+Overlap BCD=A & CAD=B Length 192
+Overlap BCD=A & CBA=D Length 832
+Overlap BCD=A & CBD=A Length 768
+Overlap BCD=A & CDA=B Length 768
+Overlap BCD=A & CDB=A Length 1152
+Overlap BCD=A & DAB=C Length 192
+Overlap BCD=A & DAC=B Length 192
+Overlap BCD=A & DBA=C Length 768
+Overlap BCD=A & DBC=A Length 832
+Overlap BCD=A & DCA=B Length 4224
+Overlap BCD=A & DCB=A Length 0
+BDA=C : 4224
+Overlap BDA=C & ABC=D Length 768
+Overlap BDA=C & ABD=C Length 832
+Overlap BDA=C & ACB=D Length 1152
+Overlap BDA=C & ACD=B Length 768
+Overlap BDA=C & ADB=C Length 0
+Overlap BDA=C & ADC=B Length 4224
+Overlap BDA=C & BAC=D Length 192
+Overlap BDA=C & BAD=C Length 192
+Overlap BDA=C & BCA=D Length 768
+Overlap BDA=C & BCD=A Length 1152
+Overlap BDA=C & BDC=A Length 0
+Overlap BDA=C & CAB=D Length 192
+Overlap BDA=C & CAD=B Length 192
+Overlap BDA=C & CBA=D Length 832
+Overlap BDA=C & CBD=A Length 768
+Overlap BDA=C & CDA=B Length 0
+Overlap BDA=C & CDB=A Length 4224
+Overlap BDA=C & DAB=C Length 192
+Overlap BDA=C & DAC=B Length 192
+Overlap BDA=C & DBA=C Length 768
+Overlap BDA=C & DBC=A Length 832
+Overlap BDA=C & DCA=B Length 1152
+Overlap BDA=C & DCB=A Length 768
+BDC=A : 4224
+Overlap BDC=A & ABC=D Length 832
+Overlap BDC=A & ABD=C Length 768
+Overlap BDC=A & ACB=D Length 768
+Overlap BDC=A & ACD=B Length 1152
+Overlap BDC=A & ADB=C Length 4224
+Overlap BDC=A & ADC=B Length 0
+Overlap BDC=A & BAC=D Length 192
+Overlap BDC=A & BAD=C Length 192
+Overlap BDC=A & BCA=D Length 1152
+Overlap BDC=A & BCD=A Length 768
+Overlap BDC=A & BDA=C Length 0
+Overlap BDC=A & CAB=D Length 192
+Overlap BDC=A & CAD=B Length 192
+Overlap BDC=A & CBA=D Length 768
+Overlap BDC=A & CBD=A Length 832
+Overlap BDC=A & CDA=B Length 4224
+Overlap BDC=A & CDB=A Length 0
+Overlap BDC=A & DAB=C Length 192
+Overlap BDC=A & DAC=B Length 192
+Overlap BDC=A & DBA=C Length 832
+Overlap BDC=A & DBC=A Length 768
+Overlap BDC=A & DCA=B Length 768
+Overlap BDC=A & DCB=A Length 1152
+CAB=D : 4224
+Overlap CAB=D & ABC=D Length 192
+Overlap CAB=D & ABD=C Length 192
+Overlap CAB=D & ACB=D Length 192
+Overlap CAB=D & ACD=B Length 192
+Overlap CAB=D & ADB=C Length 192
+Overlap CAB=D & ADC=B Length 192
+Overlap CAB=D & BAC=D Length 0
+Overlap CAB=D & BAD=C Length 4224
+Overlap CAB=D & BCA=D Length 192
+Overlap CAB=D & BCD=A Length 192
+Overlap CAB=D & BDA=C Length 192
+Overlap CAB=D & BDC=A Length 192
+Overlap CAB=D & CAD=B Length 0
+Overlap CAB=D & CBA=D Length 192
+Overlap CAB=D & CBD=A Length 192
+Overlap CAB=D & CDA=B Length 192
+Overlap CAB=D & CDB=A Length 192
+Overlap CAB=D & DAB=C Length 0
+Overlap CAB=D & DAC=B Length 4224
+Overlap CAB=D & DBA=C Length 192
+Overlap CAB=D & DBC=A Length 192
+Overlap CAB=D & DCA=B Length 192
+Overlap CAB=D & DCB=A Length 192
+CAD=B : 4224
+Overlap CAD=B & ABC=D Length 192
+Overlap CAD=B & ABD=C Length 192
+Overlap CAD=B & ACB=D Length 192
+Overlap CAD=B & ACD=B Length 192
+Overlap CAD=B & ADB=C Length 192
+Overlap CAD=B & ADC=B Length 192
+Overlap CAD=B & BAC=D Length 4224
+Overlap CAD=B & BAD=C Length 0
+Overlap CAD=B & BCA=D Length 192
+Overlap CAD=B & BCD=A Length 192
+Overlap CAD=B & BDA=C Length 192
+Overlap CAD=B & BDC=A Length 192
+Overlap CAD=B & CAB=D Length 0
+Overlap CAD=B & CBA=D Length 192
+Overlap CAD=B & CBD=A Length 192
+Overlap CAD=B & CDA=B Length 192
+Overlap CAD=B & CDB=A Length 192
+Overlap CAD=B & DAB=C Length 4224
+Overlap CAD=B & DAC=B Length 0
+Overlap CAD=B & DBA=C Length 192
+Overlap CAD=B & DBC=A Length 192
+Overlap CAD=B & DCA=B Length 192
+Overlap CAD=B & DCB=A Length 192
+CBA=D : 4224
+Overlap CBA=D & ABC=D Length 0
+Overlap CBA=D & ABD=C Length 4224
+Overlap CBA=D & ACB=D Length 832
+Overlap CBA=D & ACD=B Length 768
+Overlap CBA=D & ADB=C Length 768
+Overlap CBA=D & ADC=B Length 832
+Overlap CBA=D & BAC=D Length 192
+Overlap CBA=D & BAD=C Length 192
+Overlap CBA=D & BCA=D Length 768
+Overlap CBA=D & BCD=A Length 832
+Overlap CBA=D & BDA=C Length 832
+Overlap CBA=D & BDC=A Length 768
+Overlap CBA=D & CAB=D Length 192
+Overlap CBA=D & CAD=B Length 192
+Overlap CBA=D & CBD=A Length 0
+Overlap CBA=D & CDA=B Length 768
+Overlap CBA=D & CDB=A Length 832
+Overlap CBA=D & DAB=C Length 192
+Overlap CBA=D & DAC=B Length 192
+Overlap CBA=D & DBA=C Length 0
+Overlap CBA=D & DBC=A Length 4224
+Overlap CBA=D & DCA=B Length 832
+Overlap CBA=D & DCB=A Length 768
+CBD=A : 4224
+Overlap CBD=A & ABC=D Length 4224
+Overlap CBD=A & ABD=C Length 0
+Overlap CBD=A & ACB=D Length 768
+Overlap CBD=A & ACD=B Length 832
+Overlap CBD=A & ADB=C Length 832
+Overlap CBD=A & ADC=B Length 768
+Overlap CBD=A & BAC=D Length 192
+Overlap CBD=A & BAD=C Length 192
+Overlap CBD=A & BCA=D Length 832
+Overlap CBD=A & BCD=A Length 768
+Overlap CBD=A & BDA=C Length 768
+Overlap CBD=A & BDC=A Length 832
+Overlap CBD=A & CAB=D Length 192
+Overlap CBD=A & CAD=B Length 192
+Overlap CBD=A & CBA=D Length 0
+Overlap CBD=A & CDA=B Length 832
+Overlap CBD=A & CDB=A Length 768
+Overlap CBD=A & DAB=C Length 192
+Overlap CBD=A & DAC=B Length 192
+Overlap CBD=A & DBA=C Length 4224
+Overlap CBD=A & DBC=A Length 0
+Overlap CBD=A & DCA=B Length 768
+Overlap CBD=A & DCB=A Length 832
+CDA=B : 4224
+Overlap CDA=B & ABC=D Length 832
+Overlap CDA=B & ABD=C Length 768
+Overlap CDA=B & ACB=D Length 768
+Overlap CDA=B & ACD=B Length 1152
+Overlap CDA=B & ADB=C Length 4224
+Overlap CDA=B & ADC=B Length 0
+Overlap CDA=B & BAC=D Length 192
+Overlap CDA=B & BAD=C Length 192
+Overlap CDA=B & BCA=D Length 1152
+Overlap CDA=B & BCD=A Length 768
+Overlap CDA=B & BDA=C Length 0
+Overlap CDA=B & BDC=A Length 4224
+Overlap CDA=B & CAB=D Length 192
+Overlap CDA=B & CAD=B Length 192
+Overlap CDA=B & CBA=D Length 768
+Overlap CDA=B & CBD=A Length 832
+Overlap CDA=B & CDB=A Length 0
+Overlap CDA=B & DAB=C Length 192
+Overlap CDA=B & DAC=B Length 192
+Overlap CDA=B & DBA=C Length 832
+Overlap CDA=B & DBC=A Length 768
+Overlap CDA=B & DCA=B Length 768
+Overlap CDA=B & DCB=A Length 1152
+CDB=A : 4224
+Overlap CDB=A & ABC=D Length 768
+Overlap CDB=A & ABD=C Length 832
+Overlap CDB=A & ACB=D Length 1152
+Overlap CDB=A & ACD=B Length 768
+Overlap CDB=A & ADB=C Length 0
+Overlap CDB=A & ADC=B Length 4224
+Overlap CDB=A & BAC=D Length 192
+Overlap CDB=A & BAD=C Length 192
+Overlap CDB=A & BCA=D Length 768
+Overlap CDB=A & BCD=A Length 1152
+Overlap CDB=A & BDA=C Length 4224
+Overlap CDB=A & BDC=A Length 0
+Overlap CDB=A & CAB=D Length 192
+Overlap CDB=A & CAD=B Length 192
+Overlap CDB=A & CBA=D Length 832
+Overlap CDB=A & CBD=A Length 768
+Overlap CDB=A & CDA=B Length 0
+Overlap CDB=A & DAB=C Length 192
+Overlap CDB=A & DAC=B Length 192
+Overlap CDB=A & DBA=C Length 768
+Overlap CDB=A & DBC=A Length 832
+Overlap CDB=A & DCA=B Length 1152
+Overlap CDB=A & DCB=A Length 768
+DAB=C : 4224
+Overlap DAB=C & ABC=D Length 192
+Overlap DAB=C & ABD=C Length 192
+Overlap DAB=C & ACB=D Length 192
+Overlap DAB=C & ACD=B Length 192
+Overlap DAB=C & ADB=C Length 192
+Overlap DAB=C & ADC=B Length 192
+Overlap DAB=C & BAC=D Length 4224
+Overlap DAB=C & BAD=C Length 0
+Overlap DAB=C & BCA=D Length 192
+Overlap DAB=C & BCD=A Length 192
+Overlap DAB=C & BDA=C Length 192
+Overlap DAB=C & BDC=A Length 192
+Overlap DAB=C & CAB=D Length 0
+Overlap DAB=C & CAD=B Length 4224
+Overlap DAB=C & CBA=D Length 192
+Overlap DAB=C & CBD=A Length 192
+Overlap DAB=C & CDA=B Length 192
+Overlap DAB=C & CDB=A Length 192
+Overlap DAB=C & DAC=B Length 0
+Overlap DAB=C & DBA=C Length 192
+Overlap DAB=C & DBC=A Length 192
+Overlap DAB=C & DCA=B Length 192
+Overlap DAB=C & DCB=A Length 192
+DAC=B : 4224
+Overlap DAC=B & ABC=D Length 192
+Overlap DAC=B & ABD=C Length 192
+Overlap DAC=B & ACB=D Length 192
+Overlap DAC=B & ACD=B Length 192
+Overlap DAC=B & ADB=C Length 192
+Overlap DAC=B & ADC=B Length 192
+Overlap DAC=B & BAC=D Length 0
+Overlap DAC=B & BAD=C Length 4224
+Overlap DAC=B & BCA=D Length 192
+Overlap DAC=B & BCD=A Length 192
+Overlap DAC=B & BDA=C Length 192
+Overlap DAC=B & BDC=A Length 192
+Overlap DAC=B & CAB=D Length 4224
+Overlap DAC=B & CAD=B Length 0
+Overlap DAC=B & CBA=D Length 192
+Overlap DAC=B & CBD=A Length 192
+Overlap DAC=B & CDA=B Length 192
+Overlap DAC=B & CDB=A Length 192
+Overlap DAC=B & DAB=C Length 0
+Overlap DAC=B & DBA=C Length 192
+Overlap DAC=B & DBC=A Length 192
+Overlap DAC=B & DCA=B Length 192
+Overlap DAC=B & DCB=A Length 192
+DBA=C : 4224
+Overlap DBA=C & ABC=D Length 4224
+Overlap DBA=C & ABD=C Length 0
+Overlap DBA=C & ACB=D Length 768
+Overlap DBA=C & ACD=B Length 832
+Overlap DBA=C & ADB=C Length 832
+Overlap DBA=C & ADC=B Length 768
+Overlap DBA=C & BAC=D Length 192
+Overlap DBA=C & BAD=C Length 192
+Overlap DBA=C & BCA=D Length 832
+Overlap DBA=C & BCD=A Length 768
+Overlap DBA=C & BDA=C Length 768
+Overlap DBA=C & BDC=A Length 832
+Overlap DBA=C & CAB=D Length 192
+Overlap DBA=C & CAD=B Length 192
+Overlap DBA=C & CBA=D Length 0
+Overlap DBA=C & CBD=A Length 4224
+Overlap DBA=C & CDA=B Length 832
+Overlap DBA=C & CDB=A Length 768
+Overlap DBA=C & DAB=C Length 192
+Overlap DBA=C & DAC=B Length 192
+Overlap DBA=C & DBC=A Length 0
+Overlap DBA=C & DCA=B Length 768
+Overlap DBA=C & DCB=A Length 832
+DBC=A : 4224
+Overlap DBC=A & ABC=D Length 0
+Overlap DBC=A & ABD=C Length 4224
+Overlap DBC=A & ACB=D Length 832
+Overlap DBC=A & ACD=B Length 768
+Overlap DBC=A & ADB=C Length 768
+Overlap DBC=A & ADC=B Length 832
+Overlap DBC=A & BAC=D Length 192
+Overlap DBC=A & BAD=C Length 192
+Overlap DBC=A & BCA=D Length 768
+Overlap DBC=A & BCD=A Length 832
+Overlap DBC=A & BDA=C Length 832
+Overlap DBC=A & BDC=A Length 768
+Overlap DBC=A & CAB=D Length 192
+Overlap DBC=A & CAD=B Length 192
+Overlap DBC=A & CBA=D Length 4224
+Overlap DBC=A & CBD=A Length 0
+Overlap DBC=A & CDA=B Length 768
+Overlap DBC=A & CDB=A Length 832
+Overlap DBC=A & DAB=C Length 192
+Overlap DBC=A & DAC=B Length 192
+Overlap DBC=A & DBA=C Length 0
+Overlap DBC=A & DCA=B Length 832
+Overlap DBC=A & DCB=A Length 768
+DCA=B : 4224
+Overlap DCA=B & ABC=D Length 768
+Overlap DCA=B & ABD=C Length 832
+Overlap DCA=B & ACB=D Length 4224
+Overlap DCA=B & ACD=B Length 0
+Overlap DCA=B & ADB=C Length 768
+Overlap DCA=B & ADC=B Length 1152
+Overlap DCA=B & BAC=D Length 192
+Overlap DCA=B & BAD=C Length 192
+Overlap DCA=B & BCA=D Length 0
+Overlap DCA=B & BCD=A Length 4224
+Overlap DCA=B & BDA=C Length 1152
+Overlap DCA=B & BDC=A Length 768
+Overlap DCA=B & CAB=D Length 192
+Overlap DCA=B & CAD=B Length 192
+Overlap DCA=B & CBA=D Length 832
+Overlap DCA=B & CBD=A Length 768
+Overlap DCA=B & CDA=B Length 768
+Overlap DCA=B & CDB=A Length 1152
+Overlap DCA=B & DAB=C Length 192
+Overlap DCA=B & DAC=B Length 192
+Overlap DCA=B & DBA=C Length 768
+Overlap DCA=B & DBC=A Length 832
+Overlap DCA=B & DCB=A Length 0
+DCB=A : 4224
+Overlap DCB=A & ABC=D Length 832
+Overlap DCB=A & ABD=C Length 768
+Overlap DCB=A & ACB=D Length 0
+Overlap DCB=A & ACD=B Length 4224
+Overlap DCB=A & ADB=C Length 1152
+Overlap DCB=A & ADC=B Length 768
+Overlap DCB=A & BAC=D Length 192
+Overlap DCB=A & BAD=C Length 192
+Overlap DCB=A & BCA=D Length 4224
+Overlap DCB=A & BCD=A Length 0
+Overlap DCB=A & BDA=C Length 768
+Overlap DCB=A & BDC=A Length 1152
+Overlap DCB=A & CAB=D Length 192
+Overlap DCB=A & CAD=B Length 192
+Overlap DCB=A & CBA=D Length 768
+Overlap DCB=A & CBD=A Length 832
+Overlap DCB=A & CDA=B Length 1152
+Overlap DCB=A & CDB=A Length 768
+Overlap DCB=A & DAB=C Length 192
+Overlap DCB=A & DAC=B Length 192
+Overlap DCB=A & DBA=C Length 832
+Overlap DCB=A & DBC=A Length 768
+Overlap DCB=A & DCA=B Length 0
+
+Number of '100%' overlap groups: 24
+ABC=D & CBD=A
+ABC=D & DBA=C
+ABD=C & CBA=D
+ABD=C & DBC=A
+ACB=D & BCD=A
+ACB=D & DCA=B
+ACD=B & BCA=D
+ACD=B & DCB=A
+ADB=C & BDC=A
+ADB=C & CDA=B
+ADC=B & BDA=C
+ADC=B & CDB=A
+BAC=D & CAD=B
+BAC=D & DAB=C
+BAD=C & CAB=D
+BAD=C & DAC=B
+
+BCA=D & DCB=A
+BCD=A & DCA=B
+BDA=C & CDB=A
+BDC=A & CDA=B
+CAB=D & DAC=B
+CAD=B & DAB=C
+CBA=D & DBC=A
+CBD=A & DBA=C
+
+Number of '0%' overlap groups: 36
+ABC=D & ABD=C
+ABC=D & CBA=D 
+CBA=D & CBD=A
+ABC=D & DBC=A 
+CBA=D & DBA=C
+ABD=C & CBD=A
+ABD=C & DBA=C
+DBA=C & DBC=A
+CBD=A & DBC=A
+
+ACB=D & ACD=B
+ACB=D & BCA=D
+ACB=D & DCB=A
+ACD=B & BCD=A
+ACD=B & DCA=B
+DCA=B & DCB=A
+BCA=D & BCD=A
+BCA=D & DCA=B
+BCD=A & DCB=A
+
+ADB=C & ADC=B
+ADB=C & BDA=C
+ADB=C & CDB=A
+ADC=B & BDC=A
+ADC=B & CDA=B
+BDA=C & CDA=B
+BDA=C & BDC=A
+BDC=A & CDB=A
+CDA=B & CDB=A
+
+
+BAC=D & BAD=C
+BAC=D & CAB=D
+BAC=D & DAC=B
+BAD=C & CAD=B
+BAD=C & DAB=C
+CAB=D & CAD=B
+CAB=D & DAB=C
+CAD=B & DAC=B
+DAB=C & DAC=B
+
+
+-- Execution time --
+---- 8.959235906600952 seconds ----
